@@ -1,9 +1,9 @@
 import { Inter } from 'next/font/google';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { SUPPORTED_LOCALES } from '../../i18n/routing';
-import Header from '../../components/header/Header';
-import '../globals.css';
+import { SUPPORTED_LOCALES } from '@/i18n/routing';
+import Header from '@/components/header/Header';
+import '@/app/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

@@ -5,6 +5,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #0B4476;
+  --sermas: #D9181F;
+  --haquette: #F46F1B;
+  --aretec: #58BBA3;
+  --cip: #88BD22;
+  --sp2i-prehension: #F9AE0B;
+  --sp2i-feroviaire: #88BBCF;
+  --tracip: #75C92A;
+  --tracip-mecano: #30BBCA;
 }
 
 @media (prefers-color-scheme: dark) {

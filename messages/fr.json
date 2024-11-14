@@ -1,10 +1,72 @@
 {
     "common": {
-      "switchLanguage": "Switch to English"
-    },
+        "switchLanguage": "Switch to English"
+      },
     "home": {
-      "title": "Groupe SOGAT",
-      "description": "Solutions industrielles innovantes",
-      "welcome": "Bienvenue chez"
+      "hero": {
+        "title": "SOGAT DES HOMMES DES MÉTIERS",
+        "description": "Nous vous accompagnons durant toutes les phases des projets de construction et vous proposons notre expertise pour mener à bien vos projets avec passion.",
+        "cta": "Découvrir"
+      },
+      "services": {
+        "title": "Nos Services",
+        "description": "Découvrez notre gamme complète de services pour accompagner vos projets de construction du début à la fin.",
+        "bim": {
+          "title": "BIM/CIM",
+          "description": "Modélisation numérique et gestion de l'information pour la construction"
+        },
+        "studies": {
+          "title": "Bureau d'Études",
+          "description": "Études techniques et gestion de projet"
+        },
+        "monitoring": {
+          "title": "Monitoring",
+          "description": "Suivi de projet et contrôle qualité"
+        },
+        "3d": {
+          "title": "Acquisitions 3D",
+          "description": "Numérisation 3D et relevés numériques"
+        }
+      },
+      "cta": {
+        "title": "Vous souhaitez rejoindre une équipe jeune et dynamique ?",
+        "description": "Sogat n'attend plus que vous !",
+        "button": "Contactez-nous"
+      },
+      "expertise": {
+        "title": "Notre Expertise",
+        "description": "Avec des années d'expérience dans la construction et la modélisation numérique, nous apportons une expertise inégalée à chaque projet.",
+        "experience": {
+          "title": "Expérience",
+          "description": "Plus de 10 ans d'expérience en gestion de projets de construction"
+        },
+        "team": {
+          "title": "Équipe Expert",
+          "description": "Des professionnels qualifiés dédiés au succès de votre projet"
+        },
+        "quality": {
+          "title": "Assurance Qualité",
+          "description": "Contrôles qualité rigoureux et mise en œuvre des meilleures pratiques"
+        },
+        "delivery": {
+          "title": "Livraison à Temps",
+          "description": "Engagés à livrer les projets dans les délais"
+        }
+      }
+    },
+    "footer": {
+      "description": "Expert en gestion de projets de construction et modélisation numérique",
+      "sections": {
+        "services": "Services",
+        "studies": "Bureau d'Études",
+        "monitoring": "Monitoring",
+        "3d": "Acquisitions 3D",
+        "company": "Entreprise",
+        "about": "À propos",
+        "careers": "Carrières",
+        "contact": "Contact",
+        "language": "Langue"
+      },
+      "rights": "Tous droits réservés."
     }
-}
+  }

@@ -1,27 +1,27 @@
-'use client';
+'use client'
 
-import { useLocale, useTranslations } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { useTranslations } from 'next-intl'
+import { useRouter, usePathname } from 'next/navigation'
+import { Button } from "@/components/ui/button"
 
-export default function LanguageSwitcher() {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-  const t = useTranslations('common');
+export default function LanguageSwitcher({ locale }) {
+  const t = useTranslations('common')
+  const router = useRouter()
+  const pathname = usePathname()
 
-  const onLanguageChange = () => {
-    const newLocale = locale === 'fr' ? 'en' : 'fr';
-    const newPathname = pathname.replace(`/${locale}/`, '/');
-    router.push(newPathname, { locale: newLocale });
-  };
+  const handleClick = () => {
+    const newLocale = locale === 'fr' ? 'en' : 'fr'
+    const newPath = pathname.replace(`/${locale}`, `/${newLocale}`)
+    router.push(newPath)
+  }
 
   return (
-    <button
-      type="button"
-      onClick={onLanguageChange}
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+    <Button
+      onClick={handleClick}
+      variant="default" 
+      className="font-medium"
     >
-      {locale === 'fr' ? 'Switch to English' : 'Passer en français'}
-    </button>
-  );
+      {t('switchLanguage')}
+    </Button>
+  )
 }

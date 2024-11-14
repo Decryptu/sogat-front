@@ -10,7 +10,7 @@ export default function Hero({ t }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* First column - Title */}
             <div className="text-left">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-background tracking-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold text-background tracking-tight">
                 {t('hero.title')}
               </h1>
             </div>

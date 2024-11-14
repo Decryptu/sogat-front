@@ -1,0 +1,10 @@
+{
+    "common": {
+      "switchLanguage": "Passer en français"
+    },
+    "home": {
+      "title": "SOGAT Group",
+      "description": "Innovative industrial solutions",
+      "welcome": "Welcome to"
+    }
+}

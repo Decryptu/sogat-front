@@ -6,10 +6,16 @@ import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import NavigationContent from './NavigationContent';
 import Image from 'next/image';
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
 
 export default function NavigationMenu({ locale }) {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations('navigation');
+
+  const handleNavigationClose = () => {
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -17,15 +23,16 @@ export default function NavigationMenu({ locale }) {
         <div className="border-b border-white/20 grid grid-cols-[1fr,auto,1fr] h-20">
           {/* Logo section */}
           <div className="px-6 md:px-12 flex items-center">
-            <div className="w-32">
+            <Link href={`/${locale}`} className="w-32">
               <Image 
                 src="/images/sogat-white.webp" 
                 alt="Logo" 
                 width={120} 
                 height={40}
-                className="object-contain"
+                priority
+                className="object-contain hover:opacity-80 transition-opacity"
               />
-            </div>
+            </Link>
           </div>
 
           {/* Empty middle section - just for border */}
@@ -46,12 +53,14 @@ export default function NavigationMenu({ locale }) {
         </div>
       </div>
 
-      {isOpen && (
-        <NavigationContent 
-          onClose={() => setIsOpen(false)} 
-          locale={locale}
-        />
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <NavigationContent 
+            onClose={handleNavigationClose} 
+            locale={locale}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }

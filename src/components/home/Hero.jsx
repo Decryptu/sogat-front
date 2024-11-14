@@ -1,33 +1,39 @@
-import { Button } from "@/components/ui/button";
-import Image from 'next/image';
+import HeroParallax from './HeroParallax'
+import { Button } from "@/components/ui/button"
 
 export default function Hero({ t }) {
   return (
-    <section className="relative h-screen">
-      <Image
-        src="/images/construction-hero.webp"
-        alt="Construction site"
-        fill
-        priority
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50" />
-      
-      <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-          {t('hero.title')}
-        </h1>
-        <p className="text-xl md:text-2xl text-white/90 max-w-2xl mb-8">
-          {t('hero.description')}
-        </p>
-        <Button 
-          size="lg"
-          className="w-fit"
-          asChild
-        >
-          <a href="#discover">{t('hero.cta')}</a>
-        </Button>
-      </div>
-    </section>
-  );
+    <div className="flex flex-col w-full">
+      {/* First section with two columns */}
+      <section className="w-full bg-dark pb-16 pt-32 md:pb-32 md:pt-80">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            {/* First column - Title */}
+            <div className="text-left">
+              <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold text-background tracking-tight">
+                {t('hero.title')}
+              </h1>
+            </div>
+            
+            {/* Second column - Description and CTA */}
+            <div className="flex flex-col gap-6">
+              <p className="text-md text-background/80 leading-relaxed">
+                {t('hero.description')}
+              </p>
+              <Button 
+                size="lg"
+                className="w-fit text-lg"
+                asChild
+              >
+                <a href="#discover">{t('hero.cta')}</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Second section with parallax image */}
+      <HeroParallax />
+    </div>
+  )
 }

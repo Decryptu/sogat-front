@@ -4,7 +4,7 @@
       },
     "home": {
       "hero": {
-        "title": "SOGAT MEN AND TRADES",
+        "title": "SOGAT, PARTNER OF YOUR INDUSTRIAL PROJECTS",
         "description": "We support you throughout all construction project phases and offer our expertise to make your project a success with passion.",
         "cta": "Discover"
       },
@@ -68,5 +68,14 @@
         "language": "Language"
       },
       "rights": "All rights reserved."
+    },
+    "navigation": {
+        "home": "HOME",
+        "group": "GROUP",
+        "services": "SERVICES",
+        "contact": "CONTACT",
+        "personalSpace": "Personal space",
+        "legalNotice": "Legal notice",
+        "close": "Close menu"
     }
   }

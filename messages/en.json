@@ -1,10 +1,72 @@
 {
     "common": {
-      "switchLanguage": "Passer en français"
-    },
+        "switchLanguage": "Passer en français"
+      },
     "home": {
-      "title": "SOGAT Group",
-      "description": "Innovative industrial solutions",
-      "welcome": "Welcome to"
+      "hero": {
+        "title": "SOGAT MEN AND TRADES",
+        "description": "We support you throughout all construction project phases and offer our expertise to make your project a success with passion.",
+        "cta": "Discover"
+      },
+      "services": {
+        "title": "Our Services",
+        "description": "Discover our complete range of services to support your construction projects from start to finish.",
+        "bim": {
+          "title": "BIM/CIM",
+          "description": "Digital modeling and information management for construction"
+        },
+        "studies": {
+          "title": "Engineering Office",
+          "description": "Technical studies and project management"
+        },
+        "monitoring": {
+          "title": "Monitoring",
+          "description": "Project monitoring and quality control"
+        },
+        "3d": {
+          "title": "3D Acquisitions",
+          "description": "3D scanning and digital surveying"
+        }
+      },
+      "cta": {
+        "title": "Want to join a young and dynamic team?",
+        "description": "SOGAT is waiting for you!",
+        "button": "Contact us"
+      },
+      "expertise": {
+        "title": "Our Expertise",
+        "description": "With years of experience in construction and digital modeling, we bring unmatched expertise to every project.",
+        "experience": {
+          "title": "Experience",
+          "description": "Over 10 years of experience in construction project management"
+        },
+        "team": {
+          "title": "Expert Team",
+          "description": "Skilled professionals dedicated to your project's success"
+        },
+        "quality": {
+          "title": "Quality Assurance",
+          "description": "Rigorous quality controls and best practices implementation"
+        },
+        "delivery": {
+          "title": "Timely Delivery",
+          "description": "Committed to delivering projects on schedule"
+        }
+      }
+    },
+    "footer": {
+      "description": "Expert in construction project management and digital modeling",
+      "sections": {
+        "services": "Services",
+        "studies": "Engineering Office",
+        "monitoring": "Monitoring",
+        "3d": "3D Acquisitions",
+        "company": "Company",
+        "about": "About",
+        "careers": "Careers",
+        "contact": "Contact",
+        "language": "Language"
+      },
+      "rights": "All rights reserved."
     }
-}
+  }

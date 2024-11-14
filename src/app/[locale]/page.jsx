@@ -1,5 +1,10 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SUPPORTED_LOCALES } from '@/i18n/routing';
+import Hero from '@/components/home/Hero';
+import Services from '@/components/home/Services';
+import Expertise from '@/components/home/Expertise';
+import CTA from '@/components/home/CTA';
+import Footer from '@/components/footer/Footer';
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -11,14 +16,12 @@ export default async function Home({ params }) {
   const t = await getTranslations('home');
 
   return (
-    <main className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center">
-          <p className="text-xl mb-2">{t('welcome')}</p>
-          <h1 className="text-4xl font-bold mb-4">{t('title')}</h1>
-          <p className="text-xl text-gray-600">{t('description')}</p>
-        </div>
-      </div>
-    </main>
+    <>
+      <Hero t={t} />
+      <Services t={t} />
+      <Expertise t={t} />
+      <CTA t={t} />
+      <Footer />
+    </>
   );
 }

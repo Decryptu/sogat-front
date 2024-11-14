@@ -20,12 +20,10 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale}>
       <body className={geist.className}>
         <NextIntlClientProvider messages={messages}>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow">
-              {children}
-            </main>
-          </div>
+          <Header />
+          <main>
+            {children}
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>

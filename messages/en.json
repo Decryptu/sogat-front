@@ -68,5 +68,14 @@
         "language": "Language"
       },
       "rights": "All rights reserved."
+    },
+    "navigation": {
+        "home": "HOME",
+        "group": "GROUP",
+        "services": "SERVICES",
+        "contact": "CONTACT",
+        "personalSpace": "Personal space",
+        "legalNotice": "Legal notice",
+        "close": "Close menu"
     }
   }

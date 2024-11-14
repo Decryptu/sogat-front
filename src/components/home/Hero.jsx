@@ -5,7 +5,7 @@ export default function Hero({ t }) {
   return (
     <div className="flex flex-col w-full">
       {/* First section with two columns */}
-      <section className="w-full bg-dark py-16 md:pb-32 md:pt-64">
+      <section className="w-full bg-dark pb-16 pt-32 md:pb-32 md:pt-80">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* First column - Title */}

@@ -68,5 +68,14 @@
         "language": "Langue"
       },
       "rights": "Tous droits réservés."
+    },
+    "navigation": {
+        "home": "ACCUEIL",
+        "group": "GROUPE",
+        "services": "MÉTIERS",
+        "contact": "CONTACT", 
+        "personalSpace": "Espace personnel",
+        "legalNotice": "Mentions légales",
+        "close": "Fermer le menu"
     }
   }

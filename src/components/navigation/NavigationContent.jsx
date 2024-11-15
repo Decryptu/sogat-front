@@ -47,7 +47,7 @@ export default function NavigationContent({ onClose, locale }) {
             alt="Navigation background"
             fill
             className="object-cover"
-            priority
+            priority={true}
           />
           <div className="absolute top-8 left-8">
             <Image

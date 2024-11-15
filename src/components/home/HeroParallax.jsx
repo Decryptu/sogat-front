@@ -18,9 +18,9 @@ export default function HeroParallax() {
   return (
     <section className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-blue-600">
       <div 
-        className="absolute inset-0 h-[130%]" // Make container taller than viewport
+        className="absolute inset-0 h-[130%]"
         style={{
-          transform: `translateY(${-scrollY * 0.3}px)`, // Slower, smoother parallax
+          transform: `translateY(${-scrollY * 0.3}px)`,
           willChange: 'transform'
         }}
       >
@@ -28,11 +28,13 @@ export default function HeroParallax() {
           src="/images/construction-hero.webp"
           alt="Construction site"
           fill
-          priority
-          sizes="100vw"
+          priority={false} // Change to false since it's below the fold
+          loading="lazy" // Add lazy loading
+          quality={75} // Optimize quality
+          sizes="(max-width: 768px) 100vw, 100vw"
           className="object-cover"
           style={{
-            objectPosition: 'center 30%' // Adjust this value to control the vertical focus point
+            objectPosition: 'center 30%'
           }}
         />
       </div>

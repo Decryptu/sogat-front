@@ -24,13 +24,13 @@ export default function NavigationMenu({ locale }) {
           {/* Logo section */}
           <div className="px-6 md:px-12 flex items-center">
             <Link href={`/${locale}`} className="w-32">
-              <Image 
+            <Image 
                 src="/images/sogat-white.webp" 
                 alt="Logo" 
-                width={120} 
+                width={120}
                 height={40}
                 priority
-                className="object-contain hover:opacity-80 transition-opacity"
+                className="object-contain w-[120px] h-[40px]" // Fixed dimensions
               />
             </Link>
           </div>

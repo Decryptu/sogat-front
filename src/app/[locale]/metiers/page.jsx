@@ -6,16 +6,6 @@ export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }) {
-    const { locale } = params;
-    const t = await getTranslations('home');
-  
-    return {
-      title: t.raw('hero.title'),
-      description: t.raw('hero.description'),
-    };
-}
-
 export default async function Metiers({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);

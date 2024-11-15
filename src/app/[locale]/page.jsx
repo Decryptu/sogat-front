@@ -6,22 +6,32 @@ import Metiers from '@/components/home/Metiers';
 import CTA from '@/components/home/CTA';
 import Footer from '@/components/footer/Footer';
 
+export async function generateMetadata({ params }) {
+ const { locale } = await params;
+ const t = await getTranslations('home');
+
+ return {
+   title: t('hero.title'),
+   description: t('hero.description'),
+ };
+}
+
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
+ return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
 
 export default async function Home({ params }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  const t = await getTranslations('home');
+ const { locale } = await params;
+ setRequestLocale(locale);
+ const t = await getTranslations('home');
 
-  return (
-    <>
-      <Hero t={t} />
-      <Expertise t={t} />
-      <Metiers t={t} />
-      <CTA t={t} />
-      <Footer />
-    </>
-  );
+ return (
+   <>
+     <Hero t={t} />
+     <Expertise t={t} />
+     <Metiers t={t} />
+     <CTA t={t} />
+     <Footer />
+   </>
+ );
 }

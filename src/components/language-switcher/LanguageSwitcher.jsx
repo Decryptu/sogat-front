@@ -18,7 +18,7 @@ export default function LanguageSwitcher({ locale }) {
   return (
     <Button
       onClick={handleClick}
-      variant="default" 
+      variant="secondary" 
       className="font-medium"
     >
       {t('switchLanguage')}

@@ -1,6 +1,12 @@
 {
     "common": {
-        "switchLanguage": "Switch to English"
+        "switchLanguage": "Switch to English 🇬🇧"
+      },
+      "metadata": {
+        "siteTitle": "SOGAT - Partenaire de Projets Industriels",
+        "siteName": "SOGAT",
+        "keywords": "SOGAT, Projets Industriels, Ingénierie, Construction, Gestion de Projets",
+        "socialBanner": "SOGAT - Excellence en Ingénierie" 
       },
     "home": {
       "hero": {

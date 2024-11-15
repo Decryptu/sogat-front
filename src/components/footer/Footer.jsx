@@ -16,13 +16,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="h-8 w-32 mb-4">
-              <Image 
-                src="/images/sogat-white.webp" 
-                alt="Sogat" 
-                width={128}
-                height={32}
-                className="h-full w-auto"
-              />
+            <Image 
+              src="/images/sogat-white.webp" 
+              alt="Sogat" 
+              width={128}
+              height={32}
+              className="w-[128px] h-[32px] object-contain" // Fixed dimensions
+            />
             </div>
             <p className="text-gray-400">{t('description')}</p>
           </div>
@@ -46,8 +46,8 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">{t('sections.company')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">{t('sections.about')}</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white">{t('sections.careers')}</Link></li>
+              <li><Link href="/groupe" className="text-gray-400 hover:text-white">{t('sections.about')}</Link></li>
+              <li><Link href="/metiers" className="text-gray-400 hover:text-white">{t('sections.careers')}</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('sections.contact')}</Link></li>
             </ul>
           </div>

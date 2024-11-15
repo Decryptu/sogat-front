@@ -28,7 +28,7 @@ export default function HeroParallax() {
           src="/images/construction-hero.webp"
           alt="Construction site"
           fill
-          priority={false} // Change to false since it's below the fold
+          priority
           loading="lazy" // Add lazy loading
           quality={75} // Optimize quality
           sizes="(max-width: 768px) 100vw, 100vw"

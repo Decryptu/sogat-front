@@ -2,6 +2,12 @@
     "common": {
         "switchLanguage": "Passer en français"
       },
+      "metadata": {
+        "siteTitle": "SOGAT - Industrial Project Partner",
+        "siteName": "SOGAT",
+        "keywords": "SOGAT, Industrial Projects, Engineering, Construction, Project Management",
+        "socialBanner": "SOGAT - Engineering Excellence"
+      },
     "home": {
       "hero": {
         "title": "SOGAT, PARTNER OF YOUR INDUSTRIAL PROJECTS",

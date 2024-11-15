@@ -12,8 +12,15 @@ const NAVIGATION_LINKS = [
   { key: 'home', path: '/' },
   { key: 'group', path: '/group' },
   { key: 'services', path: '/services' },
+  { key: 'expertise', path: '/expertise' },
   { key: 'contact', path: '/contact' }
 ];
+
+// Standardized animation config
+const ANIMATION_CONFIG = {
+  duration: 0.5,
+  ease: [0.22, 1, 0.36, 1]
+};
 
 export default function NavigationContent({ onClose, locale }) {
   const t = useTranslations('navigation');
@@ -23,7 +30,7 @@ export default function NavigationContent({ onClose, locale }) {
       initial={{ height: 0 }} 
       animate={{ height: '100%' }}
       exit={{ height: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      transition={ANIMATION_CONFIG}
       className="fixed inset-x-0 top-0 bg-blue-600 z-50 overflow-hidden"
     >
       <div className="flex h-full">
@@ -32,7 +39,7 @@ export default function NavigationContent({ onClose, locale }) {
           initial={{ y: '-100%' }}
           animate={{ y: 0 }}
           exit={{ y: '-100%' }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          transition={ANIMATION_CONFIG}
           className="relative hidden md:block w-1/2 h-full"
         >
           <Image
@@ -57,7 +64,7 @@ export default function NavigationContent({ onClose, locale }) {
           initial={{ y: '-100%' }}
           animate={{ y: 0 }}
           exit={{ y: '-100%' }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          transition={ANIMATION_CONFIG}
           className="w-full md:w-1/2 p-8 md:p-16 flex flex-col"
         >
           <div className="flex justify-end mb-8">
@@ -80,11 +87,9 @@ export default function NavigationContent({ onClose, locale }) {
                   initial={{ y: -20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
-                  transition={{ 
-                    duration: 0.4, 
-                    ease: [0.22, 1, 0.36, 1],
-                    delay: 0.3 + (index * 0.1),
-                    exit: { delay: 0 } 
+                  transition={{
+                    ...ANIMATION_CONFIG,
+                    delay: 0.1 * index
                   }}
                 >
                   <Link
@@ -103,11 +108,7 @@ export default function NavigationContent({ onClose, locale }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ 
-              duration: 0.4, 
-              delay: 0.7,
-              exit: { delay: 0 } 
-            }}
+            transition={ANIMATION_CONFIG}
             className="mt-auto flex flex-col space-y-4 text-white"
           >
             <Link

@@ -8,56 +8,37 @@
         "description": "Nous vous accompagnons durant toutes les phases des projets de construction et vous proposons notre expertise pour mener à bien vos projets avec passion.",
         "cta": "Découvrir"
       },
-      "services": {
-        "title": "Nos Services",
-        "description": "Découvrez notre gamme complète de services pour accompagner vos projets de construction du début à la fin.",
-        "bim": {
-          "title": "BIM/CIM",
-          "description": "Modélisation numérique et gestion de l'information pour la construction"
+      "expertise": {
+        "banner": "Une expertise 100% française",
+        "title": "Notre Expertise & Histoire",
+        "subtitle": "Plus qu'une promesse, nos prestations sont certifiées \"Service France Garanti\" par l'AFNOR",
+        "stats": {
+          "yearFounded": "Année de création",
+          "employees": "Collaborateurs",
+          "workshopArea": "Surface d'atelier",
+          "exportPercentage": "Taux d'export"
         },
-        "studies": {
-          "title": "Bureau d'Études",
-          "description": "Études techniques et gestion de projet"
-        },
-        "monitoring": {
-          "title": "Monitoring",
-          "description": "Suivi de projet et contrôle qualité"
-        },
-        "3d": {
-          "title": "Acquisitions 3D",
-          "description": "Numérisation 3D et relevés numériques"
-        }
+        "cta": "En savoir plus"
       },
       "cta": {
         "title": "Vous souhaitez rejoindre une équipe jeune et dynamique ?",
         "description": "Sogat n'attend plus que vous !",
         "button": "Contactez-nous"
       },
-      "expertise": {
-        "title": "Notre Expertise",
-        "description": "Avec des années d'expérience dans la construction et la modélisation numérique, nous apportons une expertise inégalée à chaque projet.",
-        "experience": {
-          "title": "Expérience",
-          "description": "Plus de 10 ans d'expérience en gestion de projets de construction"
-        },
-        "team": {
-          "title": "Équipe Expert",
-          "description": "Des professionnels qualifiés dédiés au succès de votre projet"
-        },
-        "quality": {
-          "title": "Assurance Qualité",
-          "description": "Contrôles qualité rigoureux et mise en œuvre des meilleures pratiques"
-        },
-        "delivery": {
-          "title": "Livraison à Temps",
-          "description": "Engagés à livrer les projets dans les délais"
-        }
+      "businessAreas": {
+        "title": "Nos Métiers",
+        "sermas": "SERMAS",
+        "sp2i-ferroviaire": "SP2I Ferroviaire", 
+        "sp2i-prehension": "SP2I Préhension",
+        "aretec": "ARETEC",
+        "tracip": "TRACIP",
+        "imageAlt": "Illustration de dessins techniques et d'ingénierie"
       }
     },
     "footer": {
       "description": "Expert en gestion de projets de construction et modélisation numérique",
       "sections": {
-        "services": "Services",
+        "services": "Nos Métiers",
         "studies": "Bureau d'Études",
         "monitoring": "Monitoring",
         "3d": "Acquisitions 3D",
@@ -78,5 +59,46 @@
         "personalSpace": "Espace personnel",
         "legalNotice": "Mentions légales",
         "close": "Fermer le menu"
+    },
+    "metiers": {
+      "title": "Nos Métiers",
+      "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
+      "imageAlt": "Équipe professionnelle au travail",
+      
+      "sermas": {
+        "title": "SERMAS",
+        "description": "SERMAS est spécialisée dans les solutions d'automatisation industrielle et de robotique, fournissant des technologies de pointe pour les processus de fabrication.",
+        "imageAlt": "Installations et équipements SERMAS"
+      },
+      "sp2i-ferroviaire": {
+        "title": "SP2I Ferroviaire",
+        "description": "SP2I Ferroviaire propose des solutions spécialisées pour l'industrie ferroviaire, en mettant l'accent sur la sécurité et l'efficacité des systèmes de transport ferroviaire.",
+        "imageAlt": "Systèmes et équipements ferroviaires"
+      },
+      "sp2i-prehension": {
+        "title": "SP2I Préhension",
+        "description": "SP2I Préhension développe des systèmes avancés de préhension et de manipulation pour les applications industrielles, optimisant les processus de production.",
+        "imageAlt": "Systèmes de préhension industriels"
+      },
+      "aretec": {
+        "title": "ARETEC",
+        "description": "ARETEC fournit une expertise technique en maintenance industrielle et en ingénierie, assurant une performance optimale des équipements industriels.",
+        "imageAlt": "Solutions techniques ARETEC"
+      },
+      "tracip": {
+        "title": "TRACIP",
+        "description": "TRACIP est spécialisée dans l'investigation numérique et la récupération de données, offrant des solutions sécurisées et fiables pour les enquêtes numériques.",
+        "imageAlt": "Équipement d'investigation numérique TRACIP"
+      }
+    },
+    "groupe": {
+      "title": "Notre Groupe",
+      "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
+      "imageAlt": "Équipe professionnelle au travail"
+    },
+    "expertise": {
+      "title": "Notre Savoir Faire",
+      "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
+      "imageAlt": "Équipe professionnelle au travail"
     }
   }

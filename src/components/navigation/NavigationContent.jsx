@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 
 const NAVIGATION_LINKS = [
   { key: 'home', path: '/' },
-  { key: 'group', path: '/group' },
-  { key: 'services', path: '/services' },
+  { key: 'group', path: '/groupe' },
+  { key: 'services', path: '/metiers' },
   { key: 'expertise', path: '/expertise' },
   { key: 'contact', path: '/contact' }
 ];

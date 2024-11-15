@@ -16,7 +16,7 @@ export default function HeroParallax() {
   }, [])
 
   return (
-    <section className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-primary">
+    <section className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-blue-600">
       <div 
         className="absolute inset-0 h-[130%]" // Make container taller than viewport
         style={{

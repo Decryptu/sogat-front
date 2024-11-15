@@ -1,10 +1,13 @@
 import LanguageSwitcher from '@/components/language-switcher/LanguageSwitcher';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { useLocale } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
+import { METIERS } from '@/constants/metiers';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const metierT = useTranslations('home.businessAreas');
   const locale = useLocale();
   
   return (
@@ -27,19 +30,25 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">{t('sections.services')}</h3>
             <ul className="space-y-2">
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">BIM/CIM</a></li>
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">{t('sections.studies')}</a></li>
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">{t('sections.monitoring')}</a></li>
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">{t('sections.3d')}</a></li>
+              {METIERS.map((metier) => (
+                <li key={metier}>
+                  <Link 
+                    href={`/metiers/${metier}`} 
+                    className="text-gray-400 hover:text-white"
+                  >
+                    {metierT(metier)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4">{t('sections.company')}</h3>
             <ul className="space-y-2">
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">{t('sections.about')}</a></li>
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">{t('sections.careers')}</a></li>
-              <li><a href="https://sogat.vercel.app/" className="text-gray-400 hover:text-white">{t('sections.contact')}</a></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">{t('sections.about')}</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white">{t('sections.careers')}</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('sections.contact')}</Link></li>
             </ul>
           </div>
           

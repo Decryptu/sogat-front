@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Geist, Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -82,6 +78,8 @@ body {
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
     scroll-behavior: smooth;
   }
   
@@ -91,6 +89,7 @@ body {
   
   html {
     @apply scroll-smooth;
+    overscroll-behavior-y: none;
   }
   
   body {

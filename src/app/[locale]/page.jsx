@@ -1,8 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { SUPPORTED_LOCALES } from '@/i18n/routing';
 import Hero from '@/components/home/Hero';
-import Services from '@/components/home/Services';
 import Expertise from '@/components/home/Expertise';
+import Metiers from '@/components/home/Metiers';
 import CTA from '@/components/home/CTA';
 import Footer from '@/components/footer/Footer';
 
@@ -18,8 +18,8 @@ export default async function Home({ params }) {
   return (
     <>
       <Hero t={t} />
-      <Services t={t} />
       <Expertise t={t} />
+      <Metiers t={t} />
       <CTA t={t} />
       <Footer />
     </>

@@ -17,11 +17,11 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className={geist.className}>
+    <html lang={locale} className="h-full">
+      <body className={`${geist.className} h-full flex flex-col overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main>
+          <main className="flex-1 relative">
             {children}
           </main>
         </NextIntlClientProvider>

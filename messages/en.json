@@ -59,5 +59,46 @@
         "personalSpace": "Personal space",
         "legalNotice": "Legal notice",
         "close": "Close menu"
+    },
+    "metiers": {
+      "title": "Our Professions",
+      "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+      "imageAlt": "Professional team at work",
+      
+      "sermas": {
+        "title": "SERMAS",
+        "description": "SERMAS specializes in industrial automation and robotics solutions, providing cutting-edge technology for manufacturing processes.",
+        "imageAlt": "SERMAS facilities and equipment"
+      },
+      "sp2i-ferroviaire": {
+        "title": "SP2I Ferroviaire",
+        "description": "SP2I Ferroviaire delivers specialized solutions for the railway industry, focusing on safety and efficiency in rail transport systems.",
+        "imageAlt": "Railway systems and equipment"
+      },
+      "sp2i-prehension": {
+        "title": "SP2I Préhension",
+        "description": "SP2I Préhension develops advanced gripping and handling systems for industrial applications, optimizing production processes.",
+        "imageAlt": "Industrial gripping systems"
+      },
+      "aretec": {
+        "title": "ARETEC",
+        "description": "ARETEC provides technical expertise in industrial maintenance and engineering, ensuring optimal performance of industrial equipment.",
+        "imageAlt": "ARETEC technical solutions"
+      },
+      "tracip": {
+        "title": "TRACIP",
+        "description": "TRACIP specializes in digital forensics and data recovery, offering secure and reliable solutions for digital investigations.",
+        "imageAlt": "TRACIP digital forensics equipment"
+      }
+    },
+    "groupe": {
+      "title": "Our Group",
+      "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+      "imageAlt": "Professional team at work"
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+      "imageAlt": "Professional team at work"
     }
   }

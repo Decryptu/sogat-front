@@ -11,11 +11,11 @@ export default function Expertise() {
     <section id="discover" className="relative overflow-hidden">
       <div className="bg-white py-4 text-center border-t border-b">
         <div className="flex items-center justify-center gap-4">
-          <span className="h-1 w-12 bg-blue-600"></span>
+          <span className="h-1 w-12 bg-blue-600" />
           <h3 className="text-sm font-medium uppercase tracking-wider">
             {t('banner')}
           </h3>
-          <span className="h-1 w-12 bg-red-600"></span>
+          <span className="h-1 w-12 bg-red-600" />
         </div>
       </div>
 
@@ -33,7 +33,7 @@ export default function Expertise() {
 
         <div className="text-center">
           <Button asChild variant="outline" size="lg">
-            <Link href="/about" className="inline-flex items-center gap-2">
+            <Link href="/expertise" className="inline-flex items-center gap-2">
               {t('cta')}
               <ArrowRight className="h-4 w-4 stroke-[1.5]" />
             </Link>

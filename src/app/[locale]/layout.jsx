@@ -1,14 +1,18 @@
 import { geist, geistMono } from "../fonts";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import {
+	getMessages,
+	setRequestLocale,
+	getTranslations,
+} from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import { getTranslations } from "next-intl/server";
 import "@/app/globals.css";
 
 export async function generateMetadata({ params }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
 	const [t, homeT] = await Promise.all([
 		getTranslations("metadata"),
 		getTranslations("home"),

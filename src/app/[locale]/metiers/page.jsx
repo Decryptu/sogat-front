@@ -12,7 +12,7 @@ export default async function Metiers({ params }) {
   const t = await getTranslations('metiers');
 
   return (
-    <div className="container mx-auto px-4 py-12 lg:min-h-[calc(100vh-80px)]">
+    <div className="container mx-auto mt-32 px-4 py-12 lg:min-h-[calc(100vh-80px)]">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Column - Text Content */}
         <div className="space-y-6">

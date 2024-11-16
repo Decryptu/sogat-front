@@ -1,148 +1,148 @@
 {
-    "common": {
-        "switchLanguage": "Passer en français 🇫🇷"
-      },
-      "metadata": {
-        "siteTitle": "SOGAT - Industrial Project Partner",
-        "siteName": "SOGAT",
-        "keywords": "SOGAT, Industrial Projects, Engineering, Construction, Project Management",
-        "socialBanner": "SOGAT - Engineering Excellence"
-      },
-    "home": {
-      "hero": {
-        "title": "SOGAT, PARTNER OF YOUR INDUSTRIAL PROJECTS",
-        "description": "We support you throughout all construction project phases and offer our expertise to make your project a success with passion.",
-        "cta": "Discover"
-      },
-      "expertise": {
-        "banner": "100% French Expertise",
-        "title": "Our Expertise & History",
-        "subtitle": "More than a promise, our services are certified \"Service France Garanti\" by AFNOR",
-        "stats": {
-          "yearFounded": "Year of creation",
-          "employees": "Employees",
-          "workshopArea": "Workshop area",
-          "exportPercentage": "Export rate"
-        },
-        "cta": "Learn more"
-      },
-      "cta": {
-        "title": "Want to join a young and dynamic team?",
-        "description": "SOGAT is waiting for you!",
-        "button": "Contact us"
-      },
-      "businessAreas": {
-        "title": "Our Business Areas",
-        "sermas": "SERMAS",
-        "sp2i-ferroviaire": "SP2I Ferroviaire",
-        "sp2i-prehension": "SP2I Préhension",
-        "aretec": "ARETEC",
-        "tracip": "TRACIP",
-        "imageAlt": "Engineering and technical drawings illustration"
-      }
-    },
-    "footer": {
-      "description": "Expert in construction project management and digital modeling",
-      "sections": {
-        "services": "Services",
-        "studies": "Engineering Office",
-        "monitoring": "Monitoring",
-        "3d": "3D Acquisitions",
-        "company": "Company",
-        "about": "About",
-        "careers": "Careers",
-        "contact": "Contact",
-        "language": "Language"
-      },
-      "rights": "All rights reserved."
-    },
-    "navigation": {
-        "home": "HOME",
-        "group": "GROUP",
-        "services": "SERVICES",
-        "expertise": "EXPERTISE",
-        "contact": "CONTACT",
-        "personalSpace": "Personal space",
-        "legalNotice": "Legal notice",
-        "close": "Close menu"
-    },
-    "metiersPage": {
-      "hero": {
-        "title": "TOGETHER, WE GO FURTHER",
-        "description": "Discover our specialized subsidiaries, each bringing unique expertise to serve your projects and challenges.",
-        "imageAlt": "Our services illustration"
-      },
-      "grid": {
-        "title": "Our Subsidiaries",
-        "discoverCta": "Discover the subsidiary",
-        "items": {
-          "sermas": {
-            "name": "BIM / CIM",
-            "description": "3D modeling of existing structures, BIM Management, Digital BIM model, BIM Coordination, AMO BIM, Training"
-          },
-          "sp2i-ferroviaire": {
-            "name": "Design Office",
-            "description": "VRD and earthworks studies, Project design, Infrastructure coordination, Sizing"
-          },
-          "sp2i-prehension": {
-            "name": "Monitoring",
-            "description": "Structure testing, Automatic topographical monitoring, Inclinometer, Extensometer, Geophone, Online monitoring software ORIS Monitoring"
-          },
-          "aretec": {
-            "name": "3D Acquisitions",
-            "description": "Static 3D laser scanner, Mobile Mapping, Ground and aerial photogrammetry (drone), Railway survey by chariot"
-          },
-          "tracip": {
-            "name": "Topography",
-            "description": "Site monitoring, External control, Precision polygonal, Implementation, Setting out, Georeferencing"
-          }
-        }
-      },
-      "references": {
-        "title": "THEY TRUST US",
-        "description": "A big thank you to our clients and partners for their loyalty: more than ever, we are committed to continuing to work with you to build the future.",
-        "logoAlt": "{client} logo"
-      }
-    },
-    "metiers": {
-      "title": "Our Professions",
-      "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
-      "imageAlt": "Professional team at work",
-      
-      "sermas": {
-        "title": "SERMAS",
-        "description": "SERMAS specializes in industrial automation and robotics solutions, providing cutting-edge technology for manufacturing processes.",
-        "imageAlt": "SERMAS facilities and equipment"
-      },
-      "sp2i-ferroviaire": {
-        "title": "SP2I Ferroviaire",
-        "description": "SP2I Ferroviaire delivers specialized solutions for the railway industry, focusing on safety and efficiency in rail transport systems.",
-        "imageAlt": "Railway systems and equipment"
-      },
-      "sp2i-prehension": {
-        "title": "SP2I Préhension",
-        "description": "SP2I Préhension develops advanced gripping and handling systems for industrial applications, optimizing production processes.",
-        "imageAlt": "Industrial gripping systems"
-      },
-      "aretec": {
-        "title": "ARETEC",
-        "description": "ARETEC provides technical expertise in industrial maintenance and engineering, ensuring optimal performance of industrial equipment.",
-        "imageAlt": "ARETEC technical solutions"
-      },
-      "tracip": {
-        "title": "TRACIP",
-        "description": "TRACIP specializes in digital forensics and data recovery, offering secure and reliable solutions for digital investigations.",
-        "imageAlt": "TRACIP digital forensics equipment"
-      }
-    },
-    "groupe": {
-      "title": "Our Group",
-      "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
-      "imageAlt": "Professional team at work"
+  "common": {
+    "switchLanguage": "Passer en français 🇫🇷"
+  },
+  "metadata": {
+    "siteTitle": "SOGAT - Industrial Project Partner",
+    "siteName": "SOGAT",
+    "keywords": "SOGAT, Industrial Projects, Engineering, Construction, Project Management",
+    "socialBanner": "SOGAT - Engineering Excellence"
+  },
+  "home": {
+    "hero": {
+      "title": "SOGAT, PARTNER OF YOUR INDUSTRIAL PROJECTS",
+      "description": "We support you throughout all construction project phases and offer our expertise to make your project a success with passion.",
+      "cta": "Discover"
     },
     "expertise": {
-      "title": "Our Expertise",
-      "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
-      "imageAlt": "Professional team at work"
+      "banner": "100% French Expertise",
+      "title": "Our Expertise & History",
+      "subtitle": "More than a promise, our services are certified \"Service France Garanti\" by AFNOR",
+      "stats": {
+        "yearFounded": "Year of creation",
+        "employees": "Employees",
+        "workshopArea": "Workshop area",
+        "exportPercentage": "Export rate"
+      },
+      "cta": "Learn more"
+    },
+    "cta": {
+      "title": "Want to join a young and dynamic team?",
+      "description": "SOGAT is waiting for you!",
+      "button": "Contact us"
+    },
+    "businessAreas": {
+      "title": "Our Business Areas",
+      "sermas": "SERMAS",
+      "sp2i-ferroviaire": "SP2I Ferroviaire",
+      "sp2i-prehension": "SP2I Préhension",
+      "aretec": "ARETEC",
+      "tracip": "TRACIP",
+      "imageAlt": "Engineering and technical drawings illustration"
     }
+  },
+  "footer": {
+    "description": "Expert in construction project management and digital modeling",
+    "sections": {
+      "services": "Services",
+      "studies": "Engineering Office",
+      "monitoring": "Monitoring",
+      "3d": "3D Acquisitions",
+      "company": "Company",
+      "about": "About",
+      "careers": "Careers",
+      "contact": "Contact",
+      "language": "Language"
+    },
+    "rights": "All rights reserved."
+  },
+  "navigation": {
+    "home": "HOME",
+    "group": "GROUP",
+    "services": "SERVICES",
+    "expertise": "EXPERTISE",
+    "contact": "CONTACT",
+    "personalSpace": "Personal space",
+    "legalNotice": "Legal notice",
+    "close": "Close menu"
+  },
+  "metiersPage": {
+    "hero": {
+      "title": "TOGETHER, WE GO FURTHER",
+      "description": "Discover our specialized subsidiaries, each bringing unique expertise to serve your projects and challenges.",
+      "imageAlt": "Our services illustration"
+    },
+    "grid": {
+      "title": "Our Subsidiaries",
+      "discoverCta": "Discover the subsidiary",
+      "items": {
+        "sermas": {
+          "name": "BIM / CIM",
+          "description": "3D modeling of existing structures, BIM Management, Digital BIM model, BIM Coordination, AMO BIM, Training"
+        },
+        "sp2i-ferroviaire": {
+          "name": "Design Office",
+          "description": "VRD and earthworks studies, Project design, Infrastructure coordination, Sizing"
+        },
+        "sp2i-prehension": {
+          "name": "Monitoring",
+          "description": "Structure testing, Automatic topographical monitoring, Inclinometer, Extensometer, Geophone, Online monitoring software ORIS Monitoring"
+        },
+        "aretec": {
+          "name": "3D Acquisitions",
+          "description": "Static 3D laser scanner, Mobile Mapping, Ground and aerial photogrammetry (drone), Railway survey by chariot"
+        },
+        "tracip": {
+          "name": "Topography",
+          "description": "Site monitoring, External control, Precision polygonal, Implementation, Setting out, Georeferencing"
+        }
+      }
+    },
+    "references": {
+      "title": "THEY TRUST US",
+      "description": "A big thank you to our clients and partners for their loyalty: more than ever, we are committed to continuing to work with you to build the future.",
+      "logoAlt": "{client} logo"
+    }
+  },
+  "metiers": {
+    "title": "Our Professions",
+    "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+    "imageAlt": "Professional team at work",
+
+    "sermas": {
+      "title": "SERMAS",
+      "description": "SERMAS specializes in industrial automation and robotics solutions, providing cutting-edge technology for manufacturing processes.",
+      "imageAlt": "SERMAS facilities and equipment"
+    },
+    "sp2i-ferroviaire": {
+      "title": "SP2I Ferroviaire",
+      "description": "SP2I Ferroviaire delivers specialized solutions for the railway industry, focusing on safety and efficiency in rail transport systems.",
+      "imageAlt": "Railway systems and equipment"
+    },
+    "sp2i-prehension": {
+      "title": "SP2I Préhension",
+      "description": "SP2I Préhension develops advanced gripping and handling systems for industrial applications, optimizing production processes.",
+      "imageAlt": "Industrial gripping systems"
+    },
+    "aretec": {
+      "title": "ARETEC",
+      "description": "ARETEC provides technical expertise in industrial maintenance and engineering, ensuring optimal performance of industrial equipment.",
+      "imageAlt": "ARETEC technical solutions"
+    },
+    "tracip": {
+      "title": "TRACIP",
+      "description": "TRACIP specializes in digital forensics and data recovery, offering secure and reliable solutions for digital investigations.",
+      "imageAlt": "TRACIP digital forensics equipment"
+    }
+  },
+  "groupe": {
+    "title": "Our Group",
+    "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+    "imageAlt": "Professional team at work"
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+    "imageAlt": "Professional team at work"
   }
+}

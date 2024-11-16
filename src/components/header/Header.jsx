@@ -1,12 +1,12 @@
-import { useLocale } from 'next-intl';
-import NavigationMenu from '../navigation/NavigationMenu';
+import { useLocale } from "next-intl";
+import NavigationMenu from "../navigation/NavigationMenu";
 
 export default function Header() {
-  const locale = useLocale();
-  
-  return (
-    <header>
-      <NavigationMenu locale={locale} />
-    </header>
-  );
+	const locale = useLocale();
+
+	return (
+		<header>
+			<NavigationMenu locale={locale} />
+		</header>
+	);
 }

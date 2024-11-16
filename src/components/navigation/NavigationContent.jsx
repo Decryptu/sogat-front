@@ -1,7 +1,5 @@
-"use client";
-
 import { useTranslations } from "next-intl";
-import { X } from "lucide-react";
+import { X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,6 +13,23 @@ const ANIMATION_CONFIG = {
 	ease: [0.22, 1, 0.36, 1],
 };
 
+const AnimatedNavLink = ({ href, children, onClick }) => (
+	<Link
+		href={href}
+		onClick={onClick}
+		className="group relative flex items-center gap-4 w-fit"
+	>
+		{/* Text content */}
+		<span className="block text-4xl md:text-6xl font-bold transition-all duration-300 ease-out group-hover:translate-x-4">
+			{children}
+		</span>
+
+		{/* Arrow icon */}
+		<ArrowRight className="w-8 h-8 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0" />
+	</Link>
+);
+
+// Rest of the component remains the same
 export default function NavigationContent({ onClose, locale }) {
 	const t = useTranslations("navigation");
 	const pathname = usePathname();
@@ -34,8 +49,6 @@ export default function NavigationContent({ onClose, locale }) {
 	};
 
 	const currentStyle = getCurrentStyle();
-
-	// Generate the background color style using CSS custom property
 	const backgroundStyle = {
 		backgroundColor: `hsl(var(${currentStyle.cssVariable}))`,
 	};
@@ -97,7 +110,7 @@ export default function NavigationContent({ onClose, locale }) {
 					</div>
 
 					<nav className="flex-1">
-						<ul className="space-y-6 text-white text-4xl md:text-6xl font-bold">
+						<ul className="space-y-6 text-white">
 							{NAVIGATION_LINKS.map(({ key, path }, index) => (
 								<motion.li
 									key={key}
@@ -109,13 +122,9 @@ export default function NavigationContent({ onClose, locale }) {
 										delay: 0.1 * index,
 									}}
 								>
-									<Link
-										href={`/${locale}${path}`}
-										className="hover:text-white/80 transition-colors"
-										onClick={onClose}
-									>
+									<AnimatedNavLink href={`/${locale}${path}`} onClick={onClose}>
 										{t(key)}
-									</Link>
+									</AnimatedNavLink>
 								</motion.li>
 							))}
 						</ul>

@@ -12,21 +12,18 @@ export default async function Groupe({ params }) {
   const t = await getTranslations('groupe');
 
   return (
-    <div className="container mx-auto px-4 py-12 lg:min-h-[calc(100vh-80px)]">
-      <div className="grid lg:grid-cols-2 gap-8 items-center">
-        {/* Left Column - Text Content */}
-        <div className="space-y-6">
+    <div className="w-full">
+      <div className="grid lg:grid-cols-2 items-center">
+        <div className="space-y-6 px-16 py-12">
           <h1 className="text-4xl lg:text-6xl font-bold">{t('title')}</h1>
           <p className="text-lg lg:text-xl text-gray-700">{t('description')}</p>
         </div>
-
-        {/* Right Column - Image */}
-        <div className="relative aspect-[4/3] lg:aspect-square">
+        <div className="relative w-full aspect-[4/3] lg:aspect-square">
           <Image
             src="/images/groupe.webp"
             alt={t('imageAlt')}
             fill
-            className="object-cover rounded-lg"
+            className="object-cover"
             priority
           />
         </div>

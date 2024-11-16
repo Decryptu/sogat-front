@@ -6,8 +6,8 @@ export default function Hero({ t }) {
     <div className="flex flex-col w-full">
       {/* First section with two columns */}
       <section className="w-full bg-dark pb-16 pt-32 md:pb-32 md:pt-80">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="container mx-auto px-4 md:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-32 items-center">
             {/* First column - Title */}
             <div className="text-left">
               <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold text-background tracking-tight">

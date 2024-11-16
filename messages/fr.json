@@ -97,6 +97,11 @@
             "description": "Suivi de chantier, Contrôle extérieur, Polygonale de précision, Implantation, Récolement, Géoréférencement"
           }
         }
+      },
+      "references": {
+        "title": "ILS NOUS FONT CONFIANCE",
+        "description": "Un grand merci à nos clients et partenaires pour leur fidélité : plus que jamais, nous avons à cœur de continuer à travailler avec vous pour construire l'avenir.",
+        "logoAlt": "Logo {client}"
       }
     },
     "metiers": {

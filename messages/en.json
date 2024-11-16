@@ -97,6 +97,11 @@
             "description": "Site monitoring, External control, Precision polygonal, Implementation, Setting out, Georeferencing"
           }
         }
+      },
+      "references": {
+        "title": "THEY TRUST US",
+        "description": "A big thank you to our clients and partners for their loyalty: more than ever, we are committed to continuing to work with you to build the future.",
+        "logoAlt": "{client} logo"
       }
     },
     "metiers": {

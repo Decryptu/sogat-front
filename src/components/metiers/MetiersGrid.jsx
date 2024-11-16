@@ -22,7 +22,7 @@ export default function MetiersGrid({ t, locale }) {
               />
             </div>
             <h3 className="text-xl font-semibold mb-4">{t(`grid.items.${metier}.name`)}</h3>
-            <p className="text-gray-600 line-clamp-3">{t(`grid.items.${metier}.description`)}</p>
+            <p className="text-gray-500 line-clamp-3">{t(`grid.items.${metier}.description`)}</p>
             <div className="mt-4 text-blue-600 group-hover:text-blue-800 font-medium flex items-center gap-2">
               {t('grid.discoverCta')} 
               <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>

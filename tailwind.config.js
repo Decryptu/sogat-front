@@ -13,6 +13,14 @@ module.exports = {
 			mono: ['var(--font-geist-mono)'],
 		  },
   		colors: {
+			sermas: 'hsl(var(--sermas))',
+			haquette: 'hsl(var(--haquette))',
+			aretec: 'hsl(var(--aretec))',
+			cip: 'hsl(var(--cip))',
+			sp2iPrehension: 'hsl(var(--sp2i-prehension))',
+			sp2iFeroviaire: 'hsl(var(--sp2i-feroviaire))',
+			tracip: 'hsl(var(--tracip))',
+			tracipMecano: 'hsl(var(--tracip-mecano))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
 			dark: 'hsl(var(--dark))',
@@ -54,14 +62,6 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-        sermas: 'hsl(var(--sermas))',
-        haquette: 'hsl(var(--haquette))',
-        aretec: 'hsl(var(--aretec))',
-        cip: 'hsl(var(--cip))',
-        sp2iPrehension: 'hsl(var(--sp2i-prehension))',
-        sp2iFeroviaire: 'hsl(var(--sp2i-feroviaire))',
-        tracip: 'hsl(var(--tracip))',
-        tracipMecano: 'hsl(var(--tracip-mecano))'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

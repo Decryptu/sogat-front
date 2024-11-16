@@ -50,7 +50,7 @@ export default function NavigationMenu({ locale }) {
           </div>
 
           {/* Empty middle section - just for border */}
-          <div className={`border-x ${styles.border} w-8 md:w-96`} />
+          <div className={`border-l md:border-x ${styles.border} w-8 md:w-96`} />
 
           {/* Menu trigger section */}
           <div className="flex justify-end px-6 md:px-12 items-center">

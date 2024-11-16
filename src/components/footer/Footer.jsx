@@ -19,9 +19,9 @@ export default function Footer() {
             <Image 
               src="/images/sogat-white.webp" 
               alt="Sogat" 
-              width={128}
+              width={100}
               height={32}
-              className="w-[128px] h-[32px] object-contain" // Fixed dimensions
+              className="w-[100px] h-[32px] object-contain" // Fixed dimensions
             />
             </div>
             <p className="text-gray-400">{t('description')}</p>

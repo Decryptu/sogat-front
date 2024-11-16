@@ -31,7 +31,6 @@ export default async function Home({ params }) {
      <Expertise t={t} />
      <Metiers t={t} />
      <CTA t={t} />
-     <Footer />
    </>
  );
 }

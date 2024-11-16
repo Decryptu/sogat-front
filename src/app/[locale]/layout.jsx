@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { SUPPORTED_LOCALES } from '@/i18n/routing';
 import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 import { getTranslations } from 'next-intl/server';
 import '@/app/globals.css';
 
@@ -64,6 +65,7 @@ export default async function RootLayout({ children, params }) {
           <main className="flex-1 relative">
             {children}
           </main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

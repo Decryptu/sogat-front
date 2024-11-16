@@ -66,6 +66,44 @@
         "legalNotice": "Legal notice",
         "close": "Close menu"
     },
+    "metiersPage": {
+      "hero": {
+        "title": "TOGETHER, WE GO FURTHER",
+        "description": "Discover our specialized subsidiaries, each bringing unique expertise to serve your projects and challenges.",
+        "imageAlt": "Our services illustration"
+      },
+      "grid": {
+        "title": "Our Subsidiaries",
+        "discoverCta": "Discover the subsidiary",
+        "items": {
+          "sermas": {
+            "name": "BIM / CIM",
+            "description": "3D modeling of existing structures, BIM Management, Digital BIM model, BIM Coordination, AMO BIM, Training"
+          },
+          "sp2i-ferroviaire": {
+            "name": "Design Office",
+            "description": "VRD and earthworks studies, Project design, Infrastructure coordination, Sizing"
+          },
+          "sp2i-prehension": {
+            "name": "Monitoring",
+            "description": "Structure testing, Automatic topographical monitoring, Inclinometer, Extensometer, Geophone, Online monitoring software ORIS Monitoring"
+          },
+          "aretec": {
+            "name": "3D Acquisitions",
+            "description": "Static 3D laser scanner, Mobile Mapping, Ground and aerial photogrammetry (drone), Railway survey by chariot"
+          },
+          "tracip": {
+            "name": "Topography",
+            "description": "Site monitoring, External control, Precision polygonal, Implementation, Setting out, Georeferencing"
+          }
+        }
+      },
+      "references": {
+        "title": "THEY TRUST US",
+        "description": "A big thank you to our clients and partners for their loyalty: more than ever, we are committed to continuing to work with you to build the future.",
+        "logoAlt": "{client} logo"
+      }
+    },
     "metiers": {
       "title": "Our Professions",
       "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",

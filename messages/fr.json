@@ -66,6 +66,39 @@
         "legalNotice": "Mentions légales",
         "close": "Fermer le menu"
     },
+    "metiersPage": {
+      "hero": {
+        "title": "ENSEMBLE, NOUS ALLONS PLUS LOIN",
+        "description": "Découvrez nos filiales spécialisées, chacune apportant son expertise unique pour servir vos projets et défis.",
+        "imageAlt": "Illustration de nos métiers"
+      },
+      "grid": {
+        "title": "Nos Filiales",
+        "discoverCta": "Découvrez la filiale",
+        "items": {
+          "sermas": {
+            "name": "BIM / CIM",
+            "description": "Modélisation 3D des existants, BIM Management, Maquette numérique BIM, Coordination BIM, AMO BIM, Formation"
+          },
+          "sp2i-ferroviaire": {
+            "name": "Bureau d'Etudes",
+            "description": "Réalisation d'études VRD et terrassement, Conception de projet, Coordination infra, Dimensionnement"
+          },
+          "sp2i-prehension": {
+            "name": "Monitoring",
+            "description": "Epreuve d'ouvrage, Auscultation topographique automatique, Inclinomètre, Extensomètre, Géophone, Logiciel de suivi en ligne ORIS Monitoring"
+          },
+          "aretec": {
+            "name": "Acquisitions 3D",
+            "description": "Scanner laser 3D statique, Mobile Mapping, Photogrammétrie terrestre et aérienne (drone), Relevé ferroviaire par chariot"
+          },
+          "tracip": {
+            "name": "Topographie",
+            "description": "Suivi de chantier, Contrôle extérieur, Polygonale de précision, Implantation, Récolement, Géoréférencement"
+          }
+        }
+      }
+    },
     "metiers": {
       "title": "Nos Métiers",
       "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",

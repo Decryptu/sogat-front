@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 import { Clock, Users, Building2, Globe } from "lucide-react";
 
 const STATS = [
-  { icon: Clock, value: 1970, label: "yearFounded" },
+  { icon: Clock, value: 1970, label: "yearFounded", isYear: true },
   { icon: Users, value: 100, label: "employees" },
   { icon: Building2, value: 15000, label: "workshopArea", suffix: "m²" },
   { icon: Globe, value: 35, label: "exportPercentage", suffix: "%" }
@@ -26,7 +26,7 @@ export default function ExpertiseStats() {
 
   return (
     <div ref={statsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-      {STATS.map(({ icon: Icon, value, label, suffix }, index) => (
+      {STATS.map(({ icon: Icon, value, label, suffix, isYear }, index) => (
         <div 
           key={label}
           className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300"
@@ -43,7 +43,7 @@ export default function ExpertiseStats() {
                 start={0}
                 end={value}
                 duration={2.5}
-                separator=" "
+                separator={isYear ? "" : " "}
                 suffix={suffix || ""}
               />
             ) : (

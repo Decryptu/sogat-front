@@ -1,148 +1,148 @@
 {
-    "common": {
-        "switchLanguage": "Switch to English 🇬🇧"
-      },
-      "metadata": {
-        "siteTitle": "SOGAT - Partenaire de Projets Industriels",
-        "siteName": "SOGAT",
-        "keywords": "SOGAT, Projets Industriels, Ingénierie, Construction, Gestion de Projets",
-        "socialBanner": "SOGAT - Excellence en Ingénierie" 
-      },
-    "home": {
-      "hero": {
-        "title": "SOGAT PARTENAIRE DE VOS PROJETS INDUSTRIELS",
-        "description": "Nous vous accompagnons durant toutes les phases des projets de construction et vous proposons notre expertise pour mener à bien vos projets avec passion.",
-        "cta": "Découvrir"
-      },
-      "expertise": {
-        "banner": "Une expertise 100% française",
-        "title": "Notre Expertise & Histoire",
-        "subtitle": "Plus qu'une promesse, nos prestations sont certifiées \"Service France Garanti\" par l'AFNOR",
-        "stats": {
-          "yearFounded": "Année de création",
-          "employees": "Collaborateurs",
-          "workshopArea": "Surface d'atelier",
-          "exportPercentage": "Taux d'export"
-        },
-        "cta": "En savoir plus"
-      },
-      "cta": {
-        "title": "Vous souhaitez rejoindre une équipe jeune et dynamique ?",
-        "description": "Sogat n'attend plus que vous !",
-        "button": "Contactez-nous"
-      },
-      "businessAreas": {
-        "title": "Nos Métiers",
-        "sermas": "SERMAS",
-        "sp2i-ferroviaire": "SP2I Ferroviaire", 
-        "sp2i-prehension": "SP2I Préhension",
-        "aretec": "ARETEC",
-        "tracip": "TRACIP",
-        "imageAlt": "Illustration de dessins techniques et d'ingénierie"
-      }
-    },
-    "footer": {
-      "description": "Expert en gestion de projets de construction et modélisation numérique",
-      "sections": {
-        "services": "Nos Métiers",
-        "studies": "Bureau d'Études",
-        "monitoring": "Monitoring",
-        "3d": "Acquisitions 3D",
-        "company": "Entreprise",
-        "about": "À propos",
-        "careers": "Carrières",
-        "contact": "Contact",
-        "language": "Langue"
-      },
-      "rights": "Tous droits réservés."
-    },
-    "navigation": {
-        "home": "ACCUEIL",
-        "group": "GROUPE",
-        "services": "MÉTIERS",
-        "expertise": "SAVOIR FAIRE",
-        "contact": "CONTACT", 
-        "personalSpace": "Espace personnel",
-        "legalNotice": "Mentions légales",
-        "close": "Fermer le menu"
-    },
-    "metiersPage": {
-      "hero": {
-        "title": "ENSEMBLE, NOUS ALLONS PLUS LOIN",
-        "description": "Découvrez nos filiales spécialisées, chacune apportant son expertise unique pour servir vos projets et défis.",
-        "imageAlt": "Illustration de nos métiers"
-      },
-      "grid": {
-        "title": "Nos Filiales",
-        "discoverCta": "Découvrez la filiale",
-        "items": {
-          "sermas": {
-            "name": "BIM / CIM",
-            "description": "Modélisation 3D des existants, BIM Management, Maquette numérique BIM, Coordination BIM, AMO BIM, Formation"
-          },
-          "sp2i-ferroviaire": {
-            "name": "Bureau d'Etudes",
-            "description": "Réalisation d'études VRD et terrassement, Conception de projet, Coordination infra, Dimensionnement"
-          },
-          "sp2i-prehension": {
-            "name": "Monitoring",
-            "description": "Epreuve d'ouvrage, Auscultation topographique automatique, Inclinomètre, Extensomètre, Géophone, Logiciel de suivi en ligne ORIS Monitoring"
-          },
-          "aretec": {
-            "name": "Acquisitions 3D",
-            "description": "Scanner laser 3D statique, Mobile Mapping, Photogrammétrie terrestre et aérienne (drone), Relevé ferroviaire par chariot"
-          },
-          "tracip": {
-            "name": "Topographie",
-            "description": "Suivi de chantier, Contrôle extérieur, Polygonale de précision, Implantation, Récolement, Géoréférencement"
-          }
-        }
-      },
-      "references": {
-        "title": "ILS NOUS FONT CONFIANCE",
-        "description": "Un grand merci à nos clients et partenaires pour leur fidélité : plus que jamais, nous avons à cœur de continuer à travailler avec vous pour construire l'avenir.",
-        "logoAlt": "Logo {client}"
-      }
-    },
-    "metiers": {
-      "title": "Nos Métiers",
-      "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
-      "imageAlt": "Équipe professionnelle au travail",
-      
-      "sermas": {
-        "title": "SERMAS",
-        "description": "SERMAS est spécialisée dans les solutions d'automatisation industrielle et de robotique, fournissant des technologies de pointe pour les processus de fabrication.",
-        "imageAlt": "Installations et équipements SERMAS"
-      },
-      "sp2i-ferroviaire": {
-        "title": "SP2I Ferroviaire",
-        "description": "SP2I Ferroviaire propose des solutions spécialisées pour l'industrie ferroviaire, en mettant l'accent sur la sécurité et l'efficacité des systèmes de transport ferroviaire.",
-        "imageAlt": "Systèmes et équipements ferroviaires"
-      },
-      "sp2i-prehension": {
-        "title": "SP2I Préhension",
-        "description": "SP2I Préhension développe des systèmes avancés de préhension et de manipulation pour les applications industrielles, optimisant les processus de production.",
-        "imageAlt": "Systèmes de préhension industriels"
-      },
-      "aretec": {
-        "title": "ARETEC",
-        "description": "ARETEC fournit une expertise technique en maintenance industrielle et en ingénierie, assurant une performance optimale des équipements industriels.",
-        "imageAlt": "Solutions techniques ARETEC"
-      },
-      "tracip": {
-        "title": "TRACIP",
-        "description": "TRACIP est spécialisée dans l'investigation numérique et la récupération de données, offrant des solutions sécurisées et fiables pour les enquêtes numériques.",
-        "imageAlt": "Équipement d'investigation numérique TRACIP"
-      }
-    },
-    "groupe": {
-      "title": "Notre Groupe",
-      "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
-      "imageAlt": "Équipe professionnelle au travail"
+  "common": {
+    "switchLanguage": "Switch to English 🇬🇧"
+  },
+  "metadata": {
+    "siteTitle": "SOGAT - Partenaire de Projets Industriels",
+    "siteName": "SOGAT",
+    "keywords": "SOGAT, Projets Industriels, Ingénierie, Construction, Gestion de Projets",
+    "socialBanner": "SOGAT - Excellence en Ingénierie"
+  },
+  "home": {
+    "hero": {
+      "title": "SOGAT PARTENAIRE DE VOS PROJETS INDUSTRIELS",
+      "description": "Nous vous accompagnons durant toutes les phases des projets de construction et vous proposons notre expertise pour mener à bien vos projets avec passion.",
+      "cta": "Découvrir"
     },
     "expertise": {
-      "title": "Notre Savoir Faire",
-      "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
-      "imageAlt": "Équipe professionnelle au travail"
+      "banner": "Une expertise 100% française",
+      "title": "Notre Expertise & Histoire",
+      "subtitle": "Plus qu'une promesse, nos prestations sont certifiées \"Service France Garanti\" par l'AFNOR",
+      "stats": {
+        "yearFounded": "Année de création",
+        "employees": "Collaborateurs",
+        "workshopArea": "Surface d'atelier",
+        "exportPercentage": "Taux d'export"
+      },
+      "cta": "En savoir plus"
+    },
+    "cta": {
+      "title": "Vous souhaitez rejoindre une équipe jeune et dynamique ?",
+      "description": "Sogat n'attend plus que vous !",
+      "button": "Contactez-nous"
+    },
+    "businessAreas": {
+      "title": "Nos Métiers",
+      "sermas": "SERMAS",
+      "sp2i-ferroviaire": "SP2I Ferroviaire",
+      "sp2i-prehension": "SP2I Préhension",
+      "aretec": "ARETEC",
+      "tracip": "TRACIP",
+      "imageAlt": "Illustration de dessins techniques et d'ingénierie"
     }
+  },
+  "footer": {
+    "description": "Expert en gestion de projets de construction et modélisation numérique",
+    "sections": {
+      "services": "Nos Métiers",
+      "studies": "Bureau d'Études",
+      "monitoring": "Monitoring",
+      "3d": "Acquisitions 3D",
+      "company": "Entreprise",
+      "about": "À propos",
+      "careers": "Carrières",
+      "contact": "Contact",
+      "language": "Langue"
+    },
+    "rights": "Tous droits réservés."
+  },
+  "navigation": {
+    "home": "ACCUEIL",
+    "group": "GROUPE",
+    "services": "MÉTIERS",
+    "expertise": "SAVOIR FAIRE",
+    "contact": "CONTACT",
+    "personalSpace": "Espace personnel",
+    "legalNotice": "Mentions légales",
+    "close": "Fermer le menu"
+  },
+  "metiersPage": {
+    "hero": {
+      "title": "ENSEMBLE, NOUS ALLONS PLUS LOIN",
+      "description": "Découvrez nos filiales spécialisées, chacune apportant son expertise unique pour servir vos projets et défis.",
+      "imageAlt": "Illustration de nos métiers"
+    },
+    "grid": {
+      "title": "Nos Filiales",
+      "discoverCta": "Découvrez la filiale",
+      "items": {
+        "sermas": {
+          "name": "BIM / CIM",
+          "description": "Modélisation 3D des existants, BIM Management, Maquette numérique BIM, Coordination BIM, AMO BIM, Formation"
+        },
+        "sp2i-ferroviaire": {
+          "name": "Bureau d'Etudes",
+          "description": "Réalisation d'études VRD et terrassement, Conception de projet, Coordination infra, Dimensionnement"
+        },
+        "sp2i-prehension": {
+          "name": "Monitoring",
+          "description": "Epreuve d'ouvrage, Auscultation topographique automatique, Inclinomètre, Extensomètre, Géophone, Logiciel de suivi en ligne ORIS Monitoring"
+        },
+        "aretec": {
+          "name": "Acquisitions 3D",
+          "description": "Scanner laser 3D statique, Mobile Mapping, Photogrammétrie terrestre et aérienne (drone), Relevé ferroviaire par chariot"
+        },
+        "tracip": {
+          "name": "Topographie",
+          "description": "Suivi de chantier, Contrôle extérieur, Polygonale de précision, Implantation, Récolement, Géoréférencement"
+        }
+      }
+    },
+    "references": {
+      "title": "ILS NOUS FONT CONFIANCE",
+      "description": "Un grand merci à nos clients et partenaires pour leur fidélité : plus que jamais, nous avons à cœur de continuer à travailler avec vous pour construire l'avenir.",
+      "logoAlt": "Logo {client}"
+    }
+  },
+  "metiers": {
+    "title": "Nos Métiers",
+    "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
+    "imageAlt": "Équipe professionnelle au travail",
+
+    "sermas": {
+      "title": "SERMAS",
+      "description": "SERMAS est spécialisée dans les solutions d'automatisation industrielle et de robotique, fournissant des technologies de pointe pour les processus de fabrication.",
+      "imageAlt": "Installations et équipements SERMAS"
+    },
+    "sp2i-ferroviaire": {
+      "title": "SP2I Ferroviaire",
+      "description": "SP2I Ferroviaire propose des solutions spécialisées pour l'industrie ferroviaire, en mettant l'accent sur la sécurité et l'efficacité des systèmes de transport ferroviaire.",
+      "imageAlt": "Systèmes et équipements ferroviaires"
+    },
+    "sp2i-prehension": {
+      "title": "SP2I Préhension",
+      "description": "SP2I Préhension développe des systèmes avancés de préhension et de manipulation pour les applications industrielles, optimisant les processus de production.",
+      "imageAlt": "Systèmes de préhension industriels"
+    },
+    "aretec": {
+      "title": "ARETEC",
+      "description": "ARETEC fournit une expertise technique en maintenance industrielle et en ingénierie, assurant une performance optimale des équipements industriels.",
+      "imageAlt": "Solutions techniques ARETEC"
+    },
+    "tracip": {
+      "title": "TRACIP",
+      "description": "TRACIP est spécialisée dans l'investigation numérique et la récupération de données, offrant des solutions sécurisées et fiables pour les enquêtes numériques.",
+      "imageAlt": "Équipement d'investigation numérique TRACIP"
+    }
+  },
+  "groupe": {
+    "title": "Notre Groupe",
+    "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
+    "imageAlt": "Équipe professionnelle au travail"
+  },
+  "expertise": {
+    "title": "Notre Savoir Faire",
+    "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
+    "imageAlt": "Équipe professionnelle au travail"
   }
+}

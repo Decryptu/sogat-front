@@ -21,7 +21,8 @@ export default function Hero({ t }) {
                 {t('hero.description')}
               </p>
               <Button 
-                size="lg"
+                variant="outlineDark"
+                size="xl"
                 className="w-fit text-lg"
                 asChild
               >

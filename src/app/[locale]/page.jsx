@@ -4,7 +4,6 @@ import Hero from '@/components/home/Hero';
 import Expertise from '@/components/home/Expertise';
 import Metiers from '@/components/home/Metiers';
 import CTA from '@/components/home/CTA';
-import Footer from '@/components/footer/Footer';
 
 export async function generateMetadata({ params }) {
  const { locale } = await params;

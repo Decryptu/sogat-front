@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   ]);
  
   return {
-    metadataBase: new URL('https://sogat.com'),
+    metadataBase: new URL('https://sogat.vercel.app'),
     title: {
       template: '%s | SOGAT',
       default: t('siteTitle'),
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: t('siteTitle'),
       description: homeT('hero.description'),
-      url: 'https://sogat.com',
+      url: 'https://sogat.vercel.app',
       siteName: t('siteName'),
       images: [
         {

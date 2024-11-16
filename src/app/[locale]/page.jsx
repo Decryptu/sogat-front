@@ -7,6 +7,7 @@ import CTA from "@/components/home/CTA";
 
 export async function generateMetadata({ params }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
 	const t = await getTranslations("home");
 
 	return {

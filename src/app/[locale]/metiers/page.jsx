@@ -14,10 +14,11 @@ export default async function Metiers({ params }) {
   const t = await getTranslations('metiersPage');
 
   return (
-    <main>
+    // Removed main tag as it's adding default margins
+    <div className="w-full">
       <MetiersHero t={t} />
       <MetiersGrid t={t} locale={locale} />
       <References t={t} />
-    </main>
+    </div>
   );
 }

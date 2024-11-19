@@ -137,9 +137,73 @@
     }
   },
   "groupe": {
-    "title": "Notre Groupe",
-    "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
-    "imageAlt": "Équipe professionnelle au travail"
+    "title": "PRÉSENTATION DU GROUPE SOGAT",
+    "description": "SOGAT est un groupe familial indépendant, en troisième génération, en forte croissance. Avec plus de 30 ans de collaboration avec de grands comptes, le groupe sert une clientèle internationale diversifiée dans des secteurs tels que le ferroviaire, l’automobile, et le nucléaire. Reconnu pour son expertise et son innovation, SOGAT est leader en France avec des solutions comme les caténaires escamotables et la découpe d’aluminium. Le groupe dispose d’une équipe de direction compétente et d’un personnel agile, avec une moyenne d’âge de 40 ans, évoluant dans un environnement de travail positif.",
+    "imageAlt": "Siège du Groupe SOGAT",
+    "stats": {
+      "foundation": {
+        "value": "1970",
+        "label": "Année de création de la 1ère entreprise (SOGAT = 1987)"
+      },
+      "employees": {
+        "value": "100",
+        "label": "Collaborateurs"
+      },
+      "entities": {
+        "value": "7",
+        "label": "Différentes entités"
+      },
+      "surface": {
+        "value": "15 000 M²",
+        "label": "De surface d'atelier"
+      },
+      "departments": {
+        "value": "4",
+        "label": "Bureaux d'études spécialisés en robotique, électrique, automatisme et mécanique"
+      },
+      "revenue": {
+        "value": "30 M€",
+        "label": "De chiffre d'affaire"
+      },
+      "export": {
+        "value": "30 À 40%",
+        "label": "D'export"
+      }
+    },
+    "overview": {
+      "title": "SOGAT un groupe familial, indépendant, historique et à forte croissance",
+      "subtitle": "Un modèle économique basé sur :",
+      "points": [
+        "Groupe familial (3ème Génération)",
+        "Un panel de clients récurrents grands comptes avec lesquels le groupe travaille pour certains, depuis plus de 30 ans",
+        "Des clients et prospects internationaux",
+        "Une diversification importante de notre clientèle (Ferroviaire, automobile, nucléaire, sidérurgie et aluminerie, Agroalimentaire, Luxe, Pharmaceutique, Environnement etc…)",
+        "Des savoirs faire reconnus et une forte capacité d'innovation sur lesquelles nous sommes leaders en France",
+        "Une équipe de management en place et de qualité",
+        "Un effectif agile, flexible, expérimenté, dont la moyenne d'âge est proche de 40ans"
+      ]
+    },
+    "solutions": {
+      "title": "Nos solutions clé en main",
+      "items": {
+        "engineering": {
+          "title": "INGÉNIERIE",
+          "description": "4 bureaux d'études spécialisés : automatisme, robotique, électrique et mécanique"
+        },
+        "project": {
+          "title": "PROJET",
+          "description": "Pilotage précis, synergies entre les entités, analyse de risques, recherche de diversification, veille technologique, amélioration continue"
+        },
+        "manufacturing": {
+          "title": "FABRICATION",
+          "description": "Intégration des productions, atelier électrique et automatisme, atelier mécanique, usinage et chaudronnerie"
+        },
+        "installation": {
+          "title": "INSTALLATION",
+          "description": "Installation clé en main, service après-vente global"
+        }
+      }
+    }
   },
   "expertise": {
     "title": "Notre Savoir Faire",

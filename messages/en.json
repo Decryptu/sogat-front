@@ -137,9 +137,73 @@
     }
   },
   "groupe": {
-    "title": "Our Group",
-    "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
-    "imageAlt": "Professional team at work"
+    "title": "PRESENTATION OF SOGAT GROUP",
+    "description": "SOGAT is a family-owned, independent group in its third generation, experiencing significant growth. With over 30 years of partnerships with major clients, the group serves a diverse international clientele across industries like railways, automotive, nuclear, and more. Renowned for its expertise and innovation, SOGAT leads in France with solutions such as retractable catenaries and aluminum cutting. The group boasts a skilled management team and an agile workforce, with an average age of 40, thriving in a positive work environment.",
+    "imageAlt": "SOGAT Group headquarters",
+    "stats": {
+      "foundation": {
+        "value": "1970",
+        "label": "Year of creation of the first company (SOGAT = 1987)"
+      },
+      "employees": {
+        "value": "100",
+        "label": "Employees"
+      },
+      "entities": {
+        "value": "7",
+        "label": "Different entities"
+      },
+      "surface": {
+        "value": "15,000 M²",
+        "label": "Workshop surface"
+      },
+      "departments": {
+        "value": "4",
+        "label": "Specialized design offices in robotics, electrical, automation and mechanics"
+      },
+      "revenue": {
+        "value": "€30M",
+        "label": "Revenue"
+      },
+      "export": {
+        "value": "30-40%",
+        "label": "Export"
+      }
+    },
+    "overview": {
+      "title": "SOGAT a family-owned, independent, historic and high-growth group",
+      "subtitle": "An economic model based on:",
+      "points": [
+        "Family group (3rd Generation)",
+        "Portfolio of recurring key account customers, some of whom have been working with the group for over 30 years",
+        "International clients and prospects",
+        "Significant diversification of our clientele (Railway, automotive, nuclear, steel and aluminum, Food processing, Luxury, Pharmaceutical, Environment, etc.)",
+        "Recognized expertise and strong innovation capacity where we are leaders in France",
+        "Quality management team in place",
+        "Agile, flexible, experienced workforce with an average age of around 40 years"
+      ]
+    },
+    "solutions": {
+      "title": "Our turnkey solutions",
+      "items": {
+        "engineering": {
+          "title": "ENGINEERING",
+          "description": "4 specialized design offices: automation, robotics, electrical and mechanical"
+        },
+        "project": {
+          "title": "PROJECT",
+          "description": "Precise piloting, synergies between entities, risk analysis, diversification research, technology watch, continuous improvement"
+        },
+        "manufacturing": {
+          "title": "MANUFACTURING",
+          "description": "Production integration, electrical and automation workshop, mechanical workshop, machining and boilermaking"
+        },
+        "installation": {
+          "title": "INSTALLATION",
+          "description": "Turnkey installation, global service after-sales"
+        }
+      }
+    }
   },
   "expertise": {
     "title": "Our Expertise",

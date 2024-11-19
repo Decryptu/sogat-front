@@ -8,7 +8,7 @@ export default function Expertise() {
 
   return (
     <section>
-      <div className="py-4 text-center">
+      <div id="discover" className="py-4 text-center">
         <div className="flex items-center justify-center gap-4">
           <span className="h-1 w-12 bg-blue-600" />
           <h3 className="text-sm font-light uppercase tracking-wider">
@@ -24,7 +24,7 @@ export default function Expertise() {
             {t("title")}
           </h2>
           <Link 
-            href="/expertise"
+            href="/groupe"
             className="inline-flex items-center text-lg text-blue-600 hover:text-blue-700 gap-2 font-medium"
           >
             {t("cta")}

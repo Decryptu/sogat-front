@@ -29,7 +29,8 @@
     "cta": {
       "title": "Vous souhaitez rejoindre une équipe jeune et dynamique ?",
       "description": "Sogat n'attend plus que vous !",
-      "button": "Contactez-nous"
+      "button": "Contactez-nous",
+      "label": "Groupe SOGAT"
     },
     "businessAreas": {
       "title": "Nos Métiers",

@@ -1,17 +1,53 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function CTA({ t }) {
-	return (
-		<section className="bg-blue-600 text-white py-20">
-			<div className="container mx-auto px-4 text-center">
-				<h2 className="text-3xl md:text-4xl font-bold mb-6">
-					{t("cta.title")}
-				</h2>
-				<p className="text-xl mb-8 max-w-2xl mx-auto">{t("cta.description")}</p>
-				<Button size="lg" variant="secondary" className="font-semibold">
-					{t("cta.button")}
-				</Button>
-			</div>
-		</section>
-	);
+  return (
+    <div className="container mx-auto px-6 py-16">
+      <section className="relative text-white pt-20 pb-24 rounded-xl overflow-hidden">
+        {/* Background image with gradient overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10" />
+          <Image 
+            src="/images/contact.webp"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-20 mx-auto px-6 md:px-16">
+          <div className="max-w-3xl">
+            <span className="text-sm font-light uppercase text-gray-200 tracking-wider mb-6 block">
+              {t("cta.label")}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-normal mb-6 leading-tight">
+              {t("cta.title")}
+            </h2>
+            <p className="text-xl mb-8 opacity-90 font-light">
+              {t("cta.description")}
+            </p>
+            <Button 
+              variant="secondary" 
+              className="inline-flex items-center gap-2 text-base px-6"
+            >
+              {t("cta.button")}
+              <svg 
+                className="w-4 h-4" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2"
+              >
+                <path d="M5 12h14m-7-7l7 7-7 7" />
+				<title>Arrow</title>
+              </svg>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }

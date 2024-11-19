@@ -29,7 +29,8 @@
     "cta": {
       "title": "Want to join a young and dynamic team?",
       "description": "SOGAT is waiting for you!",
-      "button": "Contact us"
+      "button": "Contact us",
+      "label": "Groupe SOGAT"
     },
     "businessAreas": {
       "title": "Our Business Areas",

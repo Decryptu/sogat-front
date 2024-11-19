@@ -32,7 +32,7 @@ export default function HeroParallax() {
 					sizes="(max-width: 768px) 100vw, 100vw"
 					className="object-cover"
 					style={{
-						objectPosition: "center 30%",
+						objectPosition: "center 80%",
 					}}
 				/>
 			</div>

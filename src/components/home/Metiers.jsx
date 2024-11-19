@@ -17,33 +17,35 @@ const AnimatedLink = ({ href, children }) => (
 
 export default function BusinessAreas({ t }) {
 	return (
-		<section className="grid md:grid-cols-2 min-h-[600px]">
-			{/* Left column */}
-			<div className="bg-gray-50 px-8 md:px-16 py-12 md:py-20">
-				<h2 className="text-4xl md:text-5xl font-bold mb-16">
-					{t("businessAreas.title")}
-				</h2>
-
-				<nav className="space-y-8">
-					{METIERS.map((metier) => (
-						<AnimatedLink key={metier} href={`/metiers/${metier}`}>
-							{t(`businessAreas.${metier}`)}
-						</AnimatedLink>
-					))}
-				</nav>
-			</div>
-
-			{/* Right column - Fixed height for mobile */}
-			<div className="relative h-[300px] md:h-auto bg-white">
-				<Image
-					src="/images/nos-metiers.webp"
-					alt={t("businessAreas.imageAlt")}
-					fill
-					className="object-cover"
-					sizes="(max-width: 768px) 100vw, 50vw"
-					priority
-				/>
-			</div>
-		</section>
+	  <section className="grid md:grid-cols-2 border-b-4 border-blue-500 bg-white min-h-[600px]">
+		{/* Left column */}
+		<div className="bg-background px-8 md:px-16 py-12 md:py-20">
+		  <h2 className="text-4xl md:text-5xl font-bold mb-16">
+			{t("businessAreas.title")}
+		  </h2>
+  
+		  <nav className="divide-y divide-gray-200"> {/* Added divide utilities */}
+			{METIERS.map((metier) => (
+			  <div key={metier} className="py-4 first:pt-0 last:pb-0"> {/* Added padding */}
+				<AnimatedLink href={`/metiers/${metier}`}>
+				  {t(`businessAreas.${metier}`)}
+				</AnimatedLink>
+			  </div>
+			))}
+		  </nav>
+		</div>
+  
+		{/* Right column - Fixed height for mobile */}
+		<div className="relative h-[300px] md:h-auto md:m-16">
+		  <Image
+			src="/images/nos-metiers.webp"
+			alt={t("businessAreas.imageAlt")}
+			fill
+			className="object-cover"
+			sizes="(max-width: 768px) 100vw, 50vw"
+			priority
+		  />
+		</div>
+	  </section>
 	);
-}
+  }

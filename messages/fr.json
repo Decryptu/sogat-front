@@ -113,27 +113,62 @@
     "sermas": {
       "title": "SERMAS",
       "description": "SERMAS est spécialisée dans les solutions d'automatisation industrielle et de robotique, fournissant des technologies de pointe pour les processus de fabrication.",
-      "imageAlt": "Installations et équipements SERMAS"
+      "imageAlt": "Installations et équipements SERMAS",
+      "cta": {
+        "label": "Contacter Sermas",
+        "title": "Travailler avec Sermas",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société Sermas"
+      }
     },
     "sp2i-ferroviaire": {
       "title": "SP2I Ferroviaire",
       "description": "SP2I Ferroviaire propose des solutions spécialisées pour l'industrie ferroviaire, en mettant l'accent sur la sécurité et l'efficacité des systèmes de transport ferroviaire.",
-      "imageAlt": "Systèmes et équipements ferroviaires"
+      "imageAlt": "Systèmes et équipements ferroviaires",
+      "cta": {
+        "label": "Contacter SP2I Ferroviaire",
+        "title": "Travailler avec SP2I Ferroviaire",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société SP2I Ferroviaire"
+      }
     },
     "sp2i-prehension": {
       "title": "SP2I Préhension",
       "description": "SP2I Préhension développe des systèmes avancés de préhension et de manipulation pour les applications industrielles, optimisant les processus de production.",
-      "imageAlt": "Systèmes de préhension industriels"
+      "imageAlt": "Systèmes de préhension industriels",
+      "cta": {
+        "label": "Contacter SP2I Préhension",
+        "title": "Travailler avec SP2I Préhension",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société SP2I Préhension"
+      }
     },
     "aretec": {
       "title": "ARETEC",
       "description": "ARETEC fournit une expertise technique en maintenance industrielle et en ingénierie, assurant une performance optimale des équipements industriels.",
-      "imageAlt": "Solutions techniques ARETEC"
+      "imageAlt": "Solutions techniques ARETEC",
+      "cta": {
+        "label": "Contacter ARETEC",
+        "title": "Travailler avec ARETEC",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société ARETEC"
+      }
     },
     "tracip": {
       "title": "TRACIP",
       "description": "TRACIP est spécialisée dans l'investigation numérique et la récupération de données, offrant des solutions sécurisées et fiables pour les enquêtes numériques.",
-      "imageAlt": "Équipement d'investigation numérique TRACIP"
+      "imageAlt": "Équipement d'investigation numérique TRACIP",
+      "cta": {
+        "label": "Contacter TRACIP",
+        "title": "Travailler avec TRACIP",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société TRACIP"
+      }
     }
   },
   "groupe": {

@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { METIERS } from "@/constants/metiers";
+import MetiersLogos from "@/components/home/MetiersLogos";
 
 export default function Footer() {
 	const t = useTranslations("footer");
@@ -11,8 +12,9 @@ export default function Footer() {
 	const locale = useLocale();
 
 	return (
-		<footer className="bg-gray-900 text-white py-12">
-			<div className="container mx-auto px-4">
+		<footer className="bg-gray-900 text-white">
+			<MetiersLogos />
+			<div className="container py-12 mx-auto px-4">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 					<div>
 						<div className="h-8 w-32 mb-4">

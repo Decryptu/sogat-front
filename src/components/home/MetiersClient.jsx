@@ -68,7 +68,7 @@ export default function MetiersClient({ translations, metiers }) {
           `}
           sizes="(max-width: 768px) 100vw, 50vw"
           priority
-          onLoadingComplete={() => setLoading(false)}
+          onLoad={() => setLoading(false)}
         />
       </div>
     </>

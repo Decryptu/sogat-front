@@ -113,27 +113,62 @@
     "sermas": {
       "title": "SERMAS",
       "description": "SERMAS specializes in industrial automation and robotics solutions, providing cutting-edge technology for manufacturing processes.",
-      "imageAlt": "SERMAS facilities and equipment"
+      "imageAlt": "SERMAS facilities and equipment",
+      "cta": {
+        "label": "Contact Sermas",
+        "title": "Work with Sermas",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "Sermas facility"
+      }
     },
     "sp2i-ferroviaire": {
       "title": "SP2I Ferroviaire",
       "description": "SP2I Ferroviaire delivers specialized solutions for the railway industry, focusing on safety and efficiency in rail transport systems.",
-      "imageAlt": "Railway systems and equipment"
+      "imageAlt": "Railway systems and equipment",
+      "cta": {
+        "label": "Contact SP2I Ferroviaire",
+        "title": "Work with SP2I Ferroviaire",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "SP2I Ferroviaire facility"
+      }
     },
     "sp2i-prehension": {
       "title": "SP2I Préhension",
       "description": "SP2I Préhension develops advanced gripping and handling systems for industrial applications, optimizing production processes.",
-      "imageAlt": "Industrial gripping systems"
+      "imageAlt": "Industrial gripping systems",
+      "cta": {
+        "label": "Contact SP2I Préhension",
+        "title": "Work with SP2I Préhension",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "SP2I Préhension facility"
+      }
     },
     "aretec": {
       "title": "ARETEC",
       "description": "ARETEC provides technical expertise in industrial maintenance and engineering, ensuring optimal performance of industrial equipment.",
-      "imageAlt": "ARETEC technical solutions"
+      "imageAlt": "ARETEC technical solutions",
+      "cta": {
+        "label": "Contact ARETEC",
+        "title": "Work with ARETEC",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "ARETEC facility"
+      }
     },
     "tracip": {
       "title": "TRACIP",
       "description": "TRACIP specializes in digital forensics and data recovery, offering secure and reliable solutions for digital investigations.",
-      "imageAlt": "TRACIP digital forensics equipment"
+      "imageAlt": "TRACIP digital forensics equipment",
+      "cta": {
+        "label": "Contact TRACIP",
+        "title": "Work with TRACIP",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "TRACIP facility"
+      }
     }
   },
   "groupe": {

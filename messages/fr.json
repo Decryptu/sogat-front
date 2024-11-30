@@ -78,24 +78,24 @@
       "discoverCta": "Découvrez la filiale",
       "items": {
         "sermas": {
-          "name": "BIM / CIM",
-          "description": "Modélisation 3D des existants, BIM Management, Maquette numérique BIM, Coordination BIM, AMO BIM, Formation"
+          "name": "Solutions de Découpe ALU",
+          "description": "Conception d'équipements sur mesure pour les alumineries"
         },
         "sp2i-ferroviaire": {
-          "name": "Bureau d'Etudes",
-          "description": "Réalisation d'études VRD et terrassement, Conception de projet, Coordination infra, Dimensionnement"
+          "name": "Équipements Ferroviaires",
+          "description": "Réalisation d'équipements sécurisés destinés aux ateliers de maintenance ferroviaire"
         },
         "sp2i-prehension": {
-          "name": "Monitoring",
-          "description": "Epreuve d'ouvrage, Auscultation topographique automatique, Inclinomètre, Extensomètre, Géophone, Logiciel de suivi en ligne ORIS Monitoring"
+          "name": "Manutention Lourde",
+          "description": "Réalisation d'outils de levage et de manutention pour charges lourdes"
         },
         "aretec": {
-          "name": "Acquisitions 3D",
-          "description": "Scanner laser 3D statique, Mobile Mapping, Photogrammétrie terrestre et aérienne (drone), Relevé ferroviaire par chariot"
+          "name": "Machines Spéciales",
+          "description": "Conception et réalisation de machines spéciales et lignes de production automatisées et robotisées"
         },
         "tracip": {
-          "name": "Topographie",
-          "description": "Suivi de chantier, Contrôle extérieur, Polygonale de précision, Implantation, Récolement, Géoréférencement"
+          "name": "Environnement Industriel",
+          "description": "Réalisation d'unités de traitement de fumées industrielles"
         }
       }
     },

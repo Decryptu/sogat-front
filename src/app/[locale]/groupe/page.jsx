@@ -1,4 +1,3 @@
-// src/app/[locale]/groupe/page.jsx
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import Hero from "@/components/groupe/Hero";
@@ -37,7 +36,7 @@ export default async function Groupe(props) {
   };
 
   const statsProps = {
-    stats: ["foundation", "employees", "entities", "surface", "departments", "revenue", "export"].map(
+    stats: ["foundation", "employees", "entities", "surface", "departments", "revenue"].map(
       (key) => ({
         key,
         value: t(`stats.${key}.value`),

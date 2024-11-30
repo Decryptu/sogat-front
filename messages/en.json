@@ -78,24 +78,24 @@
       "discoverCta": "Discover the subsidiary",
       "items": {
         "sermas": {
-          "name": "BIM / CIM",
-          "description": "3D modeling of existing structures, BIM Management, Digital BIM model, BIM Coordination, AMO BIM, Training"
+          "name": "ALU Cutting Solutions", 
+          "description": "Design of custom equipment for aluminum manufacturing"
         },
         "sp2i-ferroviaire": {
-          "name": "Design Office",
-          "description": "VRD and earthworks studies, Project design, Infrastructure coordination, Sizing"
+          "name": "Railway Equipment",
+          "description": "Production of secured equipment for railway maintenance workshops"
         },
         "sp2i-prehension": {
-          "name": "Monitoring",
-          "description": "Structure testing, Automatic topographical monitoring, Inclinometer, Extensometer, Geophone, Online monitoring software ORIS Monitoring"
+          "name": "Heavy Load Handling",
+          "description": "Production of lifting tools and handling equipment for heavy loads"
         },
         "aretec": {
-          "name": "3D Acquisitions",
-          "description": "Static 3D laser scanner, Mobile Mapping, Ground and aerial photogrammetry (drone), Railway survey by chariot"
+          "name": "Special Machines",
+          "description": "Design and production of special machines and automated/robotic production lines"
         },
         "tracip": {
-          "name": "Topography",
-          "description": "Site monitoring, External control, Precision polygonal, Implementation, Setting out, Georeferencing"
+          "name": "Industrial Environment",
+          "description": "Production of industrial fume treatment units"
         }
       }
     },

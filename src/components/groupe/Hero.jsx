@@ -1,4 +1,3 @@
-// src/components/groupe/Hero.jsx
 import Image from "next/image";
 
 export default function Hero({ title, description, imageAlt }) {
@@ -15,7 +14,7 @@ export default function Hero({ title, description, imageAlt }) {
        </div>
        <div className="relative w-full aspect-[4/3] lg:aspect-square">
          <Image
-           src="/images/hero-bg.webp"
+           src="/images/groupe.webp"
            alt={imageAlt}
            fill
            priority 

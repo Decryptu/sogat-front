@@ -6,20 +6,20 @@ export function generateStaticParams() {
 }
 
 export default async function ContactLayout({ children, params }) {
-	const { locale } = await params;
-	setRequestLocale(locale);
+  const { locale } = await params;
+  setRequestLocale(locale);
   
-	return (
-	  <>
-		<link
-		  rel="stylesheet"
-		  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
-		  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-		  crossOrigin=""
-		/>
-		<div className="w-full pt-20">
-		  {children}
-		</div>
-	  </>
-	);
-  }
+  return (
+    <>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossOrigin=""
+      />
+      <div className="w-full pt-20">
+        {children}
+      </div>
+    </>
+  );
+}

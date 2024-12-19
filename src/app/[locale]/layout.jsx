@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import { Toaster } from "@/components/ui/toaster"
 import "@/app/globals.css";
 
 export async function generateMetadata({ params }) {
@@ -71,6 +72,7 @@ export default async function RootLayout({ children, params }) {
 				<NextIntlClientProvider messages={messages}>
 					<Header />
 					<main className="flex-1 relative">{children}</main>
+					<Toaster />
 					<Footer />
 				</NextIntlClientProvider>
 			</body>

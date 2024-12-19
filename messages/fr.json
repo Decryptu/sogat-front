@@ -244,5 +244,29 @@
     "title": "Notre Savoir Faire",
     "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
     "imageAlt": "Équipe professionnelle au travail"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Que vous ayez une question sur nos services, nos projets ou autre chose, notre équipe est prête à répondre à toutes vos questions.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "success": "Merci ! Nous reviendrons vers vous rapidement.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "location": {
+      "title": "Visitez nos bureaux",
+      "description": "Venez nous rendre visite à notre siège social pour discuter de vos projets en personne.",
+      "address": {
+        "name": "Groupe SOGAT",
+        "street": "123 Avenue Industrielle",
+        "city": "75008 Paris",
+        "country": "France"
+      },
+      "hours": "Lundi - Vendredi : 9h00 - 18h00"
+    }
   }
 }

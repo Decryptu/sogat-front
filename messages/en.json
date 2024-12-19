@@ -244,5 +244,29 @@
     "title": "Our Expertise",
     "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
     "imageAlt": "Professional team at work"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "description": "Whether you have a question about our services, projects, or anything else, our team is ready to answer all your questions.",
+    "form": {
+      "title": "Send us a message",
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "submit": "Send message",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "location": {
+      "title": "Visit our office",
+      "description": "Come visit us at our headquarters to discuss your projects in person.",
+      "address": {
+        "name": "Groupe SOGAT",
+        "street": "123 Industrial Avenue",
+        "city": "75008 Paris",
+        "country": "France"
+      },
+      "hours": "Monday - Friday: 9:00 AM - 6:00 PM"
+    }
   }
 }

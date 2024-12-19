@@ -6,7 +6,7 @@ export default function References({ t }) {
 	const displayedClients = CLIENTS.slice(0, 10);
 
 	return (
-		<section className="bg-slate-700 py-24">
+		<section className="bg-slate-700 px-16 py-32">
 			<div className="container mx-auto px-4">
 				{/* Title and Description */}
 				<div className="max-w-xl mb-20">

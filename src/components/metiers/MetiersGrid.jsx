@@ -3,12 +3,11 @@ import Link from "next/link";
 import { METIERS } from "@/constants/metiers";
 
 export default function MetiersGrid({ t, locale }) {
- return (
-   <div className="container mx-auto px-4 py-16">
-     <h1 className="text-5xl font-black mb-24">
-       ENSEMBLE, NOUS<br />
-       ALLONS PLUS LOIN
-     </h1>
+  return (
+    <div className="container mx-auto px-16 py-32">
+      <h1 className="text-5xl font-black mb-24 whitespace-pre-line">
+        {t("grid.title")}
+      </h1>
      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
        {METIERS.map((metier) => (
          <Link
@@ -29,9 +28,9 @@ export default function MetiersGrid({ t, locale }) {
                {t(`grid.items.${metier}.name`)}
              </h2>
            </div>
-           <p className="text-gray-400 font-light mb-6">
-             {t(`grid.items.${metier}.description`)}
-           </p>
+            <p className="text-gray-400 font-light mb-6 leading-relaxed text-lg">
+              {t(`grid.items.${metier}.description`)}
+            </p>
            <div className="text-gray-900 flex items-center gap-2">
              {t("grid.discoverCta")}
              <span className="group-hover:translate-x-1 transition-transform">

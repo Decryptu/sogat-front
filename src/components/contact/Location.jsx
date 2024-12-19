@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import dynamic from 'next/dynamic'
 
 const MapContainer = dynamic(
@@ -23,18 +23,12 @@ const Popup = dynamic(
 const position = [48.8566, 2.3522]
 
 export default function Location({ title, description, address, hours }) {
-  const [map, setMap] = useState(null)
-
   useEffect(() => {
     import('leaflet').then(L => {
-      // Instead of deleting, directly set the icon options
       L.Icon.Default.mergeOptions({
-        iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-        _getIconUrl: function (name) {
-          return this[`${name}Url`]
-        }
+        iconUrl: 'marker-icon.png',
+        iconRetinaUrl: 'marker-icon-2x.png',
+        shadowUrl: 'marker-shadow.png'
       })
     })
   }, [])
@@ -64,7 +58,6 @@ export default function Location({ title, description, address, hours }) {
               zoom={13}
               scrollWheelZoom={false}
               style={{ height: "100%", width: "100%" }}
-              ref={setMap}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

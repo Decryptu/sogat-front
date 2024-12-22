@@ -255,50 +255,105 @@
           "Simulation Statique et dynamique",
           "Calculs éléments finis",
           "Calcul aéraulique (fumée et extraction copeaux)"
+        ],
+        "detailedTitle": "Bureau d'Études Mécanique Avancé",
+        "detailedDescription": "Notre bureau d'études mécanique utilise des logiciels de pointe et des méthodologies éprouvées pour créer des solutions industrielles à la fois innovantes et pratiques. Chaque projet bénéficie de notre vaste expérience en processus de fabrication et en optimisation de la maintenance.",
+        "imageAlt": "Espace de travail de conception mécanique 3D avec équipement moderne",
+        "features": [
+          "Modélisation 3D avancée avec CATIA V5 et SOLIDWORKS",
+          "Études préliminaires complètes des projets",
+          "Simulations statiques et dynamiques",
+          "Calculs par éléments finis",
+          "Intégration de la fabrication industrielle",
+          "Études d'optimisation de la maintenance"
         ]
       },
       "electrical": {
-        "title": "Bureau d'Études Électrique et Automatismes Industriels",
-        "description": "Solutions complètes en électricité et automatisation pour applications industrielles.",
+        "title": "Bureau d'Études Électrique et Automatismes",
+        "description": "Solutions complètes en électricité et automatisation pour applications industrielles, de la conception à la mise en œuvre.",
         "points": [
-          "Dimensionnement Puissance et élaboration des schémas Électrique",
+          "Dimensionnement Puissance et élaboration des schémas Électriques",
           "Automatisation et Régulation (Siemens, Allen Bradley, Schneider)",
           "Robotique (Fanuc, KUKA, ABB, Yaskawa)",
           "Veille Technologique (Vision, IA, traçabilité, RFID)"
+        ],
+        "detailedTitle": "Ingénierie Électrique et Automatisation Industrielle",
+        "detailedDescription": "Notre département d'ingénierie électrique est spécialisé dans l'automatisation industrielle, alliant expertise traditionnelle et technologies de l'Industrie 4.0. Nous concevons et implémentons des systèmes de contrôle sophistiqués qui améliorent la productivité et la fiabilité.",
+        "imageAlt": "Configuration de système de contrôle d'automatisation avancé",
+        "features": [
+          "Conception complète de systèmes électriques",
+          "Programmation avancée d'automates",
+          "Intégration de robotique industrielle",
+          "Systèmes de vision artificielle et IA",
+          "Solutions RFID et traçabilité",
+          "Implémentations d'usine intelligente"
         ]
       },
       "manufacturing": {
         "title": "Fabrication",
-        "description": "Capacités de fabrication de haute précision dans plusieurs disciplines.",
+        "description": "Capacités de fabrication de haute précision dans plusieurs disciplines, garantissant qualité et fiabilité.",
         "points": [
           "Chaudronnerie",
           "Usinage à Commande Numérique",
-          "Qualité et Mesure 3D",
-          "Assemblage de sous-ensembles complexes",
-          "Réalisation d'armoires électriques"
+          "Contrôle Qualité par Mesure 3D",
+          "Assemblage de Sous-ensembles Complexes",
+          "Fabrication d'Armoires Électriques"
+        ],
+        "detailedTitle": "Excellence en Fabrication Industrielle",
+        "detailedDescription": "Nos installations de fabrication allient savoir-faire traditionnel et machines de précision modernes. Nous gérons tout, de la chaudronnerie aux assemblages complexes, en maintenant les plus hauts standards de qualité tout au long du processus de production.",
+        "imageAlt": "Installation de fabrication moderne avec machines CNC",
+        "features": [
+          "Fabrication métallique avancée",
+          "Usinage CNC de haute précision",
+          "Contrôle qualité par mesure 3D",
+          "Assemblage d'armoires électriques",
+          "Intégration de systèmes complexes",
+          "Processus qualité certifiés"
         ]
       },
       "onsite": {
         "title": "Travaux sur Site",
-        "description": "Services complets d'installation et de mise en service sur site.",
+        "description": "Services complets d'installation et de configuration sur site avec des professionnels certifiés.",
         "points": [
-          "Montage mécanique et assemblage d'équipement industriel",
-          "Levage et manutention",
-          "Installation des systèmes fluides",
-          "Personnel qualifié avec habilitations",
-          "Mise en service par nos spécialistes"
+          "Montage Mécanique d'Équipements Industriels",
+          "Opérations de Levage et Manutention",
+          "Installation de Systèmes Fluides",
+          "Personnel Qualifié avec Certifications Requises",
+          "Mise en Service par Spécialistes en Automatisation"
+        ],
+        "detailedTitle": "Installation et Services sur Site",
+        "detailedDescription": "Notre équipe d'opérations terrain gère l'installation complète et la mise en service d'équipements industriels. Avec une vaste expérience en environnements industriels complexes, nous assurons une exécution sûre et efficace des projets.",
+        "imageAlt": "Équipe professionnelle effectuant une installation sur site",
+        "features": [
+          "Assemblage d'équipements industriels",
+          "Opérations de levage spécialisées",
+          "Installations pneumatiques et hydrauliques",
+          "Intégration de systèmes électriques",
+          "Mise en service professionnelle",
+          "Personnel certifié sécurité"
         ]
       },
       "service": {
-        "title": "S.A.V",
-        "description": "Notre département « SOGAT service » assure la satisfaction client à chaque étape du cycle de vie de nos machines.",
+        "title": "Service Après-Vente",
+        "description": "Notre département SOGAT service assure la satisfaction client tout au long du cycle de vie de nos machines.",
         "points": [
-          "Maintenance préventive et curative",
-          "Gestion des pièces de rechange",
-          "Services sur site",
-          "Formation",
-          "Upgrade et retrofit",
-          "Solutions à distance (Industrie 4.0)"
+          "Maintenance Préventive et Corrective",
+          "Gestion des Pièces Détachées",
+          "Services sur Site",
+          "Programmes de Formation",
+          "Modernisation et Rénovation d'Équipements",
+          "Solutions à Distance (Industrie 4.0)"
+        ],
+        "detailedTitle": "Support Après-Vente Complet",
+        "detailedDescription": "Le département service SOGAT fournit un support mondial tout au long du cycle de vie de votre équipement. Notre réseau mondial de spécialistes techniques assure une assistance fiable et des temps de réponse rapides pour tous vos besoins de maintenance.",
+        "imageAlt": "Équipe de support technique fournissant un service de maintenance",
+        "features": [
+          "Support technique 24/7",
+          "Programmes de maintenance préventive",
+          "Gestion des pièces détachées",
+          "Services de formation des opérateurs",
+          "Modernisation des équipements",
+          "Solutions de diagnostic à distance"
         ]
       }
     }

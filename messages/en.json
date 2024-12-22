@@ -78,7 +78,7 @@
       "discoverCta": "Discover the subsidiary",
       "items": {
         "sermas": {
-          "name": "ALU Cutting Solutions", 
+          "name": "ALU Cutting Solutions",
           "description": "Design of custom equipment for aluminum manufacturing"
         },
         "sp2i-ferroviaire": {
@@ -255,43 +255,87 @@
           "Static and Dynamic Simulation",
           "Finite Element Analysis",
           "Aeraulic Calculations (smoke and chip extraction)"
+        ],
+        "detailedTitle": "Advanced Mechanical Design Office",
+        "detailedDescription": "Our mechanical design office employs cutting-edge software and proven methodologies to create industrial solutions that are both innovative and practical. Each project benefits from our extensive experience in manufacturing processes and maintenance optimization.",
+        "imageAlt": "3D mechanical design workspace with modern equipment",
+        "features": [
+          "Advanced 3D modeling with CATIA V5 and SOLIDWORKS",
+          "Comprehensive preliminary project studies",
+          "Static and dynamic simulations",
+          "Finite element method calculations",
+          "Industrial manufacturing integration",
+          "Maintenance optimization studies"
         ]
       },
       "electrical": {
         "title": "Electrical & Industrial Automation",
-        "description": "Complete electrical and automation solutions for industrial applications.",
+        "description": "Complete electrical and automation solutions for industrial applications, from design to implementation.",
         "points": [
           "Power Dimensioning and Electrical Diagram Development",
           "Automation and Regulation (Siemens, Allen Bradley, Schneider)",
           "Robotics (Fanuc, KUKA, ABB, Yaskawa)",
           "Technology Watch (Vision, AI, Traceability, RFID)"
+        ],
+        "detailedTitle": "Electrical Engineering & Industrial Automation",
+        "detailedDescription": "Our electrical engineering department specializes in industrial automation, combining traditional expertise with Industry 4.0 technologies. We design and implement sophisticated control systems that enhance productivity and reliability.",
+        "imageAlt": "Advanced automation control system setup",
+        "features": [
+          "Complete electrical system design",
+          "Advanced PLC programming",
+          "Industrial robotics integration",
+          "AI and machine vision systems",
+          "RFID and traceability solutions",
+          "Smart factory implementations"
         ]
       },
       "manufacturing": {
         "title": "Manufacturing",
-        "description": "High-precision manufacturing capabilities across multiple disciplines.",
+        "description": "High-precision manufacturing capabilities across multiple disciplines, ensuring quality and reliability.",
         "points": [
           "Metalwork Manufacturing",
           "CNC Machining",
           "3D Measurement Quality Control",
           "Complex Sub-assembly",
           "Electrical Cabinet Manufacturing"
+        ],
+        "detailedTitle": "Industrial Manufacturing Excellence",
+        "detailedDescription": "Our manufacturing facilities combine traditional craftsmanship with modern precision machinery. We handle everything from metalwork to complex assemblies, maintaining the highest quality standards throughout the production process.",
+        "imageAlt": "Modern manufacturing facility with CNC machines",
+        "features": [
+          "Advanced metalwork fabrication",
+          "High-precision CNC machining",
+          "3D measurement quality control",
+          "Electrical cabinet assembly",
+          "Complex system integration",
+          "Certified quality processes"
         ]
       },
       "onsite": {
         "title": "On-site Operations",
-        "description": "Comprehensive on-site installation and setup services.",
+        "description": "Comprehensive on-site installation and setup services with certified professionals.",
         "points": [
           "Mechanical Assembly of Industrial Equipment",
           "Lifting and Handling Operations",
           "Fluid System Installation",
           "Qualified Personnel with Required Certifications",
           "Commissioning by Automation Specialists"
+        ],
+        "detailedTitle": "On-site Installation & Services",
+        "detailedDescription": "Our field operations team handles complete industrial equipment installation and commissioning. With extensive experience in complex industrial environments, we ensure safe and efficient project execution.",
+        "imageAlt": "Professional team performing on-site installation",
+        "features": [
+          "Industrial equipment assembly",
+          "Specialized lifting operations",
+          "Pneumatic and hydraulic installations",
+          "Electrical system integration",
+          "Professional commissioning",
+          "Safety-certified personnel"
         ]
       },
       "service": {
         "title": "After-sales Service",
-        "description": "SOGAT service department ensures customer satisfaction throughout the entire lifecycle of our machines.",
+        "description": "Our SOGAT service department ensures customer satisfaction throughout the entire lifecycle of our machines.",
         "points": [
           "Preventive and Corrective Maintenance",
           "Spare Parts Management",
@@ -299,6 +343,17 @@
           "Training Programs",
           "Equipment Upgrades and Retrofitting",
           "Remote Solutions (Industry 4.0)"
+        ],
+        "detailedTitle": "Comprehensive After-sales Support",
+        "detailedDescription": "The SOGAT service department provides worldwide support throughout your equipment's lifecycle. Our global network of technical specialists ensures reliable assistance and rapid response times for all your maintenance needs.",
+        "imageAlt": "Technical support team providing maintenance service",
+        "features": [
+          "24/7 technical support",
+          "Preventive maintenance programs",
+          "Spare parts management",
+          "Operator training services",
+          "Equipment modernization",
+          "Remote diagnostic solutions"
         ]
       }
     }

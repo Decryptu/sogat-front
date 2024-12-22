@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
+import { EXPERTISE_DOMAINS } from "@/constants/expertise";
 import Domain from "@/components/expertise/Domain";
+import DetailedDomain from "@/components/expertise/DetailedDomain";
 
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -19,20 +21,20 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Expertise({ params }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  const t = await getTranslations("expertise");
-
-  const domainProps = {
-    items: ["mechanical", "electrical", "manufacturing", "onsite", "service"].map(
-      (key) => ({
-        key,
-        title: t(`domains.${key}.title`),
-        description: t(`domains.${key}.description`),
-        points: t.raw(`domains.${key}.points`)
-      })
-    )
-  };
+	const { locale } = await params;
+	setRequestLocale(locale);
+	const t = await getTranslations("expertise");
+  
+	const domainProps = {
+	  items: ["mechanical", "electrical", "manufacturing", "onsite", "service"].map(
+		(key) => ({
+		  key,
+		  title: t(`domains.${key}.title`),
+		  description: t(`domains.${key}.description`),
+		  points: t.raw(`domains.${key}.points`)
+		})
+	  )
+	};
 
   return (
     <main className="min-h-screen bg-white">
@@ -54,6 +56,7 @@ export default async function Expertise({ params }) {
         </div>
       </div>
       <Domain {...domainProps} />
+	  <DetailedDomain domains={EXPERTISE_DOMAINS} t={t} />
     </main>
   );
 }

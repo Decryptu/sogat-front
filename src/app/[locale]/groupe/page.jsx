@@ -52,6 +52,7 @@ export default async function Groupe(props) {
   };
 
   const solutionsProps = {
+    subtitle: t("solutions.subtitle"),
     title: t("solutions.title"),
     items: ["engineering", "project", "manufacturing", "installation"].map(
       (key) => ({

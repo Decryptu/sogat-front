@@ -244,7 +244,64 @@
   "expertise": {
     "title": "Notre Savoir Faire",
     "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
-    "imageAlt": "Équipe professionnelle au travail"
+    "imageAlt": "Équipe professionnelle au travail",
+    "domains": {
+      "mechanical": {
+        "title": "Bureau d'Étude Mécanique",
+        "description": "Les études de nos produits sont menées avec le plus grand soin, en veillant à intégrer au maximum les notions de fabrication industrielle et de simplicité de maintenance.",
+        "points": [
+          "Avant-Projet, dimensionnement et conception",
+          "Modélisation 3D : CATIA et SOLIDWORKS",
+          "Simulation Statique et dynamique",
+          "Calculs éléments finis",
+          "Calcul aéraulique (fumée et extraction copeaux)"
+        ]
+      },
+      "electrical": {
+        "title": "Bureau d'Études Électrique et Automatismes Industriels",
+        "description": "Solutions complètes en électricité et automatisation pour applications industrielles.",
+        "points": [
+          "Dimensionnement Puissance et élaboration des schémas Électrique",
+          "Automatisation et Régulation (Siemens, Allen Bradley, Schneider)",
+          "Robotique (Fanuc, KUKA, ABB, Yaskawa)",
+          "Veille Technologique (Vision, IA, traçabilité, RFID)"
+        ]
+      },
+      "manufacturing": {
+        "title": "Fabrication",
+        "description": "Capacités de fabrication de haute précision dans plusieurs disciplines.",
+        "points": [
+          "Chaudronnerie",
+          "Usinage à Commande Numérique",
+          "Qualité et Mesure 3D",
+          "Assemblage de sous-ensembles complexes",
+          "Réalisation d'armoires électriques"
+        ]
+      },
+      "onsite": {
+        "title": "Travaux sur Site",
+        "description": "Services complets d'installation et de mise en service sur site.",
+        "points": [
+          "Montage mécanique et assemblage d'équipement industriel",
+          "Levage et manutention",
+          "Installation des systèmes fluides",
+          "Personnel qualifié avec habilitations",
+          "Mise en service par nos spécialistes"
+        ]
+      },
+      "service": {
+        "title": "S.A.V",
+        "description": "Notre département « SOGAT service » assure la satisfaction client à chaque étape du cycle de vie de nos machines.",
+        "points": [
+          "Maintenance préventive et curative",
+          "Gestion des pièces de rechange",
+          "Services sur site",
+          "Formation",
+          "Upgrade et retrofit",
+          "Solutions à distance (Industrie 4.0)"
+        ]
+      }
+    }
   },
   "contact": {
     "title": "Contactez-nous",

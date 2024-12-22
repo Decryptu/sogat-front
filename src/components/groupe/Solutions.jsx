@@ -14,7 +14,7 @@ export default function Solutions({ subtitle, title, items }) {
         {/* Header Section */}
         <div className="flex flex-col items-center mb-20">
           <p className="text-gray-600 mb-4">{subtitle}</p>
-          <h2 className="text-5xl font-bold text-center text-gray-900">
+          <h2 className="text-6xl font-bold text-center text-gray-900">
             {title}
           </h2>
         </div>

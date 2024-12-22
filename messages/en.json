@@ -244,7 +244,64 @@
   "expertise": {
     "title": "Our Expertise",
     "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
-    "imageAlt": "Professional team at work"
+    "imageAlt": "Professional team at work",
+    "domains": {
+      "mechanical": {
+        "title": "Mechanical Design Office",
+        "description": "Our product studies are conducted with the utmost care, ensuring maximum integration of industrial manufacturing concepts and maintenance simplicity.",
+        "points": [
+          "Preliminary Design, Dimensioning and Conception",
+          "3D Modeling: CATIA and SOLIDWORKS",
+          "Static and Dynamic Simulation",
+          "Finite Element Analysis",
+          "Aeraulic Calculations (smoke and chip extraction)"
+        ]
+      },
+      "electrical": {
+        "title": "Electrical & Industrial Automation",
+        "description": "Complete electrical and automation solutions for industrial applications.",
+        "points": [
+          "Power Dimensioning and Electrical Diagram Development",
+          "Automation and Regulation (Siemens, Allen Bradley, Schneider)",
+          "Robotics (Fanuc, KUKA, ABB, Yaskawa)",
+          "Technology Watch (Vision, AI, Traceability, RFID)"
+        ]
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "High-precision manufacturing capabilities across multiple disciplines.",
+        "points": [
+          "Metalwork Manufacturing",
+          "CNC Machining",
+          "3D Measurement Quality Control",
+          "Complex Sub-assembly",
+          "Electrical Cabinet Manufacturing"
+        ]
+      },
+      "onsite": {
+        "title": "On-site Operations",
+        "description": "Comprehensive on-site installation and setup services.",
+        "points": [
+          "Mechanical Assembly of Industrial Equipment",
+          "Lifting and Handling Operations",
+          "Fluid System Installation",
+          "Qualified Personnel with Required Certifications",
+          "Commissioning by Automation Specialists"
+        ]
+      },
+      "service": {
+        "title": "After-sales Service",
+        "description": "SOGAT service department ensures customer satisfaction throughout the entire lifecycle of our machines.",
+        "points": [
+          "Preventive and Corrective Maintenance",
+          "Spare Parts Management",
+          "On-site Services",
+          "Training Programs",
+          "Equipment Upgrades and Retrofitting",
+          "Remote Solutions (Industry 4.0)"
+        ]
+      }
+    }
   },
   "contact": {
     "title": "Get in touch",

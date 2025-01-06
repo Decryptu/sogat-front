@@ -1,10 +1,10 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import { Button } from "@/components/ui/button"
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -12,59 +12,60 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: 'Name must be at least 2 characters.',
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: 'Please enter a valid email address.',
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: 'Message must be at least 10 characters.',
   }),
-})
+});
 
 export default function ContactForm({ title, labels, messages }) {
-  const { toast } = useToast()
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     },
-  })
+  });
 
   async function onSubmit(values) {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
       // Here you would typically send the data to your API
-      await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
       toast({
-        title: "Success",
+        title: 'Success',
         description: messages.success,
-      })
-      form.reset()
+      });
+      form.reset();
     } catch (error) {
       toast({
-        title: "Error",
+        title: 'Error',
         description: messages.error,
-        variant: "destructive",
-      })
+        variant: 'destructive',
+      });
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
   return (
     <section className="py-16 bg-gray-50">
+      <p className="text-center text-xl text-red-500">Design de cette page à revoir</p>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12">{title}</h2>
         <Form {...form}>
@@ -102,26 +103,18 @@ export default function ContactForm({ title, labels, messages }) {
                 <FormItem>
                   <FormLabel>{labels.message}</FormLabel>
                   <FormControl>
-                    <Textarea 
-                      placeholder={labels.message}
-                      className="min-h-[120px]"
-                      {...field} 
-                    />
+                    <Textarea placeholder={labels.message} className="min-h-[120px]" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button 
-              type="submit" 
-              className="w-full"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : labels.submit}
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : labels.submit}
             </Button>
           </form>
         </Form>
       </div>
     </section>
-  )
+  );
 }

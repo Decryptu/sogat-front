@@ -29,7 +29,7 @@ export default function Solutions({ subtitle, title, items }) {
                 className="relative bg-white border-t border-gray-200 p-8"
               >
                 <div className="flex gap-8">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <Icon className="w-10 h-10 text-gray-900" strokeWidth={1} />
                   </div>
                   <div>

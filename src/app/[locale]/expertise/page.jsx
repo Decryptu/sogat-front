@@ -44,7 +44,7 @@ export default async function Expertise({ params }) {
             <h1 className="text-4xl lg:text-6xl font-bold">{t("title")}</h1>
             <p className="text-lg font-light lg:text-xl text-gray-700">{t("description")}</p>
           </div>
-          <div className="relative w-full aspect-[4/3] lg:aspect-square">
+          <div className="relative w-full aspect-4/3 lg:aspect-square">
             <Image
               src="/images/expertise/hero.webp"
               alt={t("imageAlt")}

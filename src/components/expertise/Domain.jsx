@@ -21,7 +21,7 @@ export default function Domain({ items }) {
                 className="group hover:bg-gray-50 transition-all duration-300 p-8 border border-gray-100 rounded-lg"
               >
                 <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 p-3 bg-gray-100 rounded-lg group-hover:bg-white transition-colors duration-300">
+                  <div className="shrink-0 p-3 bg-gray-100 rounded-lg group-hover:bg-white transition-colors duration-300">
                     {IconComponent && (
                       <IconComponent 
                         className="w-8 h-8 text-gray-900" 

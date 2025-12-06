@@ -11,7 +11,7 @@ export default function MetiersLogos() {
             <Link 
               key={name} 
               href={`/metiers/${name}`}
-              className="relative h-12 transition-all duration-300 hover:opacity-100 opacity-50 [filter:brightness(5)_grayscale(1)] hover:[filter:brightness(1)_grayscale(0)]"
+              className="relative h-12 transition-all duration-300 hover:opacity-100 opacity-50 filter-[brightness(5)_grayscale(1)] hover:filter-[brightness(1)_grayscale(0)]"
             >
               <Image
                 src={`/images/metiers/logo-${name}-full.webp`}

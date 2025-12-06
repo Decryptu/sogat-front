@@ -35,7 +35,7 @@ export default function NavigationMenu({ locale }) {
 		<>
 			<div className="absolute top-0 w-full z-50">
 				<div
-					className={`border-b ${styles.border} grid grid-cols-[1fr,auto,1fr] h-20`}
+					className={`border-b ${styles.border} grid grid-cols-[1fr_auto_1fr] h-20`}
 				>
 					{/* Logo section */}
 					<div className="px-6 md:px-12 flex items-center">

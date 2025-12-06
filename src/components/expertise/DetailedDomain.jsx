@@ -25,7 +25,7 @@ export default function DetailedDomain({ domains, t }) {
                     key={`${domain.id}-feature-${index}`}
                     className="flex items-start gap-3"
                   >
-                    <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" />
+                    <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" />
                     <p className="text-gray-700">{feature}</p>
                   </div>
                 ))}

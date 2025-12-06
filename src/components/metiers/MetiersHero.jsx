@@ -11,7 +11,7 @@ export default function MetiersHero({ t }) {
 						{t("hero.description")}
 					</p>
 				</div>
-				<div className="relative w-full aspect-[4/3] lg:aspect-square">
+				<div className="relative w-full aspect-4/3 lg:aspect-square">
 					<Image
 						src="/images/nos-metiers.webp"
 						alt={t("hero.imageAlt")}

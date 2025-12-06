@@ -8,7 +8,7 @@ export default function CTA({ t }) {
       <section className="relative text-white pt-20 pb-24 rounded-xl overflow-hidden">
         {/* Background image with gradient overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10" />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/50 z-10" />
           <Image
             src="/images/contact.webp"
             alt="Background"

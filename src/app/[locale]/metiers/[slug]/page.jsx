@@ -58,7 +58,7 @@ export default async function MetierPage({ params }) {
        </div>
 
        {/* Right Column - Image */}
-       <div className="relative w-full aspect-[4/3] lg:aspect-square">
+       <div className="relative w-full aspect-4/3 lg:aspect-square">
          <Image
            src={`/images/metiers/${slug}.webp`}
            alt={t("imageAlt")}

@@ -12,7 +12,7 @@ export default function Hero({ title, description, imageAlt }) {
            {description}
          </p>
        </div>
-       <div className="relative w-full aspect-[4/3] lg:aspect-square">
+       <div className="relative w-full aspect-4/3 lg:aspect-square">
          <Image
            src="/images/groupe.webp"
            alt={imageAlt}

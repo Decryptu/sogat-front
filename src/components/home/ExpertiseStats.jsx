@@ -45,7 +45,7 @@ export default function ExpertiseStats() {
         >
           <Icon className="h-10 w-10 text-blue-600 mb-4 stroke-[1.5]" />
           {textValue ? (
-            <div className="text-xl font-medium text-blue-600 leading-tight">
+            <div className="text-5xl font-light text-blue-600">
               {t(`${textValue}.value`)}
             </div>
           ) : (

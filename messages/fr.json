@@ -19,10 +19,32 @@
       "title": "Notre Expertise & Histoire",
       "subtitle": "Plus qu'une promesse, nos prestations sont certifiées \"Service France Garanti\" par l'AFNOR",
       "stats": {
-        "yearFounded": "Année de création",
-        "employees": "Collaborateurs",
-        "workshopArea": "Surface d'atelier",
-        "exportPercentage": "Taux d'export"
+        "yearFounded": {
+          "label": "Année de création"
+        },
+        "employees": {
+          "label": "Collaborateurs"
+        },
+        "workshopArea": {
+          "label": "Surface d'atelier"
+        },
+        "revenue": {
+          "label": "De chiffre d'affaire"
+        },
+        "entities": {
+          "label": "Différentes entités"
+        },
+        "integratedProduction": {
+          "value": "Production intégrée",
+          "label": "Chaudronnerie et usinage"
+        },
+        "designOffices": {
+          "label": "Bureaux d'études spécialisés en robotique, électrique, automatisme et mécanique"
+        },
+        "exportPercentage": {
+          "value": "30% à 40%",
+          "label": "D'export"
+        }
       },
       "cta": "En savoir plus"
     },

@@ -19,10 +19,32 @@
       "title": "Our Expertise & History",
       "subtitle": "More than a promise, our services are certified \"Service France Garanti\" by AFNOR",
       "stats": {
-        "yearFounded": "Year of creation",
-        "employees": "Employees",
-        "workshopArea": "Workshop area",
-        "exportPercentage": "Export rate"
+        "yearFounded": {
+          "label": "Year of creation"
+        },
+        "employees": {
+          "label": "Employees"
+        },
+        "workshopArea": {
+          "label": "Workshop area"
+        },
+        "revenue": {
+          "label": "Turnover"
+        },
+        "entities": {
+          "label": "Different entities"
+        },
+        "integratedProduction": {
+          "value": "Integrated production",
+          "label": "Boilermaking and machining"
+        },
+        "designOffices": {
+          "label": "Specialized design offices in robotics, electrical, automation and mechanics"
+        },
+        "exportPercentage": {
+          "value": "30% to 40%",
+          "label": "Export"
+        }
       },
       "cta": "Learn more"
     },

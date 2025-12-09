@@ -19,17 +19,13 @@ const AnimatedNavLink = ({ href, children, onClick }) => (
 		onClick={onClick}
 		className="group relative flex items-center gap-4 w-fit"
 	>
-		{/* Text content */}
 		<span className="block text-4xl md:text-6xl font-bold transition-all duration-300 ease-out group-hover:translate-x-4">
 			{children}
 		</span>
-
-		{/* Arrow icon */}
 		<ArrowRight className="w-8 h-8 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0" />
 	</Link>
 );
 
-// Rest of the component remains the same
 export default function NavigationContent({ onClose, locale }) {
 	const t = useTranslations("navigation");
 	const pathname = usePathname();
@@ -137,25 +133,9 @@ export default function NavigationContent({ onClose, locale }) {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={ANIMATION_CONFIG}
-						className="mt-auto flex flex-col space-y-4 text-white"
+						className="mt-auto flex justify-end text-white"
 					>
-						<Link
-							href={`/${locale}/personal`}
-							className="text-sm hover:text-white/80 transition-colors"
-							onClick={onClose}
-						>
-							{t("personalSpace")}
-						</Link>
-						<div className="flex justify-between items-center">
-							<Link
-								href={`/${locale}/legal`}
-								className="text-sm hover:text-white/80 transition-colors"
-								onClick={onClose}
-							>
-								{t("legalNotice")}
-							</Link>
-							<LanguageSwitcher locale={locale} />
-						</div>
+						<LanguageSwitcher locale={locale} />
 					</motion.div>
 				</motion.div>
 			</div>

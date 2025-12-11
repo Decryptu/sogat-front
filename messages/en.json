@@ -60,7 +60,9 @@
       "sp2i-ferroviaire": "SP2I Ferroviaire",
       "sp2i-prehension": "SP2I Préhension",
       "aretec": "ARETEC",
-      "tracip": "TRACIP",
+      "tracip-mecano-soudure": "TRACIP Mécano-Soudure",
+      "tracip-environnement": "TRACIP Environnement",
+      "haquette": "HAQUETTE",
       "imageAlt": "Engineering and technical drawings illustration"
     }
   },
@@ -115,16 +117,26 @@
           "name": "Special Machines",
           "description": "Design and production of special machines and automated/robotic production lines"
         },
-        "tracip": {
+        "tracip-mecano-soudure": {
+          "name": "Metalworking",
+          "description": "Boilermaking and machining of complex structures"
+        },
+        "tracip-environnement": {
           "name": "Industrial Environment",
           "description": "Production of industrial fume treatment units"
+        },
+        "haquette": {
+          "name": "Industrial Solutions",
+          "description": "Expertise in custom industrial solutions"
         }
       }
     },
     "references": {
-      "title": "THEY TRUST US",
-      "description": "A big thank you to our clients and partners for their loyalty: more than ever, we are committed to continuing to work with you to build the future.",
-      "logoAlt": "{client} logo"
+      "title": "OUR VALUES",
+      "solutions": "Our engineering teams innovate daily and foster co-development with our clients.",
+      "project": "Project management is essential at SOGAT and ensures effective collaboration with our clients.",
+      "results": "For each project, we aim to achieve quality, cost, and timeline objectives.",
+      "services": "Four companies working in synergy and a network of technical partners worldwide ensure reliable support throughout the lifecycle of our equipment."
     }
   },
   "metiers": {
@@ -180,16 +192,40 @@
         "imageAlt": "ARETEC facility"
       }
     },
-    "tracip": {
-      "title": "TRACIP",
-      "description": "TRACIP specializes in digital forensics and data recovery, offering secure and reliable solutions for digital investigations.",
-      "imageAlt": "TRACIP digital forensics equipment",
+    "tracip-mecano-soudure": {
+      "title": "TRACIP Mécano-Soudure",
+      "description": "TRACIP Mécano-Soudure provides boilermaking and machining of complex structures with recognized expertise in industrial manufacturing.",
+      "imageAlt": "TRACIP boilermaking equipment",
       "cta": {
-        "label": "Contact TRACIP",
-        "title": "Work with TRACIP",
+        "label": "Contact TRACIP Mécano-Soudure",
+        "title": "Work with TRACIP Mécano-Soudure",
         "description": "...",
         "button": "Contact Us",
-        "imageAlt": "TRACIP facility"
+        "imageAlt": "TRACIP Mécano-Soudure facility"
+      }
+    },
+    "tracip-environnement": {
+      "title": "TRACIP Environnement",
+      "description": "TRACIP Environnement specializes in industrial fume treatment, offering innovative solutions for environmental protection.",
+      "imageAlt": "TRACIP fume treatment units",
+      "cta": {
+        "label": "Contact TRACIP Environnement",
+        "title": "Work with TRACIP Environnement",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "TRACIP Environnement facility"
+      }
+    },
+    "haquette": {
+      "title": "HAQUETTE",
+      "description": "HAQUETTE brings recognized expertise in custom industrial solutions, meeting the specific needs of each client.",
+      "imageAlt": "HAQUETTE industrial solutions",
+      "cta": {
+        "label": "Contact HAQUETTE",
+        "title": "Work with HAQUETTE",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "HAQUETTE facility"
       }
     }
   },
@@ -397,11 +433,15 @@
       "description": "Come visit us at our headquarters to discuss your projects in person.",
       "address": {
         "name": "Groupe SOGAT",
-        "street": "123 Industrial Avenue",
-        "city": "75008 Paris",
+        "street": "ZI - Rue Denis Papin",
+        "city": "59147 Gondecourt",
         "country": "France"
       },
-      "hours": "Monday - Friday: 9:00 AM - 6:00 PM"
+      "hours": "Monday - Friday: 9am - 6pm",
+      "phone": "+33 3 20 62 95 95",
+      "fax": "+33 3 20 62 95 96",
+      "email": "contact@sogat.com",
+      "linkedin": "https://www.linkedin.com/company/groupe-sogat/"
     }
   }
 }

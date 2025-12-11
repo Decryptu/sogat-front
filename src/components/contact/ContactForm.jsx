@@ -64,76 +64,70 @@ export default function ContactForm({ title, labels, messages }) {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">{title}</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-        </div>
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-lg font-medium">{labels.name}</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder={labels.name}
-                        {...field}
-                        className="h-12 text-base rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-lg font-medium">{labels.email}</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder={labels.email}
-                        {...field}
-                        className="h-12 text-base rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-lg font-medium">{labels.message}</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder={labels.message}
-                        className="min-h-[160px] text-base rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600 resize-none"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button
-                type="submit"
-                className="w-full h-12 text-base font-semibold bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Sending...' : labels.submit}
-              </Button>
-            </form>
-          </Form>
-        </div>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-sm font-medium text-gray-700">{labels.name}</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={labels.name}
+                      {...field}
+                      className="h-11 border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-sm font-medium text-gray-700">{labels.email}</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder={labels.email}
+                      {...field}
+                      className="h-11 border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-sm font-medium text-gray-700">{labels.message}</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder={labels.message}
+                      className="min-h-[140px] border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 resize-none"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button
+              type="submit"
+              className="w-full h-11 bg-blue-600 hover:bg-blue-700 transition-colors"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : labels.submit}
+            </Button>
+          </form>
+        </Form>
       </div>
     </section>
   );

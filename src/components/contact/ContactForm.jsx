@@ -64,20 +64,22 @@ export default function ContactForm({ title, labels, messages }) {
   }
 
   return (
-    <section className="py-16 bg-gray-50">
-      <p className="text-center text-xl text-red-500">Design de cette page à revoir</p>
+    <section className="py-16 bg-white">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12">{title}</h2>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{labels.name}</FormLabel>
+                  <FormLabel className="text-sm font-medium text-gray-700">{labels.name}</FormLabel>
                   <FormControl>
-                    <Input placeholder={labels.name} {...field} />
+                    <Input
+                      placeholder={labels.name}
+                      {...field}
+                      className="h-11 border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -88,9 +90,13 @@ export default function ContactForm({ title, labels, messages }) {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{labels.email}</FormLabel>
+                  <FormLabel className="text-sm font-medium text-gray-700">{labels.email}</FormLabel>
                   <FormControl>
-                    <Input placeholder={labels.email} {...field} />
+                    <Input
+                      placeholder={labels.email}
+                      {...field}
+                      className="h-11 border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -101,15 +107,23 @@ export default function ContactForm({ title, labels, messages }) {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{labels.message}</FormLabel>
+                  <FormLabel className="text-sm font-medium text-gray-700">{labels.message}</FormLabel>
                   <FormControl>
-                    <Textarea placeholder={labels.message} className="min-h-[120px]" {...field} />
+                    <Textarea
+                      placeholder={labels.message}
+                      className="min-h-[140px] border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 resize-none"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <Button
+              type="submit"
+              className="w-full h-11 bg-blue-600 hover:bg-blue-700 transition-colors"
+              disabled={isSubmitting}
+            >
               {isSubmitting ? 'Sending...' : labels.submit}
             </Button>
           </form>

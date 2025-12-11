@@ -3,5 +3,7 @@ export const METIERS = [
   "sp2i-ferroviaire",
   "sp2i-prehension",
   "aretec",
-  "tracip",
+  "tracip-mecano-soudure",
+  "tracip-environnement",
+  "haquette",
 ];

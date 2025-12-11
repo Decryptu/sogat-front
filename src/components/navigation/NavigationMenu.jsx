@@ -57,7 +57,7 @@ export default function NavigationMenu({ locale }) {
 					/>
 
 					{/* Menu trigger section */}
-					<div className="flex cursor-pointer justify-end px-6 md:px-12 items-center">
+					<div className="flex justify-end px-6 md:px-12 items-center">
 						<Button
 							variant="ghost"
 							size="icon"

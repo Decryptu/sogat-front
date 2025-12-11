@@ -23,7 +23,7 @@ export default function Footer() {
 								alt="Sogat"
 								width={100}
 								height={32}
-								className="w-[100px] h-[32px] object-contain" // Fixed dimensions
+								className="w-[100px] h-8 object-contain" // Fixed dimensions
 							/>
 						</div>
 						<p className="text-gray-400">{t("description")}</p>

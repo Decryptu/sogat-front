@@ -46,7 +46,7 @@ export default function NavigationMenu({ locale }) {
 								width={120}
 								height={40}
 								priority
-								className="object-contain w-[120px] h-[40px]"
+								className="object-contain w-[120px] h-10"
 							/>
 						</Link>
 					</div>

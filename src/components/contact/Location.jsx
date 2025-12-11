@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import dynamic from 'next/dynamic'
-import { Phone, Fax, Mail, Linkedin } from 'lucide-react'
+import { Phone, Printer, Mail, Linkedin } from 'lucide-react'
 
 const MapContainer = dynamic(
   () => import('react-leaflet').then(mod => mod.MapContainer),
@@ -62,7 +62,7 @@ export default function Location({ title, description, address, hours, phone, fa
               )}
               {fax && (
                 <div className="flex items-center gap-2 text-gray-700">
-                  <Fax className="w-4 h-4" />
+                  <Printer className="w-4 h-4" />
                   <span>{fax}</span>
                 </div>
               )}

@@ -46,7 +46,7 @@ export default function NavigationMenu({ locale }) {
 								width={120}
 								height={40}
 								priority
-								className="object-contain w-[120px] h-[40px]"
+								className="object-contain w-[120px] h-10"
 							/>
 						</Link>
 					</div>
@@ -57,7 +57,7 @@ export default function NavigationMenu({ locale }) {
 					/>
 
 					{/* Menu trigger section */}
-					<div className="flex justify-end px-6 md:px-12 items-center">
+					<div className="flex cursor-pointer justify-end px-6 md:px-12 items-center">
 						<Button
 							variant="ghost"
 							size="icon"

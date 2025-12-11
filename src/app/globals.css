@@ -14,8 +14,8 @@
   --color-cip: hsl(var(--cip));
   --color-sp2i-prehension: hsl(var(--sp2i-prehension));
   --color-sp2i-feroviaire: hsl(var(--sp2i-feroviaire));
-  --color-tracip: hsl(var(--tracip));
-  --color-tracip-mecano: hsl(var(--tracip-mecano));
+  --color-tracip-environnement: hsl(var(--tracip-environnement));
+  --color-tracip-mecano-soudure: hsl(var(--tracip-mecano-soudure));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-dark: hsl(var(--dark));
@@ -103,13 +103,13 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --sermas: 358 80.1% 47.3%;
-    --haquette: 23.2 90.8% 53.1%;
+    --haquette: 23 90% 53%;
     --aretec: 165 42.1% 53.9%;
     --cip: 80.5 69.5% 43.7%;
     --sp2i-prehension: 41.1 95.2% 51%;
     --sp2i-feroviaire: 197 42.5% 67.3%;
-    --tracip: 91.7 65.4% 47.6%;
-    --tracip-mecano: 186 61.6% 49%;
+    --tracip-environnement: 91 63% 48%;
+    --tracip-mecano-soudure: 186 62% 49%;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -138,13 +138,13 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --sermas: 358 80.1% 47.3%;
-    --haquette: 23.2 90.8% 53.1%;
+    --haquette: 23 90% 53%;
     --aretec: 165 42.1% 53.9%;
     --cip: 80.5 69.5% 43.7%;
     --sp2i-prehension: 41.1 95.2% 51%;
     --sp2i-feroviaire: 197 42.5% 67.3%;
-    --tracip: 91.7 65.4% 47.6%;
-    --tracip-mecano: 186 61.6% 49%;
+    --tracip-environnement: 91 63% 48%;
+    --tracip-mecano-soudure: 186 62% 49%;
   }
 }
 

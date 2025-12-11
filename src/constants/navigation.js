@@ -27,8 +27,16 @@ export const NAVIGATION_STYLES = {
     cssVariable: "--aretec",
     image: "/images/metiers/aretec.webp",
   },
-  tracip: {
-    cssVariable: "--tracip",
-    image: "/images/metiers/tracip.webp",
+  "tracip-mecano-soudure": {
+    cssVariable: "--tracip-mecano-soudure",
+    image: "/images/metiers/tracip-mecano-soudure.webp",
+  },
+  "tracip-environnement": {
+    cssVariable: "--tracip-environnement",
+    image: "/images/metiers/tracip-environnement.webp",
+  },
+  haquette: {
+    cssVariable: "--haquette",
+    image: "/images/metiers/haquette.webp",
   },
 };

@@ -49,7 +49,11 @@ export default async function Contact(props) {
     title: t("location.title"),
     description: t("location.description"),
     address: t.raw("location.address"),
-    hours: t("location.hours")
+    hours: t("location.hours"),
+    phone: t("location.phone"),
+    fax: t("location.fax"),
+    email: t("location.email"),
+    linkedin: t("location.linkedin")
   };
 
   return (

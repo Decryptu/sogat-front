@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import dynamic from 'next/dynamic'
+import { Phone, Fax, Mail, Linkedin } from 'lucide-react'
 
 const MapContainer = dynamic(
   () => import('react-leaflet').then(mod => mod.MapContainer),
@@ -20,9 +21,10 @@ const Popup = dynamic(
   { ssr: false }
 )
 
-const position = [48.8566, 2.3522]
+// Gondecourt coordinates
+const position = [50.541, 2.883]
 
-export default function Location({ title, description, address, hours }) {
+export default function Location({ title, description, address, hours, phone, fax, email, linkedin }) {
   useEffect(() => {
     import('leaflet').then(L => {
       L.Icon.Default.mergeOptions({
@@ -48,8 +50,43 @@ export default function Location({ title, description, address, hours }) {
               <p>{address.city}</p>
               <p>{address.country}</p>
             </div>
-            <div>
+            <div className="space-y-3">
               <p className="text-gray-600">{hours}</p>
+              {phone && (
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Phone className="w-4 h-4" />
+                  <a href={`tel:${phone}`} className="hover:text-blue-600">
+                    {phone}
+                  </a>
+                </div>
+              )}
+              {fax && (
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Fax className="w-4 h-4" />
+                  <span>{fax}</span>
+                </div>
+              )}
+              {email && (
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Mail className="w-4 h-4" />
+                  <a href={`mailto:${email}`} className="hover:text-blue-600">
+                    {email}
+                  </a>
+                </div>
+              )}
+              {linkedin && (
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Linkedin className="w-4 h-4" />
+                  <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              )}
             </div>
           </div>
           <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">

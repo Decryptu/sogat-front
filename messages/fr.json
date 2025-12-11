@@ -60,7 +60,9 @@
       "sp2i-ferroviaire": "SP2I Ferroviaire",
       "sp2i-prehension": "SP2I Préhension",
       "aretec": "ARETEC",
-      "tracip": "TRACIP",
+      "tracip-mecano-soudure": "TRACIP Mécano-Soudure",
+      "tracip-environnement": "TRACIP Environnement",
+      "haquette": "HAQUETTE",
       "imageAlt": "Illustration de dessins techniques et d'ingénierie"
     }
   },
@@ -115,16 +117,26 @@
           "name": "Machines Spéciales",
           "description": "Conception et réalisation de machines spéciales et lignes de production automatisées et robotisées"
         },
-        "tracip": {
+        "tracip-mecano-soudure": {
+          "name": "Mécano-Soudure",
+          "description": "Chaudronnerie et usinage de structures complexes"
+        },
+        "tracip-environnement": {
           "name": "Environnement Industriel",
           "description": "Réalisation d'unités de traitement de fumées industrielles"
+        },
+        "haquette": {
+          "name": "Solutions Industrielles",
+          "description": "Expertise en solutions industrielles sur mesure"
         }
       }
     },
     "references": {
-      "title": "ILS NOUS FONT CONFIANCE",
-      "description": "Un grand merci à nos clients et partenaires pour leur fidélité : plus que jamais, nous avons à cœur de continuer à travailler avec vous pour construire l'avenir.",
-      "logoAlt": "Logo {client}"
+      "title": "NOS VALEURS",
+      "solutions": "Nos ingénieries innovent chaque jour et favorisent le co-développement avec nos clients.",
+      "project": "La gestion de projet est essentielle chez SOGAT et garantit une collaboration efficace avec nos clients.",
+      "results": "Pour chaque projet, nous visons l'atteinte des objectifs de qualité, de coût et de délai.",
+      "services": "Quatre sociétés en synergie et un réseau de partenaires techniques à travers le monde assurent un soutien fiable tout au long de la durée de vie de nos équipements."
     }
   },
   "metiers": {
@@ -180,16 +192,40 @@
         "imageAlt": "Société ARETEC"
       }
     },
-    "tracip": {
-      "title": "TRACIP",
-      "description": "TRACIP est spécialisée dans l'investigation numérique et la récupération de données, offrant des solutions sécurisées et fiables pour les enquêtes numériques.",
-      "imageAlt": "Équipement d'investigation numérique TRACIP",
+    "tracip-mecano-soudure": {
+      "title": "TRACIP Mécano-Soudure",
+      "description": "TRACIP Mécano-Soudure assure la chaudronnerie et l'usinage de structures complexes avec une expertise reconnue dans la fabrication industrielle.",
+      "imageAlt": "Équipement de chaudronnerie TRACIP",
       "cta": {
-        "label": "Contacter TRACIP",
-        "title": "Travailler avec TRACIP",
+        "label": "Contacter TRACIP Mécano-Soudure",
+        "title": "Travailler avec TRACIP Mécano-Soudure",
         "description": "...",
         "button": "Nous Contacter",
-        "imageAlt": "Société TRACIP"
+        "imageAlt": "Société TRACIP Mécano-Soudure"
+      }
+    },
+    "tracip-environnement": {
+      "title": "TRACIP Environnement",
+      "description": "TRACIP Environnement est spécialisée dans le traitement des fumées industrielles, offrant des solutions innovantes pour la protection de l'environnement.",
+      "imageAlt": "Unités de traitement de fumées TRACIP",
+      "cta": {
+        "label": "Contacter TRACIP Environnement",
+        "title": "Travailler avec TRACIP Environnement",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société TRACIP Environnement"
+      }
+    },
+    "haquette": {
+      "title": "HAQUETTE",
+      "description": "HAQUETTE apporte une expertise reconnue dans les solutions industrielles sur mesure, répondant aux besoins spécifiques de chaque client.",
+      "imageAlt": "Solutions industrielles HAQUETTE",
+      "cta": {
+        "label": "Contacter HAQUETTE",
+        "title": "Travailler avec HAQUETTE",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société HAQUETTE"
       }
     }
   },
@@ -397,11 +433,15 @@
       "description": "Venez nous rendre visite à notre siège social pour discuter de vos projets en personne.",
       "address": {
         "name": "Groupe SOGAT",
-        "street": "123 Avenue Industrielle",
-        "city": "75008 Paris",
+        "street": "ZI - Rue Denis Papin",
+        "city": "59147 Gondecourt",
         "country": "France"
       },
-      "hours": "Lundi - Vendredi : 9h00 - 18h00"
+      "hours": "Lundi - Vendredi : 9h - 18h",
+      "phone": "+33 3 20 62 95 95",
+      "fax": "+33 3 20 62 95 96",
+      "email": "contact@sogat.com",
+      "linkedin": "https://www.linkedin.com/company/groupe-sogat/"
     }
   }
 }

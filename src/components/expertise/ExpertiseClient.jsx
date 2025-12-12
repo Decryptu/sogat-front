@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -25,6 +25,7 @@ const scaleOnHover = {
 
 export default function ExpertiseClient() {
   const t = useTranslations("expertise");
+  const locale = useLocale();
 
   const pillars = [
     {
@@ -293,7 +294,7 @@ export default function ExpertiseClient() {
                           transition={{ delay: 0.3 }}
                         >
                           <h3 className="font-bold text-xl mb-4">
-                            {t.raw("locale") === "fr"
+                            {locale === "fr"
                               ? "Usinage sur machine numérique :"
                               : "CNC machining:"}
                           </h3>

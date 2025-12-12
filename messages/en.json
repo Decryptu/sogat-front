@@ -301,118 +301,128 @@
   },
   "expertise": {
     "title": "Our Expertise",
-    "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
+    "description": "With over 30 years of expertise, the SOGAT Group masters the entire industrial cycle: engineering, automation, manufacturing, installation and support. From design to commissioning, we deliver comprehensive, tailored solutions to meet today's industrial challenges.",
     "imageAlt": "Professional team at work",
-    "domains": {
-      "mechanical": {
-        "title": "Mechanical Design Office",
-        "description": "Our product studies are conducted with the utmost care, ensuring maximum integration of industrial manufacturing concepts and maintenance simplicity.",
-        "points": [
-          "Preliminary Design, Dimensioning and Conception",
-          "3D Modeling: CATIA and SOLIDWORKS",
-          "Static and Dynamic Simulation",
-          "Finite Element Analysis",
-          "Aeraulic Calculations (smoke and chip extraction)"
-        ],
-        "detailedTitle": "Advanced Mechanical Design Office",
-        "detailedDescription": "Our mechanical design office employs cutting-edge software and proven methodologies to create industrial solutions that are both innovative and practical. Each project benefits from our extensive experience in manufacturing processes and maintenance optimization.",
-        "imageAlt": "3D mechanical design workspace with modern equipment",
-        "features": [
-          "Advanced 3D modeling with CATIA V5 and SOLIDWORKS",
-          "Comprehensive preliminary project studies",
-          "Static and dynamic simulations",
-          "Finite element method calculations",
-          "Industrial manufacturing integration",
-          "Maintenance optimization studies"
-        ]
+    "pillars": {
+      "engineering": {
+        "title": "Engineering",
+        "description": "4 specialized design offices: automation, robotics, electrical and mechanical",
+        "imageAlt": "Engineering design office"
       },
-      "electrical": {
-        "title": "Electrical & Industrial Automation",
-        "description": "Complete electrical and automation solutions for industrial applications, from design to implementation.",
-        "points": [
-          "Power Dimensioning and Electrical Diagram Development",
-          "Automation and Regulation (Siemens, Allen Bradley, Schneider)",
-          "Robotics (Fanuc, KUKA, ABB, Yaskawa)",
-          "Technology Watch (Vision, AI, Traceability, RFID)"
-        ],
-        "detailedTitle": "Electrical Engineering & Industrial Automation",
-        "detailedDescription": "Our electrical engineering department specializes in industrial automation, combining traditional expertise with Industry 4.0 technologies. We design and implement sophisticated control systems that enhance productivity and reliability.",
-        "imageAlt": "Advanced automation control system setup",
-        "features": [
-          "Complete electrical system design",
-          "Advanced PLC programming",
-          "Industrial robotics integration",
-          "AI and machine vision systems",
-          "RFID and traceability solutions",
-          "Smart factory implementations"
-        ]
+      "project": {
+        "title": "Project",
+        "description": "Precise management, synergies between entities, risk analysis, diversification research, technology watch, continuous improvement",
+        "imageAlt": "Industrial project management"
       },
       "manufacturing": {
         "title": "Manufacturing",
-        "description": "High-precision manufacturing capabilities across multiple disciplines, ensuring quality and reliability.",
-        "points": [
-          "Metalwork Manufacturing",
-          "CNC Machining",
-          "3D Measurement Quality Control",
-          "Complex Sub-assembly",
-          "Electrical Cabinet Manufacturing"
-        ],
-        "detailedTitle": "Industrial Manufacturing Excellence",
-        "detailedDescription": "Our manufacturing facilities combine traditional craftsmanship with modern precision machinery. We handle everything from metalwork to complex assemblies, maintaining the highest quality standards throughout the production process.",
-        "imageAlt": "Modern manufacturing facility with CNC machines",
-        "features": [
-          "Advanced metalwork fabrication",
-          "High-precision CNC machining",
-          "3D measurement quality control",
-          "Electrical cabinet assembly",
-          "Complex system integration",
-          "Certified quality processes"
-        ]
+        "description": "Production integration, electrical and automation workshop, mechanical workshop, machining and boilermaking",
+        "imageAlt": "Modern manufacturing workshop"
       },
-      "onsite": {
-        "title": "On-site Operations",
-        "description": "Comprehensive on-site installation and setup services with certified professionals.",
+      "installation": {
+        "title": "Installation",
+        "description": "Turnkey installation, global after-sales services",
+        "imageAlt": "On-site installation"
+      }
+    },
+    "sections": {
+      "mechanicalDesign": {
+        "title": "Advanced Mechanical Design Office",
+        "description": "Our product studies are conducted with the utmost care, ensuring maximum integration of industrial manufacturing concepts and maintenance simplicity.",
         "points": [
-          "Mechanical Assembly of Industrial Equipment",
-          "Lifting and Handling Operations",
-          "Fluid System Installation",
-          "Qualified Personnel with Required Certifications",
-          "Commissioning by Automation Specialists"
+          "Preliminary design, dimensioning and conception",
+          "3D modeling: CATIA and SOLIDWORKS",
+          "Static and dynamic simulation",
+          "Finite element analysis",
+          "Aeraulic calculations (smoke and chip extraction)"
         ],
-        "detailedTitle": "On-site Installation & Services",
-        "detailedDescription": "Our field operations team handles complete industrial equipment installation and commissioning. With extensive experience in complex industrial environments, we ensure safe and efficient project execution.",
-        "imageAlt": "Professional team performing on-site installation",
-        "features": [
-          "Industrial equipment assembly",
-          "Specialized lifting operations",
-          "Pneumatic and hydraulic installations",
-          "Electrical system integration",
-          "Professional commissioning",
-          "Safety-certified personnel"
-        ]
+        "imageAlt": "3D mechanical design"
+      },
+      "electricalAutomation": {
+        "title": "Electrical Engineering & Industrial Automation",
+        "description": "Our design office creates reliable, modern electrical and automation solutions, integrating Industry 4.0 technologies.",
+        "points": [
+          "Electrical dimensioning: power, diagrams, complete architectures",
+          "Automation & regulation: Siemens, Allen Bradley, Schneider, Pilz, ABB…",
+          "Industrial robotics: Fanuc, KUKA, ABB, Yaskawa…",
+          "Technology watch: vision, AI, traceability, RFID"
+        ],
+        "imageAlt": "Industrial automation"
+      },
+      "integratedManufacturing": {
+        "title": "Integrated Manufacturing",
+        "description": "Our manufacturing teams produce complete mechanical and electrical assemblies with high standards, from welded structures to final assembly.",
+        "points": [
+          "Boilermaking: welded assemblies compliant with drawings and specifications",
+          "CNC machining: boring mill, horizontal/vertical lathe, milling machine, machining center",
+          "Quality: 3D measurement arm controls, COFREND certified personnel",
+          "Assembly: sub-assemblies and complex systems",
+          "Connections: electrical, pneumatic, hydraulic",
+          "Electrical cabinet manufacturing: wiring, testing and integration"
+        ],
+        "imageAlt": "Manufacturing workshop"
+      },
+      "mechanicalConstruction": {
+        "title": "Mechanical Construction",
+        "description": "TRACIP masters the entire production chain for welded products, whether unique pieces or series. From profiles, sheets or tubes, our workshops produce assemblies compliant with drawings and specifications, with the possibility of handling the design as well.",
+        "specs": [
+          "Certified welders",
+          "80T lifting capacity",
+          "3,500 m² workshop",
+          "Maximum part dimensions: 7.5m x 7m"
+        ],
+        "equipment": [
+          "CNC vertical lathe – Ø 2.5m table",
+          "CNC horizontal lathe - Haas",
+          "CNC boring mill - TOS – x travel: 4m",
+          "CNC machining center – Mazak",
+          "CNC milling machine – Soraluce",
+          "Zeiss measurement bench"
+        ],
+        "imageAlt": "Mechanical construction"
+      },
+      "onsiteWork": {
+        "title": "On-site Operations",
+        "description": "Our team intervenes directly on-site to install, optimize and maintain your automation systems. We combine field expertise and advanced technologies to ensure reliability, performance and production continuity.",
+        "points": [
+          "Installation and commissioning of automated equipment",
+          "Integration of control and supervision systems",
+          "Modernization of electrical cabinets and industrial networks",
+          "Diagnostics, troubleshooting and preventive maintenance",
+          "Performance optimization and production downtime reduction"
+        ],
+        "imageAlt": "On-site intervention"
       },
       "service": {
-        "title": "After-sales Service",
-        "description": "Our SOGAT service department ensures customer satisfaction throughout the entire lifecycle of our machines.",
-        "points": [
-          "Preventive and Corrective Maintenance",
-          "Spare Parts Management",
-          "On-site Services",
-          "Training Programs",
-          "Equipment Upgrades and Retrofitting",
-          "Remote Solutions (Industry 4.0)"
+        "title": "SOGAT Service",
+        "description": "Our \"SOGAT Service\" department ensures complete customer support, from startup to the entire equipment lifecycle, through a global network of specialists guaranteeing reliable and responsive assistance.",
+        "services": [
+          {
+            "title": "Maintenance",
+            "description": "Preventive and corrective interventions to ensure proper equipment operation"
+          },
+          {
+            "title": "Spare parts & consumables",
+            "description": "Dedicated service for managing and storing your parts and consumables"
+          },
+          {
+            "title": "On-site interventions",
+            "description": "Teams ready to intervene in your factories whenever necessary"
+          },
+          {
+            "title": "Training",
+            "description": "Dedicated sessions for using and maintaining our equipment"
+          },
+          {
+            "title": "Upgrade & Retrofit",
+            "description": "Modernization and improvement of your installations to optimize their performance"
+          },
+          {
+            "title": "Remote solutions",
+            "description": "Remote assistance and diagnostics using Industry 4.0 tools"
+          }
         ],
-        "detailedTitle": "Comprehensive After-sales Support",
-        "detailedDescription": "The SOGAT service department provides worldwide support throughout your equipment's lifecycle. Our global network of technical specialists ensures reliable assistance and rapid response times for all your maintenance needs.",
-        "imageAlt": "Technical support team providing maintenance service",
-        "features": [
-          "24/7 technical support",
-          "Preventive maintenance programs",
-          "Spare parts management",
-          "Operator training services",
-          "Equipment modernization",
-          "Remote diagnostic solutions"
-        ]
+        "imageAlt": "After-sales service"
       }
     }
   },

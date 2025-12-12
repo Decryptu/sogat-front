@@ -76,46 +76,55 @@ export default async function Expertise({ params }) {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+      {/* Hero Section - Two Column */}
+      <div className="w-full">
+        <div className="grid lg:grid-cols-2 items-center">
+          <div className="space-y-6 px-4 md:px-16 py-12 lg:py-20">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               {t("title")}
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
               {t("description")}
             </p>
           </div>
+          <div className="relative w-full aspect-4/3 lg:aspect-square">
+            <Image
+              src="/images/expertise/hero.webp"
+              alt={t("imageAlt")}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* 4 Pillars Grid */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pillars.map((pillar) => (
+      {/* 4 Pillars - Modern Minimal Design */}
+      <section className="py-24 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+            {pillars.map((pillar, index) => (
               <div
                 key={pillar.key}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group relative border border-gray-200 bg-white hover:bg-gray-50 transition-all duration-200"
               >
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src={pillar.image}
-                    alt={t(`pillars.${pillar.key}.imageAlt`)}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3">
+                <div className="p-8 lg:p-10">
+                  <div className="relative h-12 w-12 mb-6 overflow-hidden rounded-lg">
+                    <Image
+                      src={pillar.image}
+                      alt={t(`pillars.${pillar.key}.imageAlt`)}
+                      fill
+                      className="object-cover opacity-80"
+                    />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3 text-gray-900">
                     {t(`pillars.${pillar.key}.title`)}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed">
                     {t(`pillars.${pillar.key}.description`)}
                   </p>
                 </div>
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-900 transition-colors duration-200 pointer-events-none" />
               </div>
             ))}
           </div>
@@ -141,7 +150,7 @@ export default async function Expertise({ params }) {
                 <div
                   className={`relative ${section.reverse ? "lg:order-2" : ""}`}
                 >
-                  <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden border border-gray-200">
                     <Image
                       src={section.image}
                       alt={sectionData.imageAlt}

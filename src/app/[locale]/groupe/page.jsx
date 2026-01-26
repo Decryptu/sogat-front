@@ -2,7 +2,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import Hero from "@/components/groupe/Hero";
 import Stats from "@/components/groupe/Stats";
-import Overview from "@/components/groupe/Overview";
+// import Overview from "@/components/groupe/Overview"; // Commented out - can be reactivated later
+import GroupeHierarchy from "@/components/groupe/GroupeHierarchy";
+import Values from "@/components/groupe/Values";
 import Solutions from "@/components/groupe/Solutions";
 
 export function generateStaticParams() {
@@ -45,11 +47,12 @@ export default async function Groupe(props) {
     )
   };
 
-  const overviewProps = {
-    title: t("overview.title"),
-    subtitle: t("overview.subtitle"),
-    points: t.raw("overview.points")
-  };
+  // Overview props - commented out, can be reactivated later
+  // const overviewProps = {
+  //   title: t("overview.title"),
+  //   subtitle: t("overview.subtitle"),
+  //   points: t.raw("overview.points")
+  // };
 
   const solutionsProps = {
     subtitle: t("solutions.subtitle"),
@@ -67,7 +70,9 @@ export default async function Groupe(props) {
     <main className="min-h-screen bg-white">
       <Hero {...heroProps} />
       <Stats {...statsProps} />
-      <Overview {...overviewProps} />
+      <GroupeHierarchy />
+      <Values />
+      {/* <Overview {...overviewProps} /> */}
       <Solutions {...solutionsProps} />
     </main>
   );

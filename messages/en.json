@@ -379,6 +379,17 @@
         ],
         "imageAlt": "Manufacturing workshop"
       },
+      "industrialAutomation": {
+        "title": "Electrical Engineering and Industrial Automation",
+        "description": "TRACIP masters the entire manufacturing chain for mechanically welded products, whether single pieces or series. From profiles, sheets or tubes, our workshops produce assemblies that comply with drawings and specifications, with the possibility of also carrying out the design.",
+        "specs": [
+          "Certified welders",
+          "Lifting capacity 80T",
+          "3,500 m² workshop",
+          "Max part dimensions: 7.5m x 7m"
+        ],
+        "imageAlt": "Industrial automation"
+      },
       "mechanicalConstruction": {
         "title": "Mechanical Construction",
         "description": "TRACIP masters the entire production chain for welded products, whether unique pieces or series. From profiles, sheets or tubes, our workshops produce assemblies compliant with drawings and specifications, with the possibility of handling the design as well.",

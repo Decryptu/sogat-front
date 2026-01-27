@@ -379,6 +379,17 @@
         ],
         "imageAlt": "Atelier de fabrication"
       },
+      "industrialAutomation": {
+        "title": "Ingénierie Électrique et Automatisation Industrielle",
+        "description": "TRACIP maîtrise toute la chaîne de fabrication des produits mécano-soudés, qu'il s'agisse de pièces uniques ou de séries. À partir de profilés, tôles ou tubes, nos ateliers réalisent des ensembles conformes aux plans et cahiers des charges, avec la possibilité d'en assurer également l'étude.",
+        "specs": [
+          "Soudeurs Agrées",
+          "Capacité de levage 80T",
+          "3'500 m² d'atelier",
+          "Dimensions pièces Max : 7,5m x 7m"
+        ],
+        "imageAlt": "Automatisation industrielle"
+      },
       "mechanicalConstruction": {
         "title": "Construction Mécanique",
         "description": "TRACIP maîtrise toute la chaîne de fabrication des produits mécano-soudés, qu'il s'agisse de pièces uniques ou de séries. À partir de profilés, tôles ou tubes, nos ateliers réalisent des ensembles conformes aux plans et cahiers des charges, avec la possibilité d'en assurer également l'étude.",

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -64,7 +65,13 @@ export default function ContactForm({ title, labels, messages }) {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <motion.section
+      className="py-16 bg-white"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+    >
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -129,6 +136,6 @@ export default function ContactForm({ title, labels, messages }) {
           </form>
         </Form>
       </div>
-    </section>
+    </motion.section>
   );
 }

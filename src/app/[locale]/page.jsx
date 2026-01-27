@@ -30,7 +30,7 @@ export default async function Home({ params }) {
 			<Hero t={t} />
 			<Expertise t={t} />
 			<Metiers t={t} />
-			<CTA t={t} />
+			<CTA />
 		</>
 	);
 }

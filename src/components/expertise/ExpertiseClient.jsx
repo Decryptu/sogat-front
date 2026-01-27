@@ -63,19 +63,24 @@ export default function ExpertiseClient() {
       reverse: false,
     },
     {
+      key: "industrialAutomation",
+      image: "/images/expertise/automatisation.webp",
+      reverse: true,
+    },
+    {
       key: "mechanicalConstruction",
       image: "/images/expertise/mechanical.webp",
-      reverse: true,
+      reverse: false,
     },
     {
       key: "onsiteWork",
       image: "/images/expertise/onsite.webp",
-      reverse: false,
+      reverse: true,
     },
     {
       key: "service",
       image: "/images/expertise/service.webp",
-      reverse: true,
+      reverse: false,
     },
   ];
 

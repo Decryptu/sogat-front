@@ -1,4 +1,7 @@
+"use client";
+
 import { Building2, Cog, Construction, Wrench } from "lucide-react";
+import { FadeIn, StaggerIn, StaggerItem } from "@/components/ui/motion";
 
 const ICONS = {
   engineering: Cog,
@@ -12,39 +15,38 @@ export default function Solutions({ subtitle, title, items }) {
     <section className="relative py-24">
       <div className="container mx-auto px-6">
         {/* Header Section */}
-        <div className="flex flex-col items-center mb-20">
+        <FadeIn className="flex flex-col items-center mb-20">
           <p className="text-gray-600 mb-4">{subtitle}</p>
           <h2 className="text-6xl font-bold text-center text-gray-900">
             {title}
           </h2>
-        </div>
+        </FadeIn>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <StaggerIn className="grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
           {items.map(({ key, title: itemTitle, description }) => {
             const Icon = ICONS[key];
             return (
-              <div
-                key={key}
-                className="relative bg-white border-t border-gray-200 p-8"
-              >
-                <div className="flex gap-8">
-                  <div className="shrink-0">
-                    <Icon className="w-10 h-10 text-gray-900" strokeWidth={1} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">
-                      {itemTitle}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed font-light">
-                      {description}
-                    </p>
+              <StaggerItem key={key}>
+                <div className="relative bg-white border-t border-gray-200 p-8">
+                  <div className="flex gap-8">
+                    <div className="shrink-0">
+                      <Icon className="w-10 h-10 text-gray-900" strokeWidth={1} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-gray-900 mb-3">
+                        {itemTitle}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed font-light">
+                        {description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerIn>
       </div>
     </section>
   );

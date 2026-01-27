@@ -2,6 +2,7 @@
 
 import { useEffect } from "react"
 import dynamic from 'next/dynamic'
+import { motion } from "framer-motion"
 import { Phone, Printer, Mail, Linkedin } from 'lucide-react'
 
 const MapContainer = dynamic(
@@ -39,7 +40,13 @@ export default function Location({ title, description, address, hours, phone, fa
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+          >
             <div>
               <h2 className="text-3xl font-bold mb-4">{title}</h2>
               <p className="text-gray-600">{description}</p>
@@ -88,8 +95,14 @@ export default function Location({ title, description, address, hours, phone, fa
                 </div>
               )}
             </div>
-          </div>
-          <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
+          </motion.div>
+          <motion.div
+            className="h-[400px] rounded-lg overflow-hidden shadow-lg"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+          >
             <MapContainer
               center={position}
               zoom={13}
@@ -107,7 +120,7 @@ export default function Location({ title, description, address, hours, phone, fa
                 </Popup>
               </Marker>
             </MapContainer>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

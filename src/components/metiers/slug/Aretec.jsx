@@ -6,36 +6,36 @@ import Image from "next/image";
 const IMAGES = {
   // Section: Nos équipements - 3-column grid
   equipment: {
-    col1: "/images/metiers/aretec/placeholder.webp", // Lignes de production
-    col2: "/images/metiers/aretec/placeholder.webp", // Machines spéciales
-    col3: "/images/metiers/aretec/placeholder.webp", // Robotique
+    col1: "/images/metiers/aretec/1.webp", // Lignes de production
+    col2: "/images/metiers/aretec/2.webp", // Machines spéciales
+    col3: "/images/metiers/aretec/3.webp", // Robotique
   },
   // Section: 2x2 grid
   grid2x2: {
-    row1col1: "/images/metiers/aretec/placeholder.webp", // Ligne échelle câble
-    row1col2: "/images/metiers/aretec/placeholder.webp", // Ligne tubes spiralés
-    row2col1: "/images/metiers/aretec/placeholder.webp", // Ligne sérigraphie
-    row2col2: "/images/metiers/aretec/placeholder.webp", // Ligne assemblage batterie
+    row1col1: "/images/metiers/aretec/4.webp", // Ligne échelle câble
+    row1col2: "/images/metiers/aretec/5.webp", // Ligne tubes spiralés
+    row2col1: "/images/metiers/aretec/6.webp", // Ligne sérigraphie
+    row2col2: "/images/metiers/aretec/7.webp", // Ligne assemblage batterie
   },
   // Section: Machines spéciales (5 items)
   machines: {
-    decoupe: "/images/metiers/aretec/placeholder.webp", // Découpe de porte
-    poinconnage: "/images/metiers/aretec/placeholder.webp", // Poinçonnage
-    tunnel: "/images/metiers/aretec/placeholder.webp", // Tunnel de séchage
-    presse: "/images/metiers/aretec/placeholder.webp", // Presse de collage
-    controle: "/images/metiers/aretec/placeholder.webp", // Poste de contrôle
+    decoupe: "/images/metiers/aretec/8.webp", // Découpe de porte
+    poinconnage: "/images/metiers/aretec/9.webp", // Poinçonnage
+    tunnel: "/images/metiers/aretec/10.webp", // Tunnel de séchage
+    presse: "/images/metiers/aretec/11.webp", // Presse de collage
+    controle: "/images/metiers/aretec/12.webp", // Poste de contrôle
   },
   // Section: Robotique (3 items)
   robotique: {
-    fabrication: "/images/metiers/aretec/placeholder.webp", // Ligne de fabrication
-    vision: "/images/metiers/aretec/placeholder.webp", // Vision
-    clippage: "/images/metiers/aretec/placeholder.webp", // Clippage
+    fabrication: "/images/metiers/aretec/13.webp", // Ligne de fabrication
+    vision: "/images/metiers/aretec/14.webp", // Vision
+    clippage: "/images/metiers/aretec/15.webp", // Clippage
   },
   // Section: Robots collaboratifs (3 images)
   cobots: {
-    img1: "/images/metiers/aretec/placeholder.webp",
-    img2: "/images/metiers/aretec/placeholder.webp",
-    img3: "/images/metiers/aretec/placeholder.webp",
+    img1: "/images/metiers/aretec/16.webp",
+    img2: "/images/metiers/aretec/17.webp",
+    img3: "/images/metiers/aretec/18.webp",
   },
 };
 
@@ -74,14 +74,14 @@ function ImageCard({ src, alt, title, aspectRatio = "aspect-[4/3]" }) {
 function OverlayCard({ src, alt, title }) {
   return (
     <div className="group">
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
+      <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-gray-100">
         <Image
           src={src}
           alt={alt}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-4">
           <h3 className="text-white font-semibold">{title}</h3>
         </div>

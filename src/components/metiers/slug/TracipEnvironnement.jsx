@@ -6,13 +6,13 @@ import Image from "next/image";
 const IMAGES = {
   // Section: Nos équipements (3 columns)
   equipements: {
-    col1: "/images/metiers/tracip-environnement/placeholder.webp",
-    col2: "/images/metiers/tracip-environnement/placeholder.webp",
-    col3: "/images/metiers/tracip-environnement/placeholder.webp",
+    col1: "/images/metiers/tracip-environnement/1.webp",
+    col2: "/images/metiers/tracip-environnement/2.webp",
+    col3: "/images/metiers/tracip-environnement/3.webp",
   },
   // Section: Filtres à manches (right image)
   filtres: {
-    main: "/images/metiers/tracip-environnement/placeholder.webp",
+    main: "/images/metiers/tracip-environnement/4.webp",
   },
 };
 

@@ -6,32 +6,32 @@ import Image from "next/image";
 const IMAGES = {
   // Section: Nos équipements - 3-column grid
   equipment: {
-    col1: "/images/metiers/sp2i-prehension/placeholder.webp", // Pince spécifique
-    col2: "/images/metiers/sp2i-prehension/placeholder.webp", // Pince de préhension bobine
-    col3: "/images/metiers/sp2i-prehension/placeholder.webp", // Navette transbordeur
+    col1: "/images/metiers/sp2i-prehension/1.webp", // Pince spécifique
+    col2: "/images/metiers/sp2i-prehension/2.webp", // Pince de préhension bobine
+    col3: "/images/metiers/sp2i-prehension/3.webp", // Navette transbordeur
   },
   // Section: 2-column grid
   twoCol: {
-    col1: "/images/metiers/sp2i-prehension/placeholder.webp", // Convoyeur à rouleau
-    col2: "/images/metiers/sp2i-prehension/placeholder.webp", // Ligne de transfert
+    col1: "/images/metiers/sp2i-prehension/4.webp", // Convoyeur à rouleau
+    col2: "/images/metiers/sp2i-prehension/5.webp", // Ligne de transfert
   },
   // Section: Outil de levage (6 items)
   levage: {
-    bobines: "/images/metiers/sp2i-prehension/placeholder.webp", // Pinces bobines horizontales
-    outillage: "/images/metiers/sp2i-prehension/placeholder.webp", // Pinces outillage presse
-    toles: "/images/metiers/sp2i-prehension/placeholder.webp", // Pinces paquets tôles
-    brames: "/images/metiers/sp2i-prehension/placeholder.webp", // Pince à brames
-    diverses: "/images/metiers/sp2i-prehension/placeholder.webp", // Pinces charges diverses
-    lingot: "/images/metiers/sp2i-prehension/placeholder.webp", // Pince à lingot aluminium
+    bobines: "/images/metiers/sp2i-prehension/6.webp", // Pinces bobines horizontales
+    outillage: "/images/metiers/sp2i-prehension/7.webp", // Pinces outillage presse
+    toles: "/images/metiers/sp2i-prehension/8.webp", // Pinces paquets tôles
+    brames: "/images/metiers/sp2i-prehension/9.webp", // Pince à brames
+    diverses: "/images/metiers/sp2i-prehension/10.webp", // Pinces charges diverses
+    lingot: "/images/metiers/sp2i-prehension/11.webp", // Pince à lingot aluminium
   },
   // Section: Convoyeur à rouleau
   convoyeur: {
-    img1: "/images/metiers/sp2i-prehension/placeholder.webp", // Convoyeurs description
-    img2: "/images/metiers/sp2i-prehension/placeholder.webp", // Transfert à chaînes
+    img1: "/images/metiers/sp2i-prehension/12.webp", // Convoyeurs description
+    img2: "/images/metiers/sp2i-prehension/13.webp", // Transfert à chaînes
   },
   // Section: Ligne de transfert
   transfert: {
-    main: "/images/metiers/sp2i-prehension/placeholder.webp",
+    main: "/images/metiers/sp2i-prehension/14.webp",
   },
 };
 
@@ -89,14 +89,14 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
 function LevageCard({ src, alt, title }) {
   return (
     <div className="group">
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-3 bg-gray-100">
+      <div className="relative aspect-4/3 rounded-xl overflow-hidden mb-3 bg-gray-100">
         <Image
           src={src}
           alt={alt}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-4">
           <h3 className="text-white font-semibold text-sm md:text-base">{title}</h3>
         </div>
@@ -209,7 +209,7 @@ export default function Sp2iPrehension({ t, locale }) {
               />
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  Les convoyeurs permettent de transférer des charges unitaires, en paquets ou en vrac d'une position vers une autre ou vers de multiples positions.
+                  Les convoyeurs permettent de transférer des charges unitaires, en paquets ou en vrac d&apos;une position vers une autre ou vers de multiples positions.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Nos convoyeurs peuvent être à rouleau, à chaînes, à bandes ou encore à écailles.

@@ -6,62 +6,62 @@ import Image from "next/image";
 const IMAGES = {
   // Section: Nos équipements (Pour Silo)
   equipementsSilo: {
-    silo: "/images/metiers/iserco/placeholder.webp",
-    bigBag: "/images/metiers/iserco/placeholder.webp",
-    sac: "/images/metiers/iserco/placeholder.webp",
-    fondVibrantRond: "/images/metiers/iserco/placeholder.webp",
-    fondVibrantCarre: "/images/metiers/iserco/placeholder.webp",
-    fondVibrantMultiple: "/images/metiers/iserco/placeholder.webp",
+    silo: "/images/metiers/iserco/1.webp",
+    bigBag: "/images/metiers/iserco/2.webp",
+    sac: "/images/metiers/iserco/3.webp",
+    fondVibrantRond: "/images/metiers/iserco/4.webp",
+    fondVibrantCarre: "/images/metiers/iserco/5.webp",
+    fondVibrantMultiple: "/images/metiers/iserco/6.webp",
   },
   // Detail sections (Pour Silo)
-  fondVibrantRond: "/images/metiers/iserco/placeholder.webp",
-  fondVibrantCarre: "/images/metiers/iserco/placeholder.webp",
-  fondVibrantMultiple: "/images/metiers/iserco/placeholder.webp",
+  fondVibrantRond: "/images/metiers/iserco/7.webp",
+  fondVibrantCarre: "/images/metiers/iserco/8.webp",
+  fondVibrantMultiple: "/images/metiers/iserco/9.webp",
   // Section: Nos équipements (Pour BIG BAGs)
   equipementsBigBag: {
-    bonneCoulabilite: "/images/metiers/iserco/placeholder.webp",
-    faibleCoulabilite: "/images/metiers/iserco/placeholder.webp",
-    mauvaiseCoulabilite: "/images/metiers/iserco/placeholder.webp",
+    bonneCoulabilite: "/images/metiers/iserco/10.webp",
+    faibleCoulabilite: "/images/metiers/iserco/11.webp",
+    mauvaiseCoulabilite: "/images/metiers/iserco/12.webp",
   },
   // Detail sections (Pour BIG BAGs)
-  vidangeBonneCoulabilite: "/images/metiers/iserco/placeholder.webp",
-  vidangeFaibleCoulabilite1: "/images/metiers/iserco/placeholder.webp",
-  vidangeFaibleCoulabilite2: "/images/metiers/iserco/placeholder.webp",
+  vidangeBonneCoulabilite: "/images/metiers/iserco/13.webp",
+  vidangeFaibleCoulabilite1: "/images/metiers/iserco/14.webp",
+  vidangeFaibleCoulabilite2: "/images/metiers/iserco/15.webp",
   // Section: Nos équipements (Pour remplir un BIG BAG)
   equipementsRemplissage: {
-    cadencePlus: "/images/metiers/iserco/placeholder.webp",
-    cadencePlusPlus: "/images/metiers/iserco/placeholder.webp",
-    cadencePlusPlusPlus: "/images/metiers/iserco/placeholder.webp",
-    bigBagOctabin: "/images/metiers/iserco/placeholder.webp",
+    cadencePlus: "/images/metiers/iserco/16.webp",
+    cadencePlusPlus: "/images/metiers/iserco/17.webp",
+    cadencePlusPlusPlus: "/images/metiers/iserco/18.webp",
+    bigBagOctabin: "/images/metiers/iserco/19.webp",
   },
   // Detail sections (Pour remplir un BIG BAG)
-  remplissagePlus: "/images/metiers/iserco/placeholder.webp",
-  remplissagePlusPlus: "/images/metiers/iserco/placeholder.webp",
-  remplissagePlusPlusPlus: "/images/metiers/iserco/placeholder.webp",
-  remplissageBigBagOctabin: "/images/metiers/iserco/placeholder.webp",
+  remplissagePlus: "/images/metiers/iserco/20.webp",
+  remplissagePlusPlus: "/images/metiers/iserco/21.webp",
+  remplissagePlusPlusPlus: "/images/metiers/iserco/22.webp",
+  remplissageBigBagOctabin: "/images/metiers/iserco/23.webp",
   // Section: Nos équipements (Pour vider un BIG BAG)
   equipementsVideSac: {
-    bonneCoulabilite: "/images/metiers/iserco/placeholder.webp",
-    mauvaiseCoulabilite: "/images/metiers/iserco/placeholder.webp",
-    hauteHygiene: "/images/metiers/iserco/placeholder.webp",
-    stationVideSac: "/images/metiers/iserco/placeholder.webp",
+    bonneCoulabilite: "/images/metiers/iserco/24.webp",
+    mauvaiseCoulabilite: "/images/metiers/iserco/25.webp",
+    hauteHygiene: "/images/metiers/iserco/26.webp",
+    stationVideSac: "/images/metiers/iserco/27.webp",
   },
   // Detail sections (Pour vider un BIG BAG)
-  videSacBonneCoulabilite: "/images/metiers/iserco/placeholder.webp",
-  videSacMauvaiseCoulabilite: "/images/metiers/iserco/placeholder.webp",
-  videSacHauteHygiene: "/images/metiers/iserco/placeholder.webp",
-  stationVideSac: "/images/metiers/iserco/placeholder.webp",
+  videSacBonneCoulabilite: "/images/metiers/iserco/28.webp",
+  videSacMauvaiseCoulabilite: "/images/metiers/iserco/29.webp",
+  videSacHauteHygiene: "/images/metiers/iserco/30.webp",
+  stationVideSac: "/images/metiers/iserco/31.webp",
   // Section: Nos équipements (transfert, dosage, réduction)
   equipementsAutres: {
-    transfert: "/images/metiers/iserco/placeholder.webp",
-    dosage: "/images/metiers/iserco/placeholder.webp",
-    reduction: "/images/metiers/iserco/placeholder.webp",
+    transfert: "/images/metiers/iserco/32.webp",
+    dosage: "/images/metiers/iserco/33.webp",
+    reduction: "/images/metiers/iserco/34.webp",
   },
   // Detail sections
-  transfertVis: "/images/metiers/iserco/placeholder.webp",
-  transfertPneumatique: "/images/metiers/iserco/placeholder.webp",
-  dosagePonderal: "/images/metiers/iserco/placeholder.webp",
-  dosageVolumetrique: "/images/metiers/iserco/placeholder.webp",
+  transfertVis: "/images/metiers/iserco/35.webp",
+  transfertPneumatique: "/images/metiers/iserco/36.webp",
+  dosagePonderal: "/images/metiers/iserco/37.webp",
+  dosageVolumetrique: "/images/metiers/iserco/38.webp",
 };
 
 // =============================================================================
@@ -81,14 +81,14 @@ function SectionTitle({ children, subtitle, className = "" }) {
   );
 }
 
-function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3]" }) {
+function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3]", contain = false }) {
   return (
     <div className={`relative ${aspectRatio} rounded-xl overflow-hidden bg-gray-100 ${className}`}>
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className={contain ? "object-contain" : "object-cover"}
       />
     </div>
   );
@@ -113,7 +113,7 @@ function DetailSection({ title, imageSrc, imageAlt, children, bgColor = "bg-whit
           {title}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <PlaceholderImage src={imageSrc} alt={imageAlt} aspectRatio="aspect-[4/3]" />
+          <PlaceholderImage src={imageSrc} alt={imageAlt} aspectRatio="aspect-[4/3]" contain />
           <div className="text-gray-700 leading-relaxed space-y-4">
             {children}
           </div>
@@ -547,7 +547,7 @@ export default function Iserco({ t, locale }) {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
-            <PlaceholderImage src={IMAGES.transfertVis} alt="Vis d'Archimède" aspectRatio="aspect-[4/3]" />
+            <PlaceholderImage src={IMAGES.transfertVis} alt="Vis d'Archimède" aspectRatio="aspect-[4/3]" contain />
             <div className="text-gray-700 leading-relaxed space-y-4">
               <h3 className="text-xl font-bold text-iserco">Vis d&apos;Archimède</h3>
               <p>
@@ -558,7 +558,7 @@ export default function Iserco({ t, locale }) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <PlaceholderImage src={IMAGES.transfertPneumatique} alt="Transport pneumatique" aspectRatio="aspect-[4/3]" />
+            <PlaceholderImage src={IMAGES.transfertPneumatique} alt="Transport pneumatique" aspectRatio="aspect-[4/3]" contain />
             <div className="text-gray-700 leading-relaxed space-y-4">
               <h3 className="text-xl font-bold text-iserco">Transport pneumatique</h3>
               <p>
@@ -579,7 +579,7 @@ export default function Iserco({ t, locale }) {
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
-            <PlaceholderImage src={IMAGES.dosagePonderal} alt="Dosage pondéral" aspectRatio="aspect-[4/3]" />
+            <PlaceholderImage src={IMAGES.dosagePonderal} alt="Dosage pondéral" aspectRatio="aspect-[4/3]" contain />
             <div className="text-gray-700 leading-relaxed space-y-4">
               <h3 className="text-xl font-bold text-iserco">Dosage pondéral</h3>
               <p>
@@ -589,7 +589,7 @@ export default function Iserco({ t, locale }) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <PlaceholderImage src={IMAGES.dosageVolumetrique} alt="Dosage volumétrique" aspectRatio="aspect-[4/3]" />
+            <PlaceholderImage src={IMAGES.dosageVolumetrique} alt="Dosage volumétrique" aspectRatio="aspect-[4/3]" contain />
             <div className="text-gray-700 leading-relaxed space-y-4">
               <h3 className="text-xl font-bold text-iserco">Dosage volumétrique</h3>
               <p>

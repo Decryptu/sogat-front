@@ -6,37 +6,37 @@ import Image from "next/image";
 const IMAGES = {
   // Section: Nos équipements - First 3-column grid
   equipmentRow1: {
-    col1: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Caténaire escamotable
-    col2: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Passerelle d'accès toiture
-    col3: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // PEMP
+    col1: "/images/metiers/sp2i-ferroviaire/1.webp", // Caténaire escamotable
+    col2: "/images/metiers/sp2i-ferroviaire/2.webp", // Passerelle d'accès toiture
+    col3: "/images/metiers/sp2i-ferroviaire/3.webp", // PEMP
   },
   // Section: Nos équipements - Second 3-column grid
   equipmentRow2: {
-    col1: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Portique mobile
-    col2: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Table élévatrice
-    col3: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Automate de sécurité
+    col1: "/images/metiers/sp2i-ferroviaire/4.webp", // Portique mobile
+    col2: "/images/metiers/sp2i-ferroviaire/5.webp", // Table élévatrice
+    col3: "/images/metiers/sp2i-ferroviaire/6.webp", // Automate de sécurité
   },
   // Section: Grue Vélocipédique
   grue: {
-    main: "/images/metiers/sp2i-ferroviaire/placeholder.webp",
+    main: "/images/metiers/sp2i-ferroviaire/7.webp",
   },
   // Section: Caténaire escamotable detail
   catenaire: {
-    side: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Side image
-    full: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Full width bottom
+    side: "/images/metiers/sp2i-ferroviaire/8.webp", // Side image
+    full: "/images/metiers/sp2i-ferroviaire/9.webp", // Full width bottom
   },
   // Section: Passerelle d'accès toiture detail
   passerelle: {
-    side: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Side image
-    full: "/images/metiers/sp2i-ferroviaire/placeholder.webp", // Full width bottom
+    side: "/images/metiers/sp2i-ferroviaire/10.webp", // Side image
+    full: "/images/metiers/sp2i-ferroviaire/11.webp", // Full width bottom
   },
   // Section: PEMP detail
   pemp: {
-    main: "/images/metiers/sp2i-ferroviaire/placeholder.webp",
+    main: "/images/metiers/sp2i-ferroviaire/12.webp",
   },
   // Section: Automate de sécurité detail
   automate: {
-    main: "/images/metiers/sp2i-ferroviaire/placeholder.webp",
+    main: "/images/metiers/sp2i-ferroviaire/13.webp",
   },
 };
 
@@ -157,7 +157,7 @@ export default function Sp2iFerroviaire({ t, locale }) {
                 Notre système de caténaires rigides escamotables a été conçu spécialement pour les centres de maintenance du matériel ferroviaire roulant.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Il permet d'électrifier les voies internes de l'atelier tout en conservant les possibilités d'utilisation des ponts-roulants et des autres installations aériennes.
+                Il permet d&apos;électrifier les voies internes de l&apos;atelier tout en conservant les possibilités d&apos;utilisation des ponts-roulants et des autres installations aériennes.
               </p>
               <div className="flex items-center gap-3 pt-4">
                 <span className="w-12 h-1 bg-sp2i-feroviaire rounded-full" />
@@ -184,7 +184,7 @@ export default function Sp2iFerroviaire({ t, locale }) {
       {/* ===== SECTION: Passerelle d'accès toiture detail ===== */}
       <section className="py-20 px-4 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
-          <SectionTitle>PASSERELLE D'ACCÈS TOITURE</SectionTitle>
+          <SectionTitle>PASSERELLE D&apos;ACCÈS TOITURE</SectionTitle>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             {/* Left - Image */}
@@ -277,7 +277,7 @@ export default function Sp2iFerroviaire({ t, locale }) {
             {/* Right - Text */}
             <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed text-lg">
-                Les multiples équipements des ateliers ferroviaires associés à l'appareillage SP2I forment un ensemble complexe qui doit être soumis à un contrôle rigoureux afin d'éviter les accidents.
+                Les multiples équipements des ateliers ferroviaires associés à l&apos;appareillage SP2I forment un ensemble complexe qui doit être soumis à un contrôle rigoureux afin d&apos;éviter les accidents.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Des automates de sécurité sont ainsi intégrés à nos structures pour gérer les risques entre caténaires sous tension et équipements mobiles ou humains.

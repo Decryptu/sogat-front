@@ -6,9 +6,9 @@ import Image from "next/image";
 const IMAGES = {
   // Section: 3 column showcase
   showcase: {
-    col1: "/images/metiers/tracip-mecano-soudure/placeholder.webp",
-    col2: "/images/metiers/tracip-mecano-soudure/placeholder.webp",
-    col3: "/images/metiers/tracip-mecano-soudure/placeholder.webp",
+    col1: "/images/metiers/tracip-mecano-soudure/1.webp",
+    col2: "/images/metiers/tracip-mecano-soudure/2.webp",
+    col3: "/images/metiers/tracip-mecano-soudure/3.webp",
   },
 };
 

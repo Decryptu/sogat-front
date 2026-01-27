@@ -6,4 +6,5 @@ export const METIERS = [
   "tracip-mecano-soudure",
   "tracip-environnement",
   "haquette",
+  "iserco",
 ];

@@ -15,8 +15,8 @@ const hierarchyData = {
       subsidiaries: [
         { logo: "/images/metiers/logo-tracip-environnement-full.webp", name: "TRACIP Environnement" },
         { logo: "/images/metiers/logo-tracip-mecano-soudure-full.webp", name: "TRACIP Mécano-Soudure" },
-        { logo: "/images/metiers/logo-iserco-full.png", name: "ISERCO" },
-        { logo: "/images/metiers/logo-haquette-full.png", name: "HAQUETTE" },
+        { logo: "/images/metiers/logo-iserco-full.webp", name: "ISERCO" },
+        { logo: "/images/metiers/logo-haquette-full.webp", name: "HAQUETTE" },
       ],
     },
     {
@@ -75,7 +75,7 @@ export default function GroupeHierarchy() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent mb-4">
             Structure du Groupe
           </h2>
           <p className="text-gray-400 text-lg">
@@ -105,7 +105,7 @@ export default function GroupeHierarchy() {
         {/* Connector line from parent */}
         <div className="flex justify-center mb-4">
           <motion.div
-            className="w-0.5 h-12 bg-gradient-to-b from-white/40 to-white/20"
+            className="w-0.5 h-12 bg-linear-to-b from-white/40 to-white/20"
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
             viewport={{ once: true }}
@@ -116,7 +116,7 @@ export default function GroupeHierarchy() {
         {/* Horizontal connector */}
         <div className="hidden md:flex justify-center mb-4">
           <motion.div
-            className="h-0.5 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+            className="h-0.5 bg-linear-to-r from-transparent via-white/30 to-transparent"
             style={{ width: "80%" }}
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -153,7 +153,7 @@ export default function GroupeHierarchy() {
                 {/* Connector to subsidiaries */}
                 {child.subsidiaries.length > 0 && (
                   <div className="flex justify-center my-4">
-                    <div className="w-0.5 h-6 bg-gradient-to-b from-white/30 to-white/10" />
+                    <div className="w-0.5 h-6 bg-linear-to-b from-white/30 to-white/10" />
                   </div>
                 )}
 

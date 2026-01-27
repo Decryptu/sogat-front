@@ -16,6 +16,7 @@
   --color-sp2i-feroviaire: hsl(var(--sp2i-feroviaire));
   --color-tracip-environnement: hsl(var(--tracip-environnement));
   --color-tracip-mecano-soudure: hsl(var(--tracip-mecano-soudure));
+  --color-iserco: hsl(var(--iserco));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-dark: hsl(var(--dark));
@@ -110,6 +111,7 @@
     --sp2i-feroviaire: 197 42.5% 67.3%;
     --tracip-environnement: 91 63% 48%;
     --tracip-mecano-soudure: 186 62% 49%;
+    --iserco: 64.2 44.8% 62.4%;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -145,6 +147,7 @@
     --sp2i-feroviaire: 197 42.5% 67.3%;
     --tracip-environnement: 91 63% 48%;
     --tracip-mecano-soudure: 186 62% 49%;
+    --iserco: 64.2 44.8% 62.4%;
   }
 }
 

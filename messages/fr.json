@@ -63,6 +63,7 @@
       "tracip-mecano-soudure": "TRACIP Mécano-Soudure",
       "tracip-environnement": "TRACIP Environnement",
       "haquette": "HAQUETTE",
+      "iserco": "ISERCO",
       "imageAlt": "Illustration de dessins techniques et d'ingénierie"
     }
   },
@@ -128,6 +129,10 @@
         "haquette": {
           "name": "Solutions Industrielles",
           "description": "Expertise en solutions industrielles sur mesure"
+        },
+        "iserco": {
+          "name": "Manutention du Vrac",
+          "description": "Conception et fabrication d'équipements de manutention du vrac sur mesure"
         }
       }
     },
@@ -226,6 +231,18 @@
         "description": "...",
         "button": "Nous Contacter",
         "imageAlt": "Société HAQUETTE"
+      }
+    },
+    "iserco": {
+      "title": "ISERCO",
+      "description": "Iserco est experte de la manutention du vrac depuis 1981. La société conçoit et fabrique ses équipements en interne. Son bureau d'étude et ses deux ateliers (acier carbone et acier inoxydable) lui permettent de proposer des solutions sur mesure et clés en main, adaptées à chaque besoin.",
+      "imageAlt": "Équipements de manutention du vrac ISERCO",
+      "cta": {
+        "label": "Contacter ISERCO",
+        "title": "Travailler avec ISERCO",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société ISERCO"
       }
     }
   },

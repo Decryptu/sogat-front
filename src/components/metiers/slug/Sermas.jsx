@@ -6,58 +6,58 @@ import Image from "next/image";
 const IMAGES = {
   // Section: Nos équipements - SCIE A BILLETTES (3 columns)
   billettes: {
-    col1: "/images/metiers/sermas/placeholder.webp", // Solutions hautes-performances
-    col2: "/images/metiers/sermas/placeholder.webp", // Technologie à ruban
-    col3: "/images/metiers/sermas/placeholder.webp", // Technologie à disque
+    col1: "/images/metiers/sermas/1.webp", // Solutions hautes-performances
+    col2: "/images/metiers/sermas/2.webp", // Technologie à ruban
+    col3: "/images/metiers/sermas/3.webp", // Technologie à disque
   },
   // Section: Second 3-column grid
   equipment: {
-    col1: "/images/metiers/sermas/placeholder.webp", // SCIES & LIGNE DE SCIAGE
-    col2: "/images/metiers/sermas/placeholder.webp", // SCIES MULTI-FONCTIONS
-    col3: "/images/metiers/sermas/placeholder.webp", // SCIES DE REFENDAGE
+    col1: "/images/metiers/sermas/4.webp", // SCIES & LIGNE DE SCIAGE
+    col2: "/images/metiers/sermas/5.webp", // SCIES MULTI-FONCTIONS
+    col3: "/images/metiers/sermas/6.webp", // SCIES DE REFENDAGE
   },
   // Section: Two columns
   twoCol: {
-    col1: "/images/metiers/sermas/placeholder.webp", // Installation de sciage
-    col2: "/images/metiers/sermas/placeholder.webp", // MACHINES A SURFACER
+    col1: "/images/metiers/sermas/7.webp", // Installation de sciage
+    col2: "/images/metiers/sermas/8.webp", // MACHINES A SURFACER
   },
   // Section: Solutions hautes-performances detail
   hautesPerformances: {
-    main: "/images/metiers/sermas/placeholder.webp", // Right side image
-    bottom: "/images/metiers/sermas/placeholder.webp", // Full width bottom image
+    main: "/images/metiers/sermas/9.webp", // Right side image
+    bottom: "/images/metiers/sermas/10.webp", // Full width bottom image
   },
   // Section: Technologie à disque (3 images)
   disque: {
-    img1: "/images/metiers/sermas/placeholder.webp",
-    img2: "/images/metiers/sermas/placeholder.webp",
-    img3: "/images/metiers/sermas/placeholder.webp",
+    img1: "/images/metiers/sermas/11.webp",
+    img2: "/images/metiers/sermas/12.webp",
+    img3: "/images/metiers/sermas/13.webp",
   },
   // Section: SCIES & LIGNE DE SCIAGE detail
   ligneSciage: {
-    left1: "/images/metiers/sermas/placeholder.webp", // Left column top
-    left2: "/images/metiers/sermas/placeholder.webp", // Left column bottom
-    right: "/images/metiers/sermas/placeholder.webp", // Right column (tall)
+    left1: "/images/metiers/sermas/14.webp", // Left column top
+    left2: "/images/metiers/sermas/15.webp", // Left column bottom
+    right: "/images/metiers/sermas/16.webp", // Right column (tall)
   },
   // Section: Scies multi-fonctions
   multiFonctions: {
-    slicing: "/images/metiers/sermas/placeholder.webp", // Slicing Saws
-    essential: "/images/metiers/sermas/placeholder.webp", // SERMAS ESSENTIAL
+    slicing: "/images/metiers/sermas/17.webp", // Slicing Saws
+    essential: "/images/metiers/sermas/18.webp", // SERMAS ESSENTIAL
   },
   // Section: SCIES DE REFENDAGE
   refendage: {
-    main: "/images/metiers/sermas/placeholder.webp", // Main image
-    bottom1: "/images/metiers/sermas/placeholder.webp", // Bottom row 1
-    bottom2: "/images/metiers/sermas/placeholder.webp", // Bottom row 2
-    bottom3: "/images/metiers/sermas/placeholder.webp", // Bottom row 3
+    main: "/images/metiers/sermas/19.webp", // Main image
+    bottom1: "/images/metiers/sermas/20.webp", // Bottom row 1
+    bottom2: "/images/metiers/sermas/21.webp", // Bottom row 2
+    bottom3: "/images/metiers/sermas/22.webp", // Bottom row 3
   },
   // Section: Installation plaques laminées
   plaquesLaminees: {
-    img1: "/images/metiers/sermas/placeholder.webp",
-    img2: "/images/metiers/sermas/placeholder.webp",
+    img1: "/images/metiers/sermas/23.webp",
+    img2: "/images/metiers/sermas/24.webp",
   },
   // Section: MACHINES A SURFACER
   surfacer: {
-    main: "/images/metiers/sermas/placeholder.webp",
+    main: "/images/metiers/sermas/25.webp",
   },
 };
 
@@ -266,7 +266,7 @@ export default function Sermas({ t, locale }) {
       <section className="py-20 px-4 md:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <SectionTitle>
-            SCIES & LIGNE DE SCIAGE pour plaques coulées & Tés (T-bars) d'Aluminium
+            SCIES & LIGNE DE SCIAGE pour plaques coulées & Tés (T-bars) d&apos;Aluminium
           </SectionTitle>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -288,7 +288,7 @@ export default function Sermas({ t, locale }) {
               src={IMAGES.ligneSciage.right}
               alt="Ligne de sciage complète"
               aspectRatio="aspect-[3/4] lg:aspect-auto"
-              className="h-full min-h-[400px] lg:min-h-0"
+              className="h-full min-h-100 lg:min-h-0"
             />
           </div>
         </div>
@@ -350,7 +350,7 @@ export default function Sermas({ t, locale }) {
       <section className="py-20 px-4 md:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <SectionTitle>
-            SCIES DE REFENDAGE la production de plaques fines (tôles) d'aluminium à partir de plaques coulées
+            SCIES DE REFENDAGE la production de plaques fines (tôles) d&apos;aluminium à partir de plaques coulées
           </SectionTitle>
 
           {/* Two columns - text & image */}
@@ -404,7 +404,7 @@ export default function Sermas({ t, locale }) {
           </SectionTitle>
 
           <p className="text-xl text-gray-700 mb-10 max-w-3xl">
-            Fabrication de produits de précision pour l'industrie aérospatiale ou navale
+            Fabrication de produits de précision pour l&apos;industrie aérospatiale ou navale
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -433,11 +433,11 @@ export default function Sermas({ t, locale }) {
             {/* Left - Text */}
             <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed text-lg">
-                Finition de surface de tôles sciées, pour obtenir une tôle d'aluminium coulée présentant une rugosité de surface similaire à celle des tôles laminées.
+                Finition de surface de tôles sciées, pour obtenir une tôle d&apos;aluminium coulée présentant une rugosité de surface similaire à celle des tôles laminées.
               </p>
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <p className="text-2xl font-bold text-sermas">
-                  Jusqu'à 7 500 mm x 3 200 mm
+                  Jusqu&apos;à 7 500 mm x 3 200 mm
                 </p>
                 <p className="text-gray-600 mt-2">Dimensions maximales</p>
               </div>

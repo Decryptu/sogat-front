@@ -63,6 +63,7 @@
       "tracip-mecano-soudure": "TRACIP Mécano-Soudure",
       "tracip-environnement": "TRACIP Environnement",
       "haquette": "HAQUETTE",
+      "iserco": "ISERCO",
       "imageAlt": "Engineering and technical drawings illustration"
     }
   },
@@ -128,6 +129,10 @@
         "haquette": {
           "name": "Industrial Solutions",
           "description": "Expertise in custom industrial solutions"
+        },
+        "iserco": {
+          "name": "Bulk Handling",
+          "description": "Design and manufacturing of custom bulk handling equipment"
         }
       }
     },
@@ -226,6 +231,18 @@
         "description": "...",
         "button": "Contact Us",
         "imageAlt": "HAQUETTE facility"
+      }
+    },
+    "iserco": {
+      "title": "ISERCO",
+      "description": "Iserco has been an expert in bulk handling since 1981. The company designs and manufactures its equipment in-house. Its engineering office and two workshops (carbon steel and stainless steel) enable custom, turnkey solutions tailored to every need.",
+      "imageAlt": "ISERCO bulk handling equipment",
+      "cta": {
+        "label": "Contact ISERCO",
+        "title": "Work with ISERCO",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "ISERCO facility"
       }
     }
   },

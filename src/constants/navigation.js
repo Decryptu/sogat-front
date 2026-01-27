@@ -39,4 +39,8 @@ export const NAVIGATION_STYLES = {
     cssVariable: "--haquette",
     image: "/images/metiers/haquette.webp",
   },
+  iserco: {
+    cssVariable: "--iserco",
+    image: "/images/metiers/iserco.webp",
+  },
 };

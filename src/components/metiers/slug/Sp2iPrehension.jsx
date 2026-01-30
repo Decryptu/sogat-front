@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
+import ClickableImageCard from "./ClickableImageCard";
 
 // =============================================================================
 // IMAGE CONFIGURATION - Easy to update all images from here
@@ -55,14 +53,9 @@ function SectionTitle({ children, subtitle, className = "" }) {
   );
 }
 
-function ImageCard({ src, alt, title, description, aspectRatio = "aspect-[4/3]" }) {
-  const [showDescription, setShowDescription] = useState(false);
-
+function ImageCard({ src, alt, title, aspectRatio = "aspect-[4/3]" }) {
   return (
-    <div
-      className="group cursor-pointer"
-      onClick={() => description && setShowDescription(!showDescription)}
-    >
+    <div className="group">
       <div className={`relative ${aspectRatio} rounded-xl overflow-hidden mb-4 bg-gray-100`}>
         <Image
           src={src}
@@ -73,9 +66,6 @@ function ImageCard({ src, alt, title, description, aspectRatio = "aspect-[4/3]" 
       </div>
       {title && (
         <h3 className="text-lg font-semibold text-gray-900 mb-1">{title}</h3>
-      )}
-      {description && showDescription && (
-        <p className="text-gray-600 text-sm animate-in fade-in duration-300">{description}</p>
       )}
     </div>
   );
@@ -125,13 +115,13 @@ export default function Sp2iPrehension({ t, locale }) {
           <SectionTitle>Nos équipements</SectionTitle>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.equipment.col1}
               alt="Pince spécifique pour outillage de presse"
               title="PINCE spécifique"
               description="Pour outillage de presse"
             />
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.equipment.col2}
               alt="Pince de préhension pour bobine horizontale"
               title="PINCE de préhension"

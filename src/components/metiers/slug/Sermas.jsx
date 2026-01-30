@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
+import ClickableImageCard from "./ClickableImageCard";
 
 // =============================================================================
 // IMAGE CONFIGURATION - Easy to update all images from here
@@ -81,14 +79,9 @@ function SectionTitle({ children, subtitle, className = "" }) {
   );
 }
 
-function ImageCard({ src, alt, title, description, aspectRatio = "aspect-[4/3]" }) {
-  const [showDescription, setShowDescription] = useState(false);
-
+function ImageCard({ src, alt, title, aspectRatio = "aspect-[4/3]" }) {
   return (
-    <div
-      className="group cursor-pointer"
-      onClick={() => description && setShowDescription(!showDescription)}
-    >
+    <div className="group">
       <div className={`relative ${aspectRatio} rounded-xl overflow-hidden mb-4 bg-gray-100`}>
         <Image
           src={src}
@@ -99,11 +92,6 @@ function ImageCard({ src, alt, title, description, aspectRatio = "aspect-[4/3]" 
       </div>
       {title && (
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      )}
-      {description && showDescription && (
-        <p className="text-gray-600 text-sm leading-relaxed animate-in fade-in duration-300">
-          {description}
-        </p>
       )}
     </div>
   );
@@ -136,7 +124,7 @@ export default function Sermas({ t, locale }) {
           </SectionTitle>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.billettes.col1}
               alt="Solutions hautes-performances pour billettes"
               title="Solutions « hautes-performances »"
@@ -160,19 +148,19 @@ export default function Sermas({ t, locale }) {
       <section className="py-20 px-4 md:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.equipment.col1}
               alt="Scies et ligne de sciage"
               title="SCIES & LIGNE DE SCIAGE"
               description="Pour plaques coulées & Tés (T-bars) d'Aluminium"
             />
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.equipment.col2}
               alt="Scies multi-fonctions"
               title="SCIES MULTI-FONCTIONS"
               description="Pour le refendage, l'éboutage de plaques & Billettes d'Aluminium"
             />
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.equipment.col3}
               alt="Scies de refendage"
               title="SCIES DE REFENDAGE"
@@ -186,13 +174,13 @@ export default function Sermas({ t, locale }) {
       <section className="py-20 px-4 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.twoCol.col1}
               alt="Installation de sciage pour plaques laminées"
               title="Installation de sciage pour plaques laminées"
               description="Solution complètes « plates Saws »"
             />
-            <ImageCard
+            <ClickableImageCard
               src={IMAGES.twoCol.col2}
               alt="Machines à surfacer"
               title="MACHINES A SURFACER"

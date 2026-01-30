@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 // =============================================================================
 // IMAGE CONFIGURATION - Easy to update all images from here
@@ -53,8 +56,13 @@ function SectionTitle({ children, subtitle, className = "" }) {
 }
 
 function ImageCard({ src, alt, title, description, aspectRatio = "aspect-[4/3]" }) {
+  const [showDescription, setShowDescription] = useState(false);
+
   return (
-    <div className="group">
+    <div
+      className="group cursor-pointer"
+      onClick={() => description && setShowDescription(!showDescription)}
+    >
       <div className={`relative ${aspectRatio} rounded-xl overflow-hidden mb-4 bg-gray-100`}>
         <Image
           src={src}
@@ -66,8 +74,8 @@ function ImageCard({ src, alt, title, description, aspectRatio = "aspect-[4/3]" 
       {title && (
         <h3 className="text-lg font-semibold text-gray-900 mb-1">{title}</h3>
       )}
-      {description && (
-        <p className="text-gray-600 text-sm">{description}</p>
+      {description && showDescription && (
+        <p className="text-gray-600 text-sm animate-in fade-in duration-300">{description}</p>
       )}
     </div>
   );

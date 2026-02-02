@@ -1,5 +1,6 @@
 import HeroParallax from "./HeroParallax";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Hero({ t }) {
 	return (
@@ -26,7 +27,7 @@ export default function Hero({ t }) {
 								className="w-fit text-lg"
 								asChild
 							>
-								<a href="#discover">{t("hero.cta")}</a>
+								<Link href="/groupe">{t("hero.cta")}</Link>
 							</Button>
 						</div>
 					</div>

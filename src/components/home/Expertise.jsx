@@ -10,11 +10,11 @@ export default function Expertise() {
     <section>
       <div id="discover" className="py-4 text-center">
         <div className="flex items-center justify-center gap-4">
-          <span className="h-1 w-12 bg-blue-600" />
+          <span className="h-1 w-12" style={{ backgroundColor: "#0C4275" }} />
           <h3 className="text-sm font-light uppercase tracking-wider">
             {t("banner")}
           </h3>
-          <span className="h-1 w-12 bg-red-600" />
+          <span className="h-1 w-12" style={{ backgroundColor: "#0C4275" }} />
         </div>
       </div>
 

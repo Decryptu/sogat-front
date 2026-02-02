@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import dynamic from 'next/dynamic';
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
-import { METIERS } from "@/constants/metiers"; 
+import { METIERS } from "@/constants/metiers";
 import MetierCTA from "@/components/metiers/MetierCTA";
+import MetierTransition from "@/components/metiers/MetierTransition";
 
 export function generateStaticParams() {
  return SUPPORTED_LOCALES.flatMap((locale) =>
@@ -50,6 +51,7 @@ export default async function MetierPage({ params }) {
 
  return (
    <div className="w-full">
+     <MetierTransition slug={slug} />
      <div className="grid lg:grid-cols-2 items-center">
        {/* Left Column - Text Content */}
        <div className="space-y-6 px-4 md:px-16 py-12">

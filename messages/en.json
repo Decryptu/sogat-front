@@ -1,6 +1,6 @@
 {
   "common": {
-    "switchLanguage": "Passer en français 🇫🇷"
+    "switchLanguage": "FR"
   },
   "metadata": {
     "siteTitle": "SOGAT - Industrial Project Partner",
@@ -15,7 +15,7 @@
       "cta": "Discover"
     },
     "expertise": {
-      "banner": "100% French Expertise",
+      "banner": "One group, many expertises",
       "title": "Our Expertise & History",
       "subtitle": "More than a promise, our services are certified \"Service France Garanti\" by AFNOR",
       "stats": {

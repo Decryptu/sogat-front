@@ -1,11 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Globe } from "lucide-react";
 
 export default function LanguageSwitcher({ locale }) {
-	const t = useTranslations("common");
 	const router = useRouter();
 	const pathname = usePathname();
 
@@ -15,9 +14,12 @@ export default function LanguageSwitcher({ locale }) {
 		router.push(newPath);
 	};
 
+	const label = locale === "fr" ? "EN" : "FR";
+
 	return (
-		<Button onClick={handleClick} variant="secondary" className="font-medium">
-			{t("switchLanguage")}
+		<Button onClick={handleClick} variant="secondary" className="font-medium gap-2">
+			<Globe className="h-4 w-4" />
+			{label}
 		</Button>
 	);
 }

@@ -8,7 +8,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
+import SmoothScroll from "@/components/providers/SmoothScroll";
 import "@/app/globals.css";
 
 export async function generateMetadata({ params }) {
@@ -70,10 +71,12 @@ export default async function RootLayout({ children, params }) {
 				className={`${geist.variable} ${geistMono.variable} font-sans h-full flex flex-col overflow-x-hidden`}
 			>
 				<NextIntlClientProvider messages={messages}>
-					<Header />
-					<main className="flex-1 relative">{children}</main>
-					<Toaster />
-					<Footer />
+					<SmoothScroll>
+						<Header />
+						<main className="flex-1 relative">{children}</main>
+						<Toaster />
+						<Footer />
+					</SmoothScroll>
 				</NextIntlClientProvider>
 			</body>
 		</html>

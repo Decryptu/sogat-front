@@ -4,20 +4,12 @@ import { useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 export default function HeroParallax() {
-	const containerRef = useRef(null);
 	const innerRef = useRef(null);
 	const rafId = useRef(null);
 
 	const updateParallax = useCallback(() => {
-		if (!containerRef.current || !innerRef.current) return;
-
-		const rect = containerRef.current.getBoundingClientRect();
-		const windowHeight = window.innerHeight;
-
-		// Only apply when the section is visible
-		if (rect.bottom < 0 || rect.top > windowHeight) return;
-
-		const offset = rect.top * 0.3;
+		if (!innerRef.current) return;
+		const offset = -window.scrollY * 0.3;
 		innerRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
 	}, []);
 
@@ -37,10 +29,7 @@ export default function HeroParallax() {
 	}, [updateParallax]);
 
 	return (
-		<section
-			ref={containerRef}
-			className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-blue-600"
-		>
+		<section className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-blue-600">
 			<div
 				ref={innerRef}
 				className="absolute inset-0 h-[130%]"

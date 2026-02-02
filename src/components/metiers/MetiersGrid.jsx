@@ -24,7 +24,7 @@ export default function MetiersGrid() {
               className="group border-t border-gray-300 pt-4 block"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative h-12 w-12">
+                <div className="relative h-20 w-20 shrink-0">
                   <Image
                     src={`/images/metiers/logo-${metier}.webp`}
                     alt={t(`grid.items.${metier}.name`)}

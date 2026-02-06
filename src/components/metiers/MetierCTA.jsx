@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 /**
@@ -10,14 +11,14 @@ import Image from "next/image";
 export default function MetierCTA({ slug, t }) {
   // Construct image path based on slug
   const imagePath = `/images/metiers/cta-${slug}.webp`;
-  
+
   return (
     <div className="container mx-auto px-6 py-16">
       <section className="relative text-white pt-20 pb-24 rounded-xl overflow-hidden">
         {/* Background image with gradient overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/50 z-10" />
-          <Image 
+          <Image
             src={imagePath}
             alt={t("cta.imageAlt") || `${slug} CTA background`}
             fill
@@ -39,22 +40,25 @@ export default function MetierCTA({ slug, t }) {
             <p className="text-xl mb-8 opacity-90 font-light">
               {t("cta.description")}
             </p>
-            <Button 
-              variant="secondary" 
+            <Button
+              asChild
+              variant="secondary"
               className="inline-flex items-center gap-2 text-base px-6"
             >
-              {t("cta.button")}
-              <svg 
-                className="w-4 h-4" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14m-7-7l7 7-7 7" />
-                <title>Arrow</title>
-              </svg>
+              <Link href="/contact">
+                {t("cta.button")}
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14m-7-7l7 7-7 7" />
+                  <title>Arrow</title>
+                </svg>
+              </Link>
             </Button>
           </div>
         </div>

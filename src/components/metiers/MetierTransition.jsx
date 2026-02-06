@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { METIER_COLORS } from "@/constants/metier-colors";
 
 export default function MetierTransition({ slug }) {
@@ -44,12 +43,12 @@ export default function MetierTransition({ slug }) {
             }}
             className="relative w-32 h-32 md:w-40 md:h-40"
           >
-            <Image
+            {/* Using native img instead of next/image so the URL matches
+                the preloaded resource from the metiers list page */}
+            <img
               src={`/images/metiers/logo-${slug}-white.webp`}
               alt=""
-              fill
-              className="object-contain"
-              priority
+              className="w-full h-full object-contain"
             />
           </motion.div>
         </motion.div>

@@ -17,8 +17,8 @@ const values = [
     description:
       "Les hommes, par leurs compétences, leur créativité, leur adaptabilité, et leur résilience, sont une valeur essentielle au cœur du succès et du développement du groupe SOGAT.",
     icon: Users,
-    color: "from-blue-600 to-blue-700",
-    bgColor: "bg-blue-600",
+    color: "from-primary to-primary/80",
+    bgColor: "bg-primary",
   },
   {
     id: 2,
@@ -35,8 +35,8 @@ const values = [
     description:
       "La qualité, en garantissant des standards élevés et une satisfaction continue des clients, est essentielle pour renforcer la réputation, la fidélité et le succès à long terme du Groupe SOGAT.",
     icon: Award,
-    color: "from-blue-600 to-blue-700",
-    bgColor: "bg-blue-600",
+    color: "from-primary to-primary/80",
+    bgColor: "bg-primary",
   },
   {
     id: 4,
@@ -53,8 +53,8 @@ const values = [
     description:
       "La Responsabilité Sociétale des Entreprises (RSE), en intégrant des préoccupations sociales, environnementales et économiques dans les activités commerciales, est essentielle pour promouvoir un développement durable et améliorer l'impact social.",
     icon: Leaf,
-    color: "from-blue-600 to-blue-700",
-    bgColor: "bg-blue-600",
+    color: "from-primary to-primary/80",
+    bgColor: "bg-primary",
   },
   {
     id: 6,
@@ -192,7 +192,7 @@ export default function Values() {
                     <motion.path
                       key={value.id}
                       d={pathData}
-                      fill={index % 2 === 0 ? "#2563eb" : "#06b6d4"}
+                      fill={index % 2 === 0 ? "var(--color-primary)" : "#06b6d4"}
                       className="hover:opacity-80 transition-opacity cursor-pointer"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -331,7 +331,7 @@ export default function Values() {
                     <path
                       key={value.id}
                       d={pathData}
-                      fill={index % 2 === 0 ? "#2563eb" : "#06b6d4"}
+                      fill={index % 2 === 0 ? "var(--color-primary)" : "#06b6d4"}
                     />
                   );
                 })}

@@ -18,7 +18,7 @@ export default function Stats({ stats }) {
               onHoverEnd={() => setHoveredStat(null)}
               whileHover={{ scale: 1.02 }}
             >
-              <h3 className="text-6xl font-light text-blue-600 mb-4">{value}</h3>
+              <h3 className="text-6xl font-light text-primary mb-4">{value}</h3>
               <p className="text-gray-500 text-sm">{label}</p>
             </motion.div>
           ))}

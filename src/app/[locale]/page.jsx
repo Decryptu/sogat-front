@@ -4,6 +4,7 @@ import Hero from "@/components/home/Hero";
 import Expertise from "@/components/home/Expertise";
 import Metiers from "@/components/home/Metiers";
 import CTA from "@/components/home/CTA";
+import IntroAnimation from "@/components/home/IntroAnimation";
 
 export async function generateMetadata({ params }) {
 	const { locale } = await params;
@@ -27,6 +28,7 @@ export default async function Home({ params }) {
 
 	return (
 		<>
+			<IntroAnimation />
 			<Hero t={t} />
 			<Expertise t={t} />
 			<Metiers t={t} />

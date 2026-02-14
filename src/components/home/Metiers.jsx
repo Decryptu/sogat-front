@@ -16,7 +16,7 @@ export default function Metiers({ t }) {
   };
 
   return (
-    <section className="grid md:grid-cols-2 border-b-4 border-blue-500 bg-white min-h-[600px]">
+    <section className="grid md:grid-cols-2 border-b-4 border-primary bg-white min-h-[600px]">
       <MetiersClient translations={translations} metiers={METIERS} />
     </section>
   );

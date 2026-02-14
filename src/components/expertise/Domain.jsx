@@ -42,7 +42,7 @@ export default function Domain({ items }) {
                           key={`${item.key}-${point}`} 
                           className="flex items-start gap-2"
                         >
-                          <span className="text-blue-600 mt-1.5">•</span>
+                          <span className="text-primary mt-1.5">•</span>
                           <span className="text-gray-600">{point}</span>
                         </li>
                       ))}

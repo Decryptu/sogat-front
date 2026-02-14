@@ -22,7 +22,7 @@ const Overview = ({ title, subtitle, points = [] }) => {
                 key={`point-${point.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
                 className="flex items-start gap-6 bg-black/20 rounded-xl p-6 backdrop-blur-xs border border-white/10 hover:border-white/20 transition-colors"
               >
-                <div className="shrink-0 w-10 h-10 rounded-lg bg-linear-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-semibold shadow-lg">
+                <div className="shrink-0 w-10 h-10 rounded-lg bg-linear-to-br from-primary/80 to-primary flex items-center justify-center text-white font-semibold shadow-lg">
                   {points.indexOf(point) + 1}
                 </div>
                 <p className="text-gray-300 leading-relaxed">{point}</p>

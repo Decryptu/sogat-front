@@ -29,7 +29,7 @@ export default function HeroParallax() {
 	}, [updateParallax]);
 
 	return (
-		<section className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-primary-foreground">
+		<section className="relative w-full h-[40vh] md:h-[80vh] overflow-hidden border-t-4 border-primary-light">
 			<div
 				ref={innerRef}
 				className="absolute inset-0 h-[130%]"

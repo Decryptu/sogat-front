@@ -62,7 +62,7 @@ export default function Location({ title, description, address, hours, phone, fa
               {phone && (
                 <div className="flex items-center gap-2 text-gray-700">
                   <Phone className="w-4 h-4" />
-                  <a href={`tel:${phone}`} className="hover:text-blue-600">
+                  <a href={`tel:${phone}`} className="hover:text-primary">
                     {phone}
                   </a>
                 </div>
@@ -76,7 +76,7 @@ export default function Location({ title, description, address, hours, phone, fa
               {email && (
                 <div className="flex items-center gap-2 text-gray-700">
                   <Mail className="w-4 h-4" />
-                  <a href={`mailto:${email}`} className="hover:text-blue-600">
+                  <a href={`mailto:${email}`} className="hover:text-primary">
                     {email}
                   </a>
                 </div>
@@ -88,7 +88,7 @@ export default function Location({ title, description, address, hours, phone, fa
                     href={linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-blue-600"
+                    className="hover:text-primary"
                   >
                     LinkedIn
                   </a>

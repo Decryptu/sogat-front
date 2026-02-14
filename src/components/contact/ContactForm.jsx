@@ -85,7 +85,7 @@ export default function ContactForm({ title, labels, messages }) {
                     <Input
                       placeholder={labels.name}
                       {...field}
-                      className="h-11 border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                      className="h-11 border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary"
                     />
                   </FormControl>
                   <FormMessage />
@@ -102,7 +102,7 @@ export default function ContactForm({ title, labels, messages }) {
                     <Input
                       placeholder={labels.email}
                       {...field}
-                      className="h-11 border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                      className="h-11 border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary"
                     />
                   </FormControl>
                   <FormMessage />
@@ -118,7 +118,7 @@ export default function ContactForm({ title, labels, messages }) {
                   <FormControl>
                     <Textarea
                       placeholder={labels.message}
-                      className="min-h-[140px] border-gray-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 resize-none"
+                      className="min-h-[140px] border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary resize-none"
                       {...field}
                     />
                   </FormControl>
@@ -128,7 +128,7 @@ export default function ContactForm({ title, labels, messages }) {
             />
             <Button
               type="submit"
-              className="w-full h-11 bg-blue-600 hover:bg-blue-700 transition-colors"
+              className="w-full h-11 bg-primary hover:bg-primary/80 transition-colors"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : labels.submit}

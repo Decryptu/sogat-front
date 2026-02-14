@@ -43,13 +43,13 @@ export default function ExpertiseStats() {
             transition: `all 0.6s ease-out ${index * 0.1}s`,
           }}
         >
-          <Icon className="h-10 w-10 text-blue-600 mb-4 stroke-[1.5]" />
+          <Icon className="h-10 w-10 text-primary mb-4 stroke-[1.5]" />
           {textValue ? (
-            <div className="text-5xl font-light text-blue-600">
+            <div className="text-5xl font-light text-primary">
               {t(`${textValue}.value`)}
             </div>
           ) : (
-            <div className="text-5xl font-light text-blue-600">
+            <div className="text-5xl font-light text-primary">
               {startCounting ? (
                 <CountUp
                   start={0}

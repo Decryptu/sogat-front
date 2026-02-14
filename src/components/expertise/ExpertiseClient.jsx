@@ -228,7 +228,7 @@ export default function ExpertiseClient() {
                           variants={fadeInUp}
                         >
                           <svg
-                            className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                            className="w-6 h-6 text-primary flex-shrink-0 mt-0.5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -257,7 +257,7 @@ export default function ExpertiseClient() {
                       {sectionData.services.map((service, idx) => (
                         <motion.div
                           key={idx}
-                          className="border-l-4 border-blue-600 pl-4"
+                          className="border-l-4 border-primary pl-4"
                           variants={fadeInUp}
                         >
                           <h3 className="font-bold text-lg mb-2">
@@ -314,7 +314,7 @@ export default function ExpertiseClient() {
                                 transition={{ delay: idx * 0.05 }}
                               >
                                 <svg
-                                  className="w-5 h-5 text-blue-600 flex-shrink-0"
+                                  className="w-5 h-5 text-primary flex-shrink-0"
                                   fill="currentColor"
                                   viewBox="0 0 20 20"
                                 >

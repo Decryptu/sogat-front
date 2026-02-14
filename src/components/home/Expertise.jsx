@@ -10,11 +10,11 @@ export default function Expertise() {
     <section>
       <div id="discover" className="py-4 text-center">
         <div className="flex items-center justify-center gap-4">
-          <span className="h-1 w-12" style={{ backgroundColor: "#0C4275" }} />
+          <span className="h-1 w-12 bg-primary" />
           <h3 className="text-sm font-light uppercase tracking-wider">
             {t("banner")}
           </h3>
-          <span className="h-1 w-12" style={{ backgroundColor: "#0C4275" }} />
+          <span className="h-1 w-12 bg-primary" />
         </div>
       </div>
 
@@ -25,7 +25,7 @@ export default function Expertise() {
           </h2>
           <Link 
             href="/groupe"
-            className="inline-flex items-center text-lg text-blue-600 hover:text-blue-700 gap-2 font-medium"
+            className="inline-flex items-center text-lg text-primary hover:text-primary/80 gap-2 font-medium"
           >
             {t("cta")}
             <ArrowUpRight className="h-5 w-5" />

@@ -139,7 +139,7 @@ export default function GroupeHierarchy() {
               <div className="hidden md:block w-0.5 h-6 bg-white/20 mb-4" />
 
               {/* Main subsidiary card */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 w-full">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10 hover:border-primary/50 transition-all duration-300 w-full">
                 <div className="flex justify-center mb-4">
                   <Image
                     src={child.logo}

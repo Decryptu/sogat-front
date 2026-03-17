@@ -43,4 +43,8 @@ export const NAVIGATION_STYLES = {
     cssVariable: "--iserco",
     image: "/images/metiers/iserco.webp",
   },
+  "mc2-maintenance": {
+    cssVariable: "--mc2-maintenance",
+    image: "/images/metiers/mc2-maintenance.webp",
+  },
 };

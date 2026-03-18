@@ -59,7 +59,7 @@ const METIER_HEADER_LOGOS = {
   "tracip-mecano-soudure": "/images/metiers/logo-tracip-mecano-soudure-flat.webp",
   "tracip-environnement": "/images/metiers/logo-tracip-environnement-flat.webp",
   haquette: "/images/metiers/logo-haquette-flat.webp",
-  iserco: "/images/metiers/logo-iserco-full.webp",
+  iserco: "/images/metiers/logo-iserco.webp",
   "mc2-maintenance": "/images/metiers/logo-mc2-maintenance-flat.webp",
 };
 

@@ -5,7 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import LanguageSwitcher from "../language-switcher/LanguageSwitcher";
 import { motion } from "framer-motion";
-import { NAVIGATION_LINKS, NAVIGATION_STYLES } from "@/constants/navigation";
+import {
+	NAVIGATION_LINKS,
+	getMetierSlugFromPathname,
+	getNavigationStyle,
+} from "@/constants/navigation";
 import { usePathname } from "next/navigation";
 
 const ANIMATION_CONFIG = {
@@ -29,22 +33,8 @@ const AnimatedNavLink = ({ href, children, onClick }) => (
 export default function NavigationContent({ onClose, locale }) {
 	const t = useTranslations("navigation");
 	const pathname = usePathname();
-
-	const getCurrentStyle = () => {
-		const pathSegments = pathname.split("/");
-		const metiersIndex = pathSegments.findIndex(
-			(segment) => segment === "metiers",
-		);
-
-		if (metiersIndex !== -1 && pathSegments[metiersIndex + 1]) {
-			const subPath = pathSegments[metiersIndex + 1];
-			return NAVIGATION_STYLES[subPath] || NAVIGATION_STYLES.default;
-		}
-
-		return NAVIGATION_STYLES.default;
-	};
-
-	const currentStyle = getCurrentStyle();
+	const currentMetier = getMetierSlugFromPathname(pathname);
+	const currentStyle = getNavigationStyle(pathname);
 	const backgroundStyle = {
 		backgroundColor: `hsl(var(${currentStyle.cssVariable}))`,
 	};
@@ -78,11 +68,15 @@ export default function NavigationContent({ onClose, locale }) {
 					<div className="absolute top-8 left-8">
 						<Link href={`/${locale}`}>
 							<Image
-								src="/images/sogat-white.webp"
-								alt="Logo"
-								width={120}
-								height={40}
-								className="object-contain"
+								src={
+									currentMetier
+										? `/images/metiers/logo-${currentMetier}-white.webp`
+										: "/images/sogat-white.webp"
+								}
+								alt={currentMetier ? `${currentMetier} logo` : "SOGAT logo"}
+								width={160}
+								height={48}
+								className="object-contain h-10 w-auto max-w-[160px]"
 							/>
 						</Link>
 					</div>

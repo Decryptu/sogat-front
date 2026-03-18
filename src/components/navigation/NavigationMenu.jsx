@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { getMetierSlugFromPathname } from "@/constants/navigation";
 
 export default function NavigationMenu({ locale }) {
 	const [isOpen, setIsOpen] = useState(false);
@@ -21,10 +22,16 @@ export default function NavigationMenu({ locale }) {
 
 	// Check if we're on the root path
 	const isRootPath = pathname === `/${locale}` || pathname === "/";
+	const currentMetier = getMetierSlugFromPathname(pathname);
 
 	// Dynamic styles based on path
 	const styles = {
-		logo: isRootPath ? "/images/sogat-white.webp" : "/images/sogat-blue.webp",
+		logo: isRootPath
+			? "/images/sogat-white.webp"
+			: currentMetier
+				? `/images/metiers/logo-${currentMetier}-full.webp`
+				: "/images/sogat-blue.webp",
+		logoAlt: currentMetier ? `${currentMetier} logo` : "SOGAT logo",
 		border: isRootPath ? "border-white/20" : "border-black/20",
 		buttonClass: isRootPath
 			? "text-white hover:bg-white/20"
@@ -39,14 +46,14 @@ export default function NavigationMenu({ locale }) {
 				>
 					{/* Logo section */}
 					<div className="px-6 md:px-12 flex items-center">
-						<Link href={`/${locale}`} className="w-32">
+						<Link href={`/${locale}`} className="block w-fit">
 							<Image
 								src={styles.logo}
-								alt="Logo"
-								width={120}
-								height={40}
+								alt={styles.logoAlt}
+								width={160}
+								height={48}
 								priority
-								className="object-contain w-[120px] h-10"
+								className="object-contain h-10 w-auto max-w-[160px]"
 							/>
 						</Link>
 					</div>

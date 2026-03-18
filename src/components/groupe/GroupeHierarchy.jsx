@@ -42,7 +42,7 @@ const hierarchyData = {
       ],
     },
     {
-      logo: "/images/metiers/logo-mc2-maintenance-full.webp",
+      logo: "/images/groupe/mc2_groupe.png",
       name: "MC2 Maintenance",
       subsidiaries: [
         { logo: "/images/metiers/logo-mc2-maintenance-full.webp", name: "MC2 Maintenance" },

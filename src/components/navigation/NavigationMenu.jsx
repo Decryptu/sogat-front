@@ -9,7 +9,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { getMetierSlugFromPathname } from "@/constants/navigation";
+import {
+	getMetierHeaderLogo,
+	getMetierSlugFromPathname,
+} from "@/constants/navigation";
 
 export default function NavigationMenu({ locale }) {
 	const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +32,7 @@ export default function NavigationMenu({ locale }) {
 		logo: isRootPath
 			? "/images/sogat-white.webp"
 			: currentMetier
-				? `/images/metiers/logo-${currentMetier}-full.webp`
+				? getMetierHeaderLogo(currentMetier)
 				: "/images/sogat-blue.webp",
 		logoAlt: currentMetier ? `${currentMetier} logo` : "SOGAT logo",
 		border: isRootPath ? "border-white/20" : "border-black/20",

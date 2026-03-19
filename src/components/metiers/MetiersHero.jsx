@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "@/components/ui/motion";
+import HeroImageFrame from "@/components/ui/HeroImageFrame";
 
 export default function MetiersHero() {
 	const t = useTranslations("metiersPage");
@@ -20,15 +20,11 @@ export default function MetiersHero() {
 					</FadeIn>
 				</div>
 				<FadeIn y={0} x={30} delay={0.1}>
-					<div className="relative w-full aspect-4/3 lg:aspect-square">
-						<Image
-							src="/images/nos-metiers.webp"
-							alt={t("hero.imageAlt")}
-							fill
-							className="object-cover"
-							priority
-						/>
-					</div>
+					<HeroImageFrame
+						src="/images/nos-metiers.webp"
+						alt={t("hero.imageAlt")}
+						priority
+					/>
 				</FadeIn>
 			</div>
 		</div>

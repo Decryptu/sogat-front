@@ -64,6 +64,7 @@
       "tracip-environnement": "TRACIP Environnement",
       "haquette": "HAQUETTE",
       "iserco": "ISERCO",
+      "mc2-maintenance": "MC2 Maintenance",
       "imageAlt": "Illustration de dessins techniques et d'ingénierie"
     }
   },
@@ -133,6 +134,10 @@
         "iserco": {
           "name": "Manutention du Vrac",
           "description": "Conception et fabrication d'équipements de manutention du vrac sur mesure"
+        },
+        "mc2-maintenance": {
+          "name": "Équipements Industriels",
+          "description": "Conception, fabrication et installation d'équipements industriels sur mesure"
         }
       }
     },
@@ -243,6 +248,18 @@
         "description": "...",
         "button": "Nous Contacter",
         "imageAlt": "Société ISERCO"
+      }
+    },
+    "mc2-maintenance": {
+      "title": "MC2 Maintenance",
+      "description": "MC2 Maintenance est spécialisée dans la conception, la fabrication et l'installation d'équipements industriels sur mesure. Grâce à son savoir-faire en chaudronnerie, mécano-soudure et charpente métallique, MC2 accompagne ses clients dans la réalisation de projets industriels adaptés à leurs contraintes techniques et opérationnelles.",
+      "imageAlt": "Équipements industriels MC2 Maintenance",
+      "cta": {
+        "label": "Contacter MC2 Maintenance",
+        "title": "Travailler avec MC2 Maintenance",
+        "description": "...",
+        "button": "Nous Contacter",
+        "imageAlt": "Société MC2 Maintenance"
       }
     }
   },

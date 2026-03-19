@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
+import HeroImageFrame from "@/components/ui/HeroImageFrame";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -103,16 +104,14 @@ export default function ExpertiseClient() {
             </p>
           </motion.div>
           <motion.div
-            className="relative w-full aspect-4/3 lg:aspect-square"
+            className="w-full"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Image
+            <HeroImageFrame
               src="/images/expertise/hero.webp"
               alt={t("imageAlt")}
-              fill
-              className="object-cover"
               priority
             />
           </motion.div>

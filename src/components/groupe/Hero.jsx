@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HeroImageFrame from "@/components/ui/HeroImageFrame";
 
 export default function Hero({ title, description, imageAlt }) {
  return (
@@ -12,15 +12,11 @@ export default function Hero({ title, description, imageAlt }) {
            {description}
          </p>
        </div>
-       <div className="relative w-full aspect-4/3 lg:aspect-square">
-         <Image
-           src="/images/groupe.webp"
-           alt={imageAlt}
-           fill
-           priority 
-           className="object-cover"
-         />
-       </div>
+       <HeroImageFrame
+         src="/images/groupe.webp"
+         alt={imageAlt}
+         priority
+       />
      </div>
    </div>
  );

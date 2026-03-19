@@ -3,17 +3,17 @@ import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import CountUp from "react-countup";
-import { Clock, Users, Building2, TrendingUp, Network, Factory, Briefcase, Globe } from "lucide-react";
+import Image from "next/image";
 
 const STATS = [
-  { icon: Clock, value: 1970, label: "yearFounded", isYear: true },
-  { icon: Users, value: 120, label: "employees" },
-  { icon: Building2, value: 15000, label: "workshopArea", suffix: " m²" },
-  { icon: TrendingUp, value: 35, label: "revenue", suffix: " M€" },
-  { icon: Network, value: 7, label: "entities" },
-  { icon: Factory, textValue: "integratedProduction", label: "integratedProduction" },
-  { icon: Briefcase, value: 4, label: "designOffices" },
-  { icon: Globe, textValue: "exportPercentage", label: "exportPercentage" },
+  { icon: "/images/icons/clock.png", value: 1970, label: "yearFounded", isYear: true },
+  { icon: "/images/icons/users.png", value: 120, label: "employees" },
+  { icon: "/images/icons/building.png", value: 15000, label: "workshopArea", suffix: " m²" },
+  { icon: "/images/icons/chart.png", value: 35, label: "revenue", suffix: " M€" },
+  { icon: "/images/icons/network.png", value: 7, label: "entities" },
+  { icon: "/images/icons/factory.png", textValue: "integratedProduction", label: "integratedProduction" },
+  { icon: "/images/icons/briefcase.png", value: 4, label: "designOffices" },
+  { icon: "/images/icons/globe.png", textValue: "exportPercentage", label: "exportPercentage" },
 ];
 
 export default function ExpertiseStats() {
@@ -33,7 +33,7 @@ export default function ExpertiseStats() {
       ref={statsRef}
       className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
     >
-      {STATS.map(({ icon: Icon, value, textValue, label, suffix, isYear }, index) => (
+      {STATS.map(({ icon, value, textValue, label, suffix, isYear }, index) => (
         <div
           key={label}
           className="relative"
@@ -43,7 +43,13 @@ export default function ExpertiseStats() {
             transition: `all 0.6s ease-out ${index * 0.1}s`,
           }}
         >
-          <Icon className="h-10 w-10 text-primary mb-4 stroke-[1.5]" />
+          <Image
+            src={icon}
+            alt={t(`${label}.label`)}
+            width={40}
+            height={40}
+            className="h-10 w-10 mb-4 object-contain"
+          />
           {textValue ? (
             <div className="text-5xl font-light text-primary">
               {t(`${textValue}.value`)}

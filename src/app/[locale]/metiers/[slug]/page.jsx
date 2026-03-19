@@ -1,11 +1,12 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import dynamic from 'next/dynamic';
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import { METIERS } from "@/constants/metiers";
+import { METIER_COLORS } from "@/constants/metier-colors";
 import MetierCTA from "@/components/metiers/MetierCTA";
 import MetierTransition from "@/components/metiers/MetierTransition";
+import HeroImageFrame from "@/components/ui/HeroImageFrame";
 
 export function generateStaticParams() {
  return SUPPORTED_LOCALES.flatMap((locale) =>
@@ -60,15 +61,12 @@ export default async function MetierPage({ params }) {
        </div>
 
        {/* Right Column - Image */}
-       <div className="relative w-full aspect-4/3 lg:aspect-square">
-         <Image
-           src={`/images/metiers/${slug}.webp`}
-           alt={t("imageAlt")}
-           fill
-           className="object-cover"
-           priority
-         />
-       </div>
+       <HeroImageFrame
+         src={`/images/metiers/${slug}.webp`}
+         alt={t("imageAlt")}
+         frameColor={METIER_COLORS[slug]}
+         priority
+       />
      </div>
 
      {/* Dynamic Metier Component */}

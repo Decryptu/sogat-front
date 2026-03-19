@@ -7,4 +7,5 @@ export const METIER_COLORS = {
   "tracip-environnement": "hsl(91, 63%, 48%)",
   haquette: "hsl(23, 90%, 53%)",
   iserco: "hsl(64.2, 44.8%, 62.4%)",
+  "mc2-maintenance": "hsl(84, 3.03%, 67.6%)",
 };

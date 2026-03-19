@@ -64,6 +64,7 @@
       "tracip-environnement": "TRACIP Environnement",
       "haquette": "HAQUETTE",
       "iserco": "ISERCO",
+      "mc2-maintenance": "MC2 Maintenance",
       "imageAlt": "Engineering and technical drawings illustration"
     }
   },
@@ -133,6 +134,10 @@
         "iserco": {
           "name": "Bulk Handling",
           "description": "Design and manufacturing of custom bulk handling equipment"
+        },
+        "mc2-maintenance": {
+          "name": "Industrial Equipment",
+          "description": "Design, manufacturing and installation of custom industrial equipment"
         }
       }
     },
@@ -243,6 +248,18 @@
         "description": "...",
         "button": "Contact Us",
         "imageAlt": "ISERCO facility"
+      }
+    },
+    "mc2-maintenance": {
+      "title": "MC2 Maintenance",
+      "description": "MC2 Maintenance specializes in the design, manufacturing and installation of custom industrial equipment. With expertise in boilermaking, mechanical welding and steel structures, MC2 supports its clients in delivering industrial projects tailored to their technical and operational requirements.",
+      "imageAlt": "MC2 Maintenance industrial equipment",
+      "cta": {
+        "label": "Contact MC2 Maintenance",
+        "title": "Work with MC2 Maintenance",
+        "description": "...",
+        "button": "Contact Us",
+        "imageAlt": "MC2 Maintenance facility"
       }
     }
   },

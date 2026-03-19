@@ -41,6 +41,13 @@ const hierarchyData = {
         { logo: "/images/metiers/logo-sermas-full.webp", name: "SERMAS" },
       ],
     },
+    {
+      logo: "/images/groupe/mc2_groupe.png",
+      name: "MC2 Maintenance",
+      subsidiaries: [
+        { logo: "/images/metiers/logo-mc2-maintenance-full.webp", name: "MC2 Maintenance" },
+      ],
+    },
   ],
 };
 
@@ -127,7 +134,7 @@ export default function GroupeHierarchy() {
 
         {/* Level 2 - Main subsidiaries */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

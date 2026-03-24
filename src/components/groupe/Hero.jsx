@@ -13,7 +13,11 @@ export default function Hero({ title, description, imageAlt }) {
          </p>
        </div>
        <HeroImageFrame
-         src="/images/groupe.webp"
+         images={[
+           "/images/groupe.webp",
+           "/images/construction-hero.webp",
+           "/images/navigation-default.webp",
+         ]}
          alt={imageAlt}
          priority
        />

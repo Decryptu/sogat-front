@@ -110,7 +110,13 @@ export default function ExpertiseClient() {
             transition={{ duration: 0.6 }}
           >
             <HeroImageFrame
-              src="/images/expertise/hero.webp"
+              images={[
+                "/images/expertise/hero.webp",
+                "/images/expertise/engineering.webp",
+                "/images/expertise/manufacturing.webp",
+                "/images/expertise/installation.webp",
+                "/images/expertise/onsite.webp",
+              ]}
               alt={t("imageAlt")}
               priority
             />

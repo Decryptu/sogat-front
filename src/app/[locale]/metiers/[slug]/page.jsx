@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import dynamic from 'next/dynamic';
+import fs from "fs";
+import path from "path";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import { METIERS } from "@/constants/metiers";
 import { METIER_COLORS } from "@/constants/metier-colors";
@@ -26,6 +28,16 @@ export default async function MetierPage({ params }) {
 
  setRequestLocale(locale);
  const t = await getTranslations(`metiers.${slug}`);
+
+ // Gather carousel images from the metier's image folder
+ const imgDir = path.join(process.cwd(), "public/images/metiers", slug);
+ const heroImages = fs.existsSync(imgDir)
+   ? fs.readdirSync(imgDir)
+       .filter((f) => /^\d+\.webp$/.test(f))
+       .sort((a, b) => parseInt(a) - parseInt(b))
+       .slice(0, 6)
+       .map((f) => `/images/metiers/${slug}/${f}`)
+   : [`/images/metiers/${slug}.webp`];
 
  // Convert hyphenated slug to PascalCase for component name
  const componentName = slug
@@ -62,7 +74,7 @@ export default async function MetierPage({ params }) {
 
        {/* Right Column - Image */}
        <HeroImageFrame
-         src={`/images/metiers/${slug}.webp`}
+         images={heroImages}
          alt={t("imageAlt")}
          frameColor={METIER_COLORS[slug]}
          priority

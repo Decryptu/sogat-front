@@ -22,13 +22,13 @@ const IMAGES = {
   },
   // Section: Caténaire escamotable detail
   catenaire: {
-    side: "/images/metiers/sp2i-ferroviaire/8.webp", // Side image
-    full: "/images/metiers/sp2i-ferroviaire/9.webp", // Full width bottom
+    side: "/images/metiers/sp2i-ferroviaire/8.webp",
+    full: "/images/metiers/sp2i-ferroviaire/9.webp",
   },
   // Section: Passerelle d'accès toiture detail
   passerelle: {
-    side: "/images/metiers/sp2i-ferroviaire/10.webp", // Side image
-    full: "/images/metiers/sp2i-ferroviaire/11.webp", // Full width bottom
+    side: "/images/metiers/sp2i-ferroviaire/10.webp",
+    full: "/images/metiers/sp2i-ferroviaire/11.webp",
   },
   // Section: PEMP detail
   pemp: {
@@ -37,6 +37,8 @@ const IMAGES = {
   // Section: Automate de sécurité detail
   automate: {
     main: "/images/metiers/sp2i-ferroviaire/13.webp",
+    img2: "/images/metiers/sp2i-ferroviaire/14.webp",
+    img3: "/images/metiers/sp2i-ferroviaire/15.webp",
   },
 };
 
@@ -148,17 +150,34 @@ export default function Sp2iFerroviaire({ t, locale }) {
       {/* ===== SECTION: Caténaire escamotable detail ===== */}
       <section className="py-20 px-4 md:px-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <SectionTitle>CATÉNAIRE ESCAMOTABLE</SectionTitle>
+          <SectionTitle>Caténaires Escamotables</SectionTitle>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
             {/* Left - Text */}
             <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed text-lg">
-                Notre système de caténaires rigides escamotables a été conçu spécialement pour les centres de maintenance du matériel ferroviaire roulant.
+                Le système de caténaire rigide escamotable a été conçu spécialement pour les centres de maintenance du matériel ferroviaire roulant pour permettre l&apos;électrification des voies internes de l&apos;atelier tout en conservant les possibilités d&apos;utilisation des ponts roulants et d&apos;autres installations aériennes.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Il permet d&apos;électrifier les voies internes de l&apos;atelier tout en conservant les possibilités d&apos;utilisation des ponts-roulants et des autres installations aériennes.
+                Pour faciliter les opérations d&apos;entretien des rames « en toiture », la caténaire escamotable doit permettre :
               </p>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">En position « captage » :</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    L&apos;amenée et le repli des rames par traction électrique à l&apos;intérieur du bâtiment, les essais des moteurs de traction, les essais des pantographes, les opérations nécessitant la présence d&apos;une ligne de contact sous tension électrique.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">En position « escamotée » :</h4>
+                  <p className="text-gray-700 leading-relaxed">
+                    L&apos;intervention par dessus les rames, en tout point, au moyen de nacelles élévatrices ou de ponts roulants mobiles sur toute la longueur des ateliers, … des interventions spécifiques telles que le tarage du pantographe, l&apos;élévation des rames via les systèmes de levage pour les interventions sous-caisse…
+                  </p>
+                </div>
+              </div>
+
               <div className="flex items-center gap-3 pt-4">
                 <span className="w-12 h-1 bg-sp2i-feroviaire rounded-full" />
                 <span className="text-sp2i-feroviaire font-medium">Solution brevetée SP2I</span>
@@ -186,7 +205,7 @@ export default function Sp2iFerroviaire({ t, locale }) {
         <div className="max-w-7xl mx-auto">
           <SectionTitle>PASSERELLE D&apos;ACCÈS TOITURE</SectionTitle>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
             {/* Left - Image */}
             <PlaceholderImage
               src={IMAGES.passerelle.side}
@@ -196,23 +215,32 @@ export default function Sp2iFerroviaire({ t, locale }) {
             {/* Right - Text */}
             <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed text-lg">
-                Des compensateurs de lacunes peuvent être intégrés à nos passerelles.
+                SP2I est spécialisé dans la conception et fabrication de passerelle complète, c&apos;est-à-dire de l&apos;ossature, de garde-corps, d&apos;échelles et d&apos;escaliers. Que ce soit des produits fabriqués à partir de plans et devis établis ou d&apos;une conception, la qualité du produit répond aux normes standards de l&apos;industrie.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Ils permettent de combler le vide entre la passerelle fixe et les différents gabarits, empêchant la chute des opérateurs de maintenance et de leurs outils.
+                Notre connaissance du milieu ferroviaire, nous permet de maîtriser les contraintes du matériel roulant tel que les gabarits de passage, hauteur de travail en toiture, les caméras de rame…
               </p>
-              <ul className="space-y-3 pt-4">
-                {[
-                  "Comble-lacune intégré",
-                  "Adaptation multi-gabarits",
-                  "Sécurité renforcée",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-700">
-                    <span className="w-2 h-2 bg-sp2i-feroviaire rounded-full shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                Par ailleurs, nous proposons des solutions efficaces pour l&apos;accès sécurisé aux trains. En effet, nous pouvons intégrer à la passerelle notre système de « compensateur de lacune » qui permet de combler le vide entre la passerelle fixe et différents gabarits empêchant la chute des opérateurs de maintenance mais aussi de leurs outils.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Le plancher mobile permet de combler la lacune entre le gabarit théorique des différents matériels roulants et celui de l&apos;engin réel immobile à visiter. Il permet d&apos;occuper le vide entre les passerelles d&apos;accès toiture et les différents gabarits de train. L&apos;ensemble en position de travail permet d&apos;empêcher la chute de personnes et d&apos;outils (conformément au code du travail).
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Les tiroirs des passerelles sont actionnés par des vérins pneumatiques, la pression d&apos;air est réglée constante, de façon à garantir un arrêt lors de la rencontre d&apos;un obstacle, ou du gabarit d&apos;une rame.
+              </p>
+
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-900">Les compensateurs permettent :</h4>
+                <div className="space-y-2">
+                  <p className="text-gray-700 leading-relaxed">
+                    <span className="font-medium">En position reculée :</span> l&apos;amenée ou le repli de la rame. Des capteurs de position valident la position.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    <span className="font-medium">En position déployée :</span> le comblement de l&apos;espace entre la passerelle et la rame en venant en butée contre la caisse du matériel roulant, permettant le passage des opérateurs en toiture en toute sécurité. Les compensateurs sont équipés de pressostats permettant de détecter que le tiroir est en contact avec la rame.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -267,7 +295,7 @@ export default function Sp2iFerroviaire({ t, locale }) {
         <div className="max-w-7xl mx-auto">
           <SectionTitle>Automate de sécurité</SectionTitle>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             {/* Left - Image */}
             <PlaceholderImage
               src={IMAGES.automate.main}
@@ -294,6 +322,20 @@ export default function Sp2iFerroviaire({ t, locale }) {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Additional photos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <PlaceholderImage
+              src={IMAGES.automate.img2}
+              alt="Automate de sécurité - armoire de commande"
+              aspectRatio="aspect-[4/3]"
+            />
+            <PlaceholderImage
+              src={IMAGES.automate.img3}
+              alt="Automate de sécurité - armoire électrique"
+              aspectRatio="aspect-[4/3]"
+            />
           </div>
         </div>
       </section>

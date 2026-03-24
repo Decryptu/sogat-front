@@ -5,30 +5,31 @@ import ClickableImageCard from "./ClickableImageCard";
 // IMAGE CONFIGURATION - Easy to update all images from here
 // =============================================================================
 const IMAGES = {
-  // Section: Nos équipements - 3-column grid
+  // Section: Nos équipements - remaining items (pince spécifique & pince préhension removed)
   equipment: {
-    col1: "/images/metiers/sp2i-prehension/1.webp", // Pince spécifique
-    col2: "/images/metiers/sp2i-prehension/2.webp", // Pince de préhension bobine
-    col3: "/images/metiers/sp2i-prehension/3.webp", // Navette transbordeur
-  },
-  // Section: 2-column grid
-  twoCol: {
-    col1: "/images/metiers/sp2i-prehension/4.webp", // Convoyeur à rouleau
-    col2: "/images/metiers/sp2i-prehension/5.webp", // Ligne de transfert
+    navette: "/images/metiers/sp2i-prehension/3.webp", // Navette transbordeur
+    convoyeur: "/images/metiers/sp2i-prehension/4.webp", // Convoyeur à rouleau
+    transfert: "/images/metiers/sp2i-prehension/5.webp", // Ligne de transfert
   },
   // Section: Outil de levage (6 items)
   levage: {
-    bobines: "/images/metiers/sp2i-prehension/6.webp", // Pinces bobines horizontales
-    outillage: "/images/metiers/sp2i-prehension/7.webp", // Pinces outillage presse
-    toles: "/images/metiers/sp2i-prehension/8.webp", // Pinces paquets tôles
-    brames: "/images/metiers/sp2i-prehension/9.webp", // Pince à brames
-    diverses: "/images/metiers/sp2i-prehension/10.webp", // Pinces charges diverses
-    lingot: "/images/metiers/sp2i-prehension/11.webp", // Pince à lingot aluminium
+    bobines: "/images/metiers/sp2i-prehension/6.webp",
+    outillage: "/images/metiers/sp2i-prehension/7.webp",
+    toles: "/images/metiers/sp2i-prehension/8.webp",
+    brames: "/images/metiers/sp2i-prehension/9.webp",
+    diverses: "/images/metiers/sp2i-prehension/10.webp",
+    lingot: "/images/metiers/sp2i-prehension/11.webp",
+  },
+  // Additional images for levage detail
+  levageDetail: {
+    bobines1: "/images/metiers/sp2i-prehension/15.webp",
+    bobines2: "/images/metiers/sp2i-prehension/16.webp",
+    outillage1: "/images/metiers/sp2i-prehension/17.webp",
   },
   // Section: Convoyeur à rouleau
   convoyeur: {
-    img1: "/images/metiers/sp2i-prehension/12.webp", // Convoyeurs description
-    img2: "/images/metiers/sp2i-prehension/13.webp", // Transfert à chaînes
+    img1: "/images/metiers/sp2i-prehension/12.webp",
+    img2: "/images/metiers/sp2i-prehension/13.webp",
   },
   // Section: Ligne de transfert
   transfert: {
@@ -84,21 +85,10 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
   );
 }
 
-function LevageCard({ src, alt, title }) {
+function DetailImage({ src, alt }) {
   return (
-    <div className="group">
-      <div className="relative aspect-4/3 rounded-xl overflow-hidden mb-3 bg-gray-100">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-4">
-          <h3 className="text-white font-semibold text-sm md:text-base">{title}</h3>
-        </div>
-      </div>
+    <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 mt-3">
+      <Image src={src} alt={alt} fill className="object-cover" />
     </div>
   );
 }
@@ -109,40 +99,24 @@ function LevageCard({ src, alt, title }) {
 export default function Sp2iPrehension({ t, locale }) {
   return (
     <div className="w-full">
-      {/* ===== SECTION: Nos équipements - 3-column ===== */}
+      {/* ===== SECTION: Nos équipements ===== */}
       <section className="py-20 px-4 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionTitle>Nos équipements</SectionTitle>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <ClickableImageCard
-              src={IMAGES.equipment.col1}
-              alt="Pince spécifique pour outillage de presse"
-              title="PINCE spécifique"
-              description="Pour outillage de presse"
-            />
-            <ClickableImageCard
-              src={IMAGES.equipment.col2}
-              alt="Pince de préhension pour bobine horizontale"
-              title="PINCE de préhension"
-              description="Pour bobine horizontale"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ImageCard
-              src={IMAGES.equipment.col3}
+              src={IMAGES.equipment.navette}
               alt="Navette transbordeur"
               title="Manutention Navette transbordeur"
             />
-          </div>
-
-          {/* 2-column row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ImageCard
-              src={IMAGES.twoCol.col1}
+              src={IMAGES.equipment.convoyeur}
               alt="Convoyeur à rouleau"
               title="Convoyeur à rouleau"
             />
             <ImageCard
-              src={IMAGES.twoCol.col2}
+              src={IMAGES.equipment.transfert}
               alt="Ligne de transfert et de manutention"
               title="Ligne de transfert et de manutention"
             />
@@ -156,36 +130,175 @@ export default function Sp2iPrehension({ t, locale }) {
           <SectionTitle>Outil de levage</SectionTitle>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <LevageCard
+            {/* Pinces pour bobines horizontales */}
+            <ClickableImageCard
               src={IMAGES.levage.bobines}
               alt="Pinces pour bobines horizontales"
               title="Pinces pour bobines horizontales"
-            />
-            <LevageCard
+            >
+              <div className="space-y-3 mt-2">
+                <p className="font-semibold text-gray-900">Pince pour bobines horizontales</p>
+                <p><span className="font-medium">Objectif :</span> Lever et transférer des bobines d&apos;acier, d&apos;aluminium, de papier, ou autres corps ronds creux rigides d&apos;axe horizontal</p>
+                <div>
+                  <p className="font-medium">Prise :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Dans le noyau de la bobine (sabot, éperon)</li>
+                    <li>Serrage sur les rives de la bobine</li>
+                    <li>Serrage sur le Ø extérieur de la bobine</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium">Type de matériel :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Pinces Mécaniques</li>
+                    <li>Électromécaniques</li>
+                    <li>Électrohydrauliques</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium">Nos pinces standards</p>
+                  <p>Nous avons développé trois gammes de pinces pour lesquelles nous avons une série de pièces standards. Ces gammes de pinces nous permettent de proposer des pinces avec un délai de fabrication plus court et une disponibilité des pièces standards que nous gérons en stock. Cette fabrication de pièces en série nous permet de vous proposer des prix attractifs par rapport à une réalisation spécifique. Même si ces pièces sont issues d&apos;une fabrication standard, nous pouvons l&apos;adapter à vos besoins.</p>
+                </div>
+                <p className="font-medium">Capacité de levage de nos pinces standard : NGH15 : jusque 15T — NGH32 : jusque 32T — NGH50 : jusque 50T</p>
+                <div className="grid grid-cols-2 gap-2">
+                  <DetailImage src={IMAGES.levageDetail.bobines1} alt="Pince bobines horizontales" />
+                  <DetailImage src={IMAGES.levageDetail.bobines2} alt="Pince bobines horizontales" />
+                </div>
+              </div>
+            </ClickableImageCard>
+
+            {/* Pinces pour outillage de presse */}
+            <ClickableImageCard
               src={IMAGES.levage.outillage}
               alt="Pinces pour outillage de presse"
               title="Pinces pour outillage de presse"
-            />
-            <LevageCard
+            >
+              <div className="space-y-3 mt-2">
+                <p className="font-semibold text-gray-900">Pince pour outillages de presse</p>
+                <p><span className="font-medium">Objectif :</span> Lever et transférer des outillages de presses grâce à 4 bras, munis de sabots spéciaux, mobiles longitudinalement et transversalement.</p>
+                <div>
+                  <p className="font-medium">Prise de levage :</p>
+                  <p className="ml-2">Passage des sabots dans les oreilles de levage prévues sur les outillages de presse</p>
+                </div>
+                <p><span className="font-medium">Type de matériel :</span> Pinces électromécaniques</p>
+                <p><span className="font-medium">Options :</span> De nombreuses options sont possibles selon les besoins et les demandes des clients. Chaque pince est adaptée aux outils à manutentionner ainsi qu&apos;aux contraintes de stockage et à l&apos;environnement de travail.</p>
+                <DetailImage src={IMAGES.levageDetail.outillage1} alt="Pince outillage de presse" />
+              </div>
+            </ClickableImageCard>
+
+            {/* Pinces pour paquets de tôles */}
+            <ClickableImageCard
               src={IMAGES.levage.toles}
               alt="Pinces pour paquets de tôles"
               title="Pinces pour paquets de tôles et produits plats"
-            />
-            <LevageCard
+            >
+              <div className="space-y-3 mt-2">
+                <p className="font-semibold text-gray-900">Pince pour paquets de tôles et de produits plats</p>
+                <p><span className="font-medium">Objectif :</span> Manutentionner des paquets de tôles, panneaux, palettes ou autres produits plats pour lesquels des appuis à entraxe important sont nécessaires.</p>
+                <p><span className="font-medium">Prise :</span> Par le dessous du paquet</p>
+                <div>
+                  <p className="font-medium">Type de matériel :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Pinces : Manuelles, Électro-mécaniques, Électrohydrauliques</li>
+                    <li>Palonniers : Cés, À fourches, À contrepoids, À rappel par ressort</li>
+                  </ul>
+                </div>
+                <p className="text-xs italic">Dans la mesure du possible, nous essayons d&apos;utiliser les caissons et autres constituants issus de notre gamme de pince à bobines horizontales.</p>
+              </div>
+            </ClickableImageCard>
+
+            {/* Pince à brames */}
+            <ClickableImageCard
               src={IMAGES.levage.brames}
               alt="Pince à brames"
               title="Pince à brames"
-            />
-            <LevageCard
+            >
+              <div className="space-y-3 mt-2">
+                <p className="font-semibold text-gray-900">Pince à brames</p>
+                <p><span className="font-medium">Objectif :</span> Lever et transférer des brames en position horizontale ou verticale, unitairement ou plusieurs.</p>
+                <p><span className="font-medium">Prise de levage :</span> Par tout type de prise</p>
+                <div>
+                  <p className="font-medium">Caractéristiques des produits manutentionnés :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Brames ronds, carrés ou rectangulaires</li>
+                    <li>Horizontaux, verticaux</li>
+                    <li>En acier, aluminium, bronze, zinc...</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium">Type de matériel : Pinces</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Manuelles</li>
+                    <li>Électromécaniques</li>
+                    <li>Électrohydrauliques</li>
+                    <li>Électropneumatiques</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium">Fonctions des pinces :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Levage</li>
+                    <li>Démoulage</li>
+                    <li>Reprise à plat</li>
+                    <li>Multifonctions</li>
+                  </ul>
+                </div>
+              </div>
+            </ClickableImageCard>
+
+            {/* Pinces charges diverses */}
+            <ClickableImageCard
               src={IMAGES.levage.diverses}
               alt="Pinces charges diverses"
               title="Pinces charges diverses"
-            />
-            <LevageCard
+            >
+              <div className="space-y-3 mt-2">
+                <p className="font-semibold text-gray-900">Pour charges diverses</p>
+                <p><span className="font-medium">Objectif :</span> Lever et transférer une charge.</p>
+                <p><span className="font-medium">Type de matériel :</span> Pinces</p>
+                <p>À partir d&apos;un cahier des charges, nous pouvons concevoir et fabriquer tout type d&apos;équipement de levage.</p>
+                <p><span className="font-medium">Options :</span> De nombreuses options sont possibles selon les besoins et les demandes des clients. Chaque pince est adaptée aux outils à manutentionner ainsi qu&apos;aux contraintes de stockage et à l&apos;environnement de travail.</p>
+              </div>
+            </ClickableImageCard>
+
+            {/* Pince à lingot d'aluminium */}
+            <ClickableImageCard
               src={IMAGES.levage.lingot}
               alt="Pince à lingot d'aluminium"
               title="Pince à lingot d'aluminium"
-            />
+            >
+              <div className="space-y-3 mt-2">
+                <p className="font-semibold text-gray-900">Pinces à lingot d&apos;aluminium</p>
+                <p><span className="font-medium">Objectif :</span> Lever et transférer des lingots en position horizontale ou verticale, unitairement ou plusieurs.</p>
+                <p><span className="font-medium">Prise de levage :</span> Par tout type de prise</p>
+                <div>
+                  <p className="font-medium">Caractéristiques des produits manutentionnés :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Lingots ronds, carrés ou rectangulaires</li>
+                    <li>Horizontaux, verticaux</li>
+                    <li>En acier, aluminium, bronze, zinc...</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium">Type de matériel : Pinces</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Manuelles</li>
+                    <li>Électromécaniques</li>
+                    <li>Électrohydrauliques</li>
+                    <li>Électropneumatiques</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium">Fonctions des pinces :</p>
+                  <ul className="list-disc list-inside ml-2 space-y-1">
+                    <li>Levage</li>
+                    <li>Démoulage</li>
+                    <li>Reprise à plat</li>
+                    <li>Multifonctions</li>
+                  </ul>
+                </div>
+              </div>
+            </ClickableImageCard>
           </div>
         </div>
       </section>

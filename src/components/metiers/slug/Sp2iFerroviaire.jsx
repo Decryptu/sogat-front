@@ -23,12 +23,20 @@ const IMAGES = {
   // Section: Caténaire escamotable detail
   catenaire: {
     side: "/images/metiers/sp2i-ferroviaire/8.webp",
-    full: "/images/metiers/sp2i-ferroviaire/9.webp",
+    collage: [
+      "/images/metiers/sp2i-ferroviaire/16.webp",
+      "/images/metiers/sp2i-ferroviaire/17.webp",
+      "/images/metiers/sp2i-ferroviaire/18.webp",
+    ],
   },
   // Section: Passerelle d'accès toiture detail
   passerelle: {
     side: "/images/metiers/sp2i-ferroviaire/10.webp",
-    full: "/images/metiers/sp2i-ferroviaire/11.webp",
+    collage: [
+      "/images/metiers/sp2i-ferroviaire/19.webp",
+      "/images/metiers/sp2i-ferroviaire/20.webp",
+      "/images/metiers/sp2i-ferroviaire/21.webp",
+    ],
   },
   // Section: PEMP detail
   pemp: {
@@ -83,6 +91,71 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
         fill
         className="object-cover"
       />
+    </div>
+  );
+}
+
+function DiagonalCollage({ images, alt }) {
+  // Gap width in % of container and diagonal offset in % of container
+  const gap = 1.2;
+  const skew = 3;
+
+  // Boundaries where diagonal cuts happen (in % of container width)
+  const cut1 = 33.33;
+  const cut2 = 66.66;
+
+  // Each image covers its third, clip-path coordinates are in % of the full container
+  const clips = [
+    // Left image: straight left, diagonal right edge (/ shape)
+    `polygon(0% 0%, ${cut1 + skew - gap / 2}% 0%, ${cut1 - skew - gap / 2}% 100%, 0% 100%)`,
+    // Center image: both edges diagonal (/ shape)
+    `polygon(${cut1 + skew + gap / 2}% 0%, ${cut2 + skew - gap / 2}% 0%, ${cut2 - skew - gap / 2}% 100%, ${cut1 - skew + gap / 2}% 100%)`,
+    // Right image: diagonal left edge (/ shape), straight right
+    `polygon(${cut2 + skew + gap / 2}% 0%, 100% 0%, 100% 100%, ${cut2 - skew + gap / 2}% 100%)`,
+  ];
+
+  return (
+    <div className="w-full">
+      {/* Desktop: horizontal collage with diagonal separations */}
+      <div className="hidden md:block">
+        <div
+          className="relative w-full rounded-xl overflow-hidden"
+          style={{ aspectRatio: "21 / 9" }}
+        >
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="absolute inset-0"
+              style={{ clipPath: clips[i] }}
+            >
+              <Image
+                src={src}
+                alt={`${alt} ${i + 1}`}
+                fill
+                className="object-cover object-center"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile: stacked cards */}
+      <div className="md:hidden flex flex-col gap-3">
+        {images.map((src, i) => (
+          <div
+            key={i}
+            className="relative w-full overflow-hidden rounded-xl"
+            style={{ aspectRatio: "16 / 9" }}
+          >
+            <Image
+              src={src}
+              alt={`${alt} ${i + 1}`}
+              fill
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -191,11 +264,10 @@ export default function Sp2iFerroviaire({ t, locale }) {
             />
           </div>
 
-          {/* Full width image */}
-          <PlaceholderImage
-            src={IMAGES.catenaire.full}
-            alt="Caténaire escamotable vue d'ensemble"
-            aspectRatio="aspect-[21/9]"
+          {/* Full width collage */}
+          <DiagonalCollage
+            images={IMAGES.catenaire.collage}
+            alt="Caténaire escamotable"
           />
         </div>
       </section>
@@ -244,11 +316,10 @@ export default function Sp2iFerroviaire({ t, locale }) {
             </div>
           </div>
 
-          {/* Full width image */}
-          <PlaceholderImage
-            src={IMAGES.passerelle.full}
-            alt="Passerelle d'accès toiture vue d'ensemble"
-            aspectRatio="aspect-[21/9]"
+          {/* Full width collage */}
+          <DiagonalCollage
+            images={IMAGES.passerelle.collage}
+            alt="Passerelle d'accès toiture"
           />
         </div>
       </section>

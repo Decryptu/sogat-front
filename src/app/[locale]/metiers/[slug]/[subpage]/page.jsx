@@ -76,7 +76,6 @@ export default async function SubPage({ params }) {
       metierTitle={t("title")}
       metierColor={METIER_COLORS[slug]}
       subpageTitle={subpageData.title[locale] || subpageData.title.fr}
-      heroImage={subpageData.image}
       locale={locale}
     >
       <DynamicContent subpage={subpage} locale={locale} />

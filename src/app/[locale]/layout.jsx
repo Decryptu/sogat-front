@@ -1,9 +1,6 @@
 import { geist, geistMono } from "../fonts";
-import {
-	getMessages,
-	setRequestLocale,
-	getTranslations,
-} from "next-intl/server";
+import { locale as rootLocale } from "next/root-params";
+import { getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import Header from "@/components/header/Header";
@@ -12,9 +9,8 @@ import { Toaster } from "@/components/ui/toaster";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import "@/app/globals.css";
 
-export async function generateMetadata({ params }) {
-	const { locale } = await params;
-	setRequestLocale(locale);
+export async function generateMetadata() {
+	const locale = await rootLocale();
 	const [t, homeT] = await Promise.all([
 		getTranslations("metadata"),
 		getTranslations("home"),
@@ -60,9 +56,8 @@ export function generateStaticParams() {
 	return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({ children, params }) {
-	const { locale } = await params;
-	setRequestLocale(locale);
+export default async function RootLayout({ children }) {
+	const locale = await rootLocale();
 	const messages = await getMessages();
 
 	return (

@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { locale as rootLocale } from "next/root-params";
+import { getTranslations } from "next-intl/server";
 import dynamic from 'next/dynamic';
 import fs from "fs";
 import path from "path";
-import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import { METIERS } from "@/constants/metiers";
 import { METIER_COLORS } from "@/constants/metier-colors";
 import MetierCTA from "@/components/metiers/MetierCTA";
@@ -11,23 +11,19 @@ import MetierTransition from "@/components/metiers/MetierTransition";
 import HeroImageFrame from "@/components/ui/HeroImageFrame";
 
 export function generateStaticParams() {
- return SUPPORTED_LOCALES.flatMap((locale) =>
-   METIERS.map((slug) => ({
-     locale,
-     slug,
-   })),
- );
+ return METIERS.map((slug) => ({ slug }));
 }
 
 export default async function MetierPage({ params }) {
- const { locale, slug } = await params;
+ const { slug } = await params;
 
  if (!METIERS.includes(slug)) {
    notFound();
  }
-
- setRequestLocale(locale);
- const t = await getTranslations(`metiers.${slug}`);
+ const [locale, t] = await Promise.all([
+   rootLocale(),
+   getTranslations(`metiers.${slug}`),
+ ]);
 
  // Gather carousel images from the metier's image folder
  const imgDir = path.join(process.cwd(), "public/images/metiers", slug);

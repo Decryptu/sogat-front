@@ -1,28 +1,16 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { SUPPORTED_LOCALES } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import Hero from "@/components/contact/Hero";
 import Location from "@/components/contact/Location";
 
-export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({ params }) {
-  const params_obj = await Promise.resolve(params);
-  const locale = params_obj.locale;
-  
-  const t = await getTranslations({ locale, namespace: "contact" });
+export async function generateMetadata() {
+  const t = await getTranslations("contact");
   return {
     title: t("title"),
     description: t("description"),
   };
 }
 
-export default async function Contact(props) {
-  const params_obj = await Promise.resolve(props.params);
-  const locale = params_obj.locale;
-  
-  setRequestLocale(locale);
+export default async function Contact() {
   const t = await getTranslations("contact");
 
   const heroProps = {

@@ -1,5 +1,4 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { SUPPORTED_LOCALES } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import Hero from "@/components/groupe/Hero";
 import Stats from "@/components/groupe/Stats";
 // import Overview from "@/components/groupe/Overview"; // Commented out - can be reactivated later
@@ -7,28 +6,15 @@ import GroupeHierarchy from "@/components/groupe/GroupeHierarchy";
 import Values from "@/components/groupe/Values";
 import Solutions from "@/components/groupe/Solutions";
 
-export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({ params }) {
-  // Extract params using Promise.resolve()
-  const params_obj = await Promise.resolve(params);
-  const locale = params_obj.locale;
-  
-  const t = await getTranslations({ locale, namespace: "groupe" });
+export async function generateMetadata() {
+  const t = await getTranslations("groupe");
   return {
     title: t("title"),
     description: t("description"),
   };
 }
 
-export default async function Groupe(props) {
-  // Extract params using Promise.resolve()
-  const params_obj = await Promise.resolve(props.params);
-  const locale = params_obj.locale;
-  
-  setRequestLocale(locale);
+export default async function Groupe() {
   const t = await getTranslations("groupe");
 
   const heroProps = {

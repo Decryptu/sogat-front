@@ -1,32 +1,30 @@
 import { notFound } from "next/navigation";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { locale as rootLocale } from "next/root-params";
+import { getTranslations } from "next-intl/server";
 import dynamic from "next/dynamic";
-import { SUPPORTED_LOCALES } from "@/i18n/routing";
 import { METIER_SUBPAGES } from "@/constants/metier-subpages";
 import { METIER_COLORS } from "@/constants/metier-colors";
 import SubpageLayout from "@/components/metiers/SubpageLayout";
 
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.flatMap((locale) =>
-    Object.entries(METIER_SUBPAGES).flatMap(([metierSlug, subpages]) =>
-      subpages.map((sp) => ({
-        locale,
-        slug: metierSlug,
-        subpage: sp.slug,
-      }))
-    )
+  return Object.entries(METIER_SUBPAGES).flatMap(([metierSlug, subpages]) =>
+    subpages.map((sp) => ({
+      slug: metierSlug,
+      subpage: sp.slug,
+    }))
   );
 }
 
 export async function generateMetadata({ params }) {
-  const { locale, slug, subpage } = await params;
+  const { slug, subpage } = await params;
+  const locale = await rootLocale();
   const metierSubpages = METIER_SUBPAGES[slug];
   if (!metierSubpages) return {};
 
   const subpageData = metierSubpages.find((sp) => sp.slug === subpage);
   if (!subpageData) return {};
 
-  const t = await getTranslations({ locale, namespace: `metiers.${slug}` });
+  const t = await getTranslations(`metiers.${slug}`);
   const title = subpageData.title[locale] || subpageData.title.fr;
 
   return {
@@ -36,16 +34,17 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function SubPage({ params }) {
-  const { locale, slug, subpage } = await params;
+  const { slug, subpage } = await params;
 
   const metierSubpages = METIER_SUBPAGES[slug];
   if (!metierSubpages) notFound();
 
   const subpageData = metierSubpages.find((sp) => sp.slug === subpage);
   if (!subpageData) notFound();
-
-  setRequestLocale(locale);
-  const t = await getTranslations(`metiers.${slug}`);
+  const [locale, t] = await Promise.all([
+    rootLocale(),
+    getTranslations(`metiers.${slug}`),
+  ]);
 
   const componentName = slug
     .split("-")

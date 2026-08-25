@@ -1,13 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
-import { SUPPORTED_LOCALES } from "@/i18n/routing";
 
-export function generateStaticParams() {
-	return SUPPORTED_LOCALES.map((locale) => ({ locale }));
-}
-
-export default async function GroupeLayout({ children, params }) {
-	const { locale } = await params;
-	setRequestLocale(locale);
-
+export default function GroupeLayout({ children }) {
 	return <div className="w-full pt-20">{children}</div>;
 }

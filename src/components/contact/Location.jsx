@@ -3,7 +3,8 @@
 import { useEffect } from "react"
 import dynamic from 'next/dynamic'
 import { motion } from "framer-motion"
-import { Phone, Printer, Mail, Linkedin } from 'lucide-react'
+import { Phone, Printer, Mail } from 'lucide-react'
+import Linkedin from '@/components/ui/LinkedinIcon'
 
 const MapContainer = dynamic(
   () => import('react-leaflet').then(mod => mod.MapContainer),

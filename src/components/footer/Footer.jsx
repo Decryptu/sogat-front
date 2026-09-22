@@ -3,7 +3,8 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import Linkedin from "@/components/ui/LinkedinIcon";
 import { METIERS } from "@/constants/metiers";
 import MetiersLogos from "@/components/home/MetiersLogos";
 

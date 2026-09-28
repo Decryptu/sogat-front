@@ -1,7 +1,6 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
+import SectionHeader from "@/components/ui/SectionHeader";
+import { StaggerIn, StaggerItem } from "@/components/ui/motion";
 
 const hierarchyData = {
   parent: {
@@ -51,103 +50,38 @@ const hierarchyData = {
   ],
 };
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
-  },
-};
-
 export default function GroupeHierarchy() {
-  return (
-    <section className="py-24 bg-foreground overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent mb-4">
-            Structure du Groupe
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Un groupe industriel structuré autour de filiales complémentaires
-          </p>
-        </motion.div>
+  const { parent, children } = hierarchyData;
 
-        {/* Parent - SOGAT Groupe */}
-        <motion.div
-          className="flex justify-center mb-8"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
+  return (
+    <section className="py-20 md:py-28 bg-dark text-white">
+      <div className="container mx-auto px-6 md:px-16">
+        <SectionHeader
+          tone="light"
+          title="Structure du Groupe"
+          description="Un groupe industriel structuré autour de filiales complémentaires"
+        />
+
+        <div className="flex flex-col items-center">
+          <div className="border border-white/15 border-t-4 border-t-primary-light px-10 py-8">
             <Image
-              src={hierarchyData.parent.logo}
-              alt={hierarchyData.parent.name}
+              src={parent.logo}
+              alt={parent.name}
               width={240}
               height={80}
               className="h-16 md:h-20 w-auto object-contain brightness-0 invert"
             />
           </div>
-        </motion.div>
-
-        {/* Connector line from parent */}
-        <div className="flex justify-center mb-4">
-          <motion.div
-            className="w-0.5 h-12 bg-linear-to-b from-white/40 to-white/20"
-            initial={{ scaleY: 0 }}
-            whileInView={{ scaleY: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-          />
+          <span className="h-12 w-px bg-white/20" />
         </div>
 
-        {/* Horizontal connector */}
-        <div className="hidden md:flex justify-center mb-4">
-          <motion.div
-            className="h-0.5 bg-linear-to-r from-transparent via-white/30 to-transparent"
-            style={{ width: "80%" }}
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          />
-        </div>
-
-        {/* Level 2 - Main subsidiaries */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {hierarchyData.children.map((child) => (
-            <motion.div key={child.name} variants={itemVariants} className="flex flex-col items-center">
-              {/* Vertical connector from horizontal line */}
-              <div className="hidden md:block w-0.5 h-6 bg-white/20 mb-4" />
-
-              {/* Main subsidiary card */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10 hover:border-primary/50 transition-all duration-300 w-full">
-                <div className="flex justify-center mb-4">
+        <StaggerIn className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <span className="absolute top-0 inset-x-[calc((100%_-_6rem)/10)] hidden h-px bg-white/20 lg:block" />
+          {children.map((child) => (
+            <StaggerItem key={child.name} className="flex flex-col items-center">
+              <span className="hidden h-8 w-px bg-white/20 lg:block" />
+              <div className="w-full border border-white/15 transition-colors duration-300 hover:border-white/40">
+                <div className="flex h-24 items-center justify-center border-b border-white/15 p-6">
                   <Image
                     src={child.logo}
                     alt={child.name}
@@ -156,36 +90,23 @@ export default function GroupeHierarchy() {
                     className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
                   />
                 </div>
-
-                {/* Connector to subsidiaries */}
-                {child.subsidiaries.length > 0 && (
-                  <div className="flex justify-center my-4">
-                    <div className="w-0.5 h-6 bg-linear-to-b from-white/30 to-white/10" />
-                  </div>
-                )}
-
-                {/* Level 3 - Sub-subsidiaries */}
-                <div className="space-y-3">
+                <ul className="divide-y divide-white/10">
                   {child.subsidiaries.map((subsidiary) => (
-                    <motion.div
-                      key={subsidiary.name}
-                      className="bg-black/30 rounded-lg p-3 border border-white/5 hover:border-white/20 transition-all duration-300"
-                      whileHover={{ scale: 1.02 }}
-                    >
+                    <li key={subsidiary.name} className="flex h-16 items-center justify-center px-4">
                       <Image
                         src={subsidiary.logo}
                         alt={subsidiary.name}
                         width={140}
                         height={40}
-                        className="h-7 md:h-8 w-auto object-contain mx-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+                        className="h-7 md:h-8 w-auto object-contain brightness-0 invert opacity-70 transition-opacity hover:opacity-100"
                       />
-                    </motion.div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
-            </motion.div>
+            </StaggerItem>
           ))}
-        </motion.div>
+        </StaggerIn>
       </div>
     </section>
   );

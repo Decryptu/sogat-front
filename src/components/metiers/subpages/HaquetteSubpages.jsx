@@ -175,30 +175,16 @@ const MACHINES = {
   },
 };
 
-function PlaceholderImage({ src, alt, aspectRatio = "aspect-[4/3]" }) {
+function SpecsList({ specs }) {
   return (
-    <div className={`relative ${aspectRatio} rounded-xl overflow-hidden bg-gray-100`}>
-      <Image src={src} alt={alt} fill className="object-cover" />
-    </div>
-  );
-}
-
-function SpecsTable({ specs }) {
-  return (
-    <div className="overflow-hidden rounded-xl border border-gray-200">
-      <table className="w-full">
-        <tbody>
-          {specs.map(([label, value], index) => (
-            <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-              <td className="px-4 py-3 text-sm font-medium text-gray-700 border-r border-gray-200 w-1/2">
-                {label}
-              </td>
-              <td className="px-4 py-3 text-sm text-gray-600">{value}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <dl className="divide-y divide-foreground/10 border-y border-foreground/10">
+      {specs.map(([label, value]) => (
+        <div key={label} className="grid grid-cols-2 gap-6 py-4">
+          <dt className="text-muted-foreground">{label}</dt>
+          <dd className="font-semibold">{value}</dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 
@@ -207,12 +193,12 @@ export default function HaquetteSubpages({ subpage }) {
   if (!machine) return null;
 
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <PlaceholderImage src={machine.image} alt={machine.title} />
-          <SpecsTable specs={machine.specs} />
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+        <div className="relative aspect-4/3 overflow-hidden border-t-4 border-haquette bg-foreground/5">
+          <Image src={machine.image} alt={machine.title} fill className="object-cover" />
         </div>
+        <SpecsList specs={machine.specs} />
       </div>
     </section>
   );

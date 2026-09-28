@@ -17,30 +17,23 @@ const IMAGES = {
   },
 };
 
-function SectionTitle({ children, subtitle, className = "" }) {
-  return (
-    <div className={`mb-12 ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-        {children}
-      </h2>
-      {subtitle && (
-        <p className="text-xl text-sermas font-semibold">{subtitle}</p>
-      )}
-    </div>
-  );
-}
-
-export default function Sermas({ t, locale }) {
+export default function Sermas() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Nos équipements - SCIE A BILLETTES ===== */}
-      <section className="py-20 px-4 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionTitle subtitle="SCIE A BILLETTES">
-            Nos équipements
-          </SectionTitle>
+      <section className="bg-white py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="mb-12 md:mb-16 flex flex-col gap-6">
+            <p className="flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-sermas">
+              <span className="size-2 rounded-full bg-current" />
+              SCIE A BILLETTES
+            </p>
+            <h2 className="max-w-4xl text-4xl md:text-6xl font-bold">
+              Nos équipements
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
             <SubpageCard
               href="/metiers/sermas/scies-a-billettes"
               src={IMAGES.billettes.col1}
@@ -64,9 +57,9 @@ export default function Sermas({ t, locale }) {
       </section>
 
       {/* ===== SECTION: Second 3-column grid ===== */}
-      <section className="py-20 px-4 md:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="bg-background py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
             <SubpageCard
               href="/metiers/sermas/scies-ligne-de-sciage"
               src={IMAGES.equipment.col1}
@@ -90,9 +83,9 @@ export default function Sermas({ t, locale }) {
       </section>
 
       {/* ===== SECTION: Two columns - Installation & Machines ===== */}
-      <section className="py-20 px-4 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="bg-white py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
             <SubpageCard
               href="/metiers/sermas/installation-plaques-laminees"
               src={IMAGES.twoCol.col1}

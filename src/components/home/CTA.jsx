@@ -1,70 +1,47 @@
 "use client";
 
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import { FadeIn } from '@/components/ui/motion';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { FadeIn } from "@/components/ui/motion";
 
 export default function CTA() {
-  const t = useTranslations('home');
+  const t = useTranslations("home");
+
   return (
-    <div className="container mx-auto px-6 py-16">
-      <FadeIn>
-        <section className="relative text-white pt-20 pb-24 rounded-xl overflow-hidden">
-          {/* Background image with gradient overlay */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/50 z-10" />
+    <section className="border-t-4 border-primary-light">
+      <div className="container mx-auto px-6 md:px-16 py-16 md:py-24">
+        <FadeIn className="grid md:grid-cols-[5fr_7fr]">
+          <Link
+            href="/contact"
+            className="group flex min-h-[420px] flex-col justify-between gap-16 bg-primary-light p-8 md:p-12 text-white transition-colors duration-500 hover:bg-primary"
+          >
+            <div className="flex items-center justify-between gap-4">
+              <span className="flex items-center gap-3">
+                <span className="size-2.5 rounded-full bg-white" />
+                {t("cta.button")}
+              </span>
+              <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </div>
+
+            <div className="flex flex-col gap-6">
+              <h2 className="text-4xl md:text-5xl font-bold">{t("cta.title")}</h2>
+              <p className="text-lg text-white/85">{t("cta.description")}</p>
+            </div>
+          </Link>
+
+          <div className="relative min-h-[280px] overflow-hidden">
             <Image
               src="/images/contact.webp"
-              alt="Background"
+              alt=""
               fill
-              className="object-cover"
-              priority
+              sizes="(max-width: 768px) 100vw, 60vw"
+              className="object-cover transition-transform duration-1000 ease-out hover:scale-105"
             />
           </div>
-
-          {/* Content */}
-          <div className="relative z-20 mx-auto px-6 md:px-16">
-            <div className="max-w-3xl">
-              <FadeIn delay={0.15} y={12}>
-                <span className="text-sm font-light uppercase text-gray-200 tracking-wider mb-6 block">
-                  {t('cta.label')}
-                </span>
-              </FadeIn>
-              <FadeIn delay={0.25} y={12}>
-                <h2 className="text-4xl md:text-5xl font-normal mb-6 leading-tight">
-                  {t('cta.title')}
-                </h2>
-              </FadeIn>
-              <FadeIn delay={0.35} y={12}>
-                <p className="text-xl mb-8 opacity-90 font-light">{t('cta.description')}</p>
-              </FadeIn>
-              <FadeIn delay={0.45} y={12}>
-                <Button
-                  asChild
-                  variant="secondary"
-                  className="inline-flex items-center gap-2 text-base px-6"
-                >
-                  <Link href="/contact">
-                    {t('cta.button')}
-                    <svg
-                      className="w-4 h-4"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M5 12h14m-7-7l7 7-7 7" />
-                      <title>Arrow</title>
-                    </svg>
-                  </Link>
-                </Button>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
-      </FadeIn>
-    </div>
+        </FadeIn>
+      </div>
+    </section>
   );
 }

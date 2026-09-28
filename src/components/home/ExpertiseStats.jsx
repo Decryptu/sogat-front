@@ -1,6 +1,6 @@
 "use client";
 import { useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import CountUp from "react-countup";
 import Image from "next/image";
@@ -20,23 +20,16 @@ export default function ExpertiseStats() {
   const t = useTranslations("home.expertise.stats");
   const statsRef = useRef(null);
   const isInView = useInView(statsRef, { once: true, margin: "-100px" });
-  const [startCounting, setStartCounting] = useState(false);
-
-  useEffect(() => {
-    if (isInView) {
-      setStartCounting(true);
-    }
-  }, [isInView]);
 
   return (
     <div
       ref={statsRef}
-      className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+      className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-14"
     >
       {STATS.map(({ icon, value, textValue, label, suffix, isYear }, index) => (
         <div
           key={label}
-          className="relative"
+          className="border-t border-foreground/15 pt-6"
           style={{
             transform: isInView ? "translateY(0)" : "translateY(50px)",
             opacity: isInView ? 1 : 0,
@@ -45,31 +38,29 @@ export default function ExpertiseStats() {
         >
           <Image
             src={icon}
-            alt={t(`${label}.label`)}
-            width={40}
-            height={40}
-            className="h-10 w-10 mb-4 object-contain"
+            alt=""
+            width={32}
+            height={32}
+            className="h-8 w-8 mb-6 object-contain"
           />
-          {textValue ? (
-            <div className="text-5xl font-light text-primary">
-              {t(`${textValue}.value`)}
-            </div>
-          ) : (
-            <div className="text-5xl font-light text-primary">
-              {startCounting ? (
-                <CountUp
-                  start={0}
-                  end={value}
-                  duration={2.5}
-                  separator={isYear ? "" : " "}
-                  suffix={suffix || ""}
-                />
-              ) : (
-                <span>0{suffix || ""}</span>
-              )}
-            </div>
-          )}
-          <p className="text-sm text-gray-600 uppercase mt-2">{t(`${label}.label`)}</p>
+          <div className="font-display text-5xl md:text-6xl font-bold leading-none text-primary">
+            {textValue ? (
+              t(`${textValue}.value`)
+            ) : isInView ? (
+              <CountUp
+                start={0}
+                end={value}
+                duration={2.5}
+                separator={isYear ? "" : " "}
+                suffix={suffix ?? ""}
+              />
+            ) : (
+              `0${suffix ?? ""}`
+            )}
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground uppercase tracking-wide">
+            {t(`${label}.label`)}
+          </p>
         </div>
       ))}
     </div>

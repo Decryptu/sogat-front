@@ -11,122 +11,146 @@ const IMAGES = {
   thermoEjecteur2: "/images/metiers/mc2-maintenance/9.webp",
 };
 
-function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3]" }) {
+const BODY = "text-lg text-muted-foreground leading-relaxed";
+
+function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-4/3" }) {
   return (
-    <div className={`relative ${aspectRatio} rounded-xl overflow-hidden bg-gray-100 ${className}`}>
+    <div className={`relative ${aspectRatio} overflow-hidden bg-foreground/5 ${className}`}>
       <Image src={src} alt={alt} fill className="object-cover" />
+    </div>
+  );
+}
+
+function Section({ children }) {
+  return (
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-6 md:px-16">{children}</div>
+    </section>
+  );
+}
+
+function Lead({ children }) {
+  return <p className="text-xl md:text-2xl font-medium leading-relaxed">{children}</p>;
+}
+
+function BulletList({ title, items }) {
+  return (
+    <div>
+      <h3 className="mb-4 text-lg md:text-xl font-semibold">{title}</h3>
+      <ul className="divide-y divide-foreground/10 border-y border-foreground/10">
+        {items.map((item) => (
+          <li key={item} className="flex items-start gap-4 py-3 text-muted-foreground">
+            <span className="mt-2 size-2 shrink-0 rounded-full bg-mc2-maintenance" />
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 function VisArchimede() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed text-lg">
-              MC2 installe et effectue le lignage des vis d&apos;Archimède en une ou plusieurs parties. Nous effectuons le démontage pour réparation, rechargement ou modification de l&apos;installation.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Qu&apos;il s&apos;agisse de vis dans l&apos;agroalimentaire ou dans les industries chimiques, de petites vis ou d&apos;installations importantes, MC2 a plusieurs années d&apos;expérience dans ce type de prestation.
-            </p>
-          </div>
-          <PlaceholderImage src={IMAGES.visArchimede} alt="Vis d'Archimède" />
+    <Section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="space-y-6">
+          <Lead>
+            MC2 installe et effectue le lignage des vis d&apos;Archimède en une ou plusieurs parties. Nous effectuons le démontage pour réparation, rechargement ou modification de l&apos;installation.
+          </Lead>
+          <p className={BODY}>
+            Qu&apos;il s&apos;agisse de vis dans l&apos;agroalimentaire ou dans les industries chimiques, de petites vis ou d&apos;installations importantes, MC2 a plusieurs années d&apos;expérience dans ce type de prestation.
+          </p>
         </div>
+        <PlaceholderImage src={IMAGES.visArchimede} alt="Vis d'Archimède" className="border-t-4 border-mc2-maintenance" />
       </div>
-    </section>
+    </Section>
   );
 }
 
 function ConvoyeurABande() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-          <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Fort de ses 20 années d&apos;expérience en industrie agroalimentaire, MC2 INDUSTRIE a acquis un savoir-faire particulier dans la conception, fabrication et installation de convoyeurs à bande.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Nous proposons une prestation de conception et étude du projet avec vos éléments (matière transportée, débit attendu, implantation, etc…).
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Ensuite nous pouvons intégrer diverses options (stations de pesage, capots, détecteurs de particules, goulottes d&apos;alimentation ou de jetée, etc…) à votre installation. MC2 assure également le déménagement et la réimplantation de convoyeurs existants.
-            </p>
-          </div>
-          <PlaceholderImage src={IMAGES.convoyeurBande} alt="Convoyeur à bande" />
+    <Section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-12 md:mb-16">
+        <div className="space-y-6">
+          <Lead>
+            Fort de ses 20 années d&apos;expérience en industrie agroalimentaire, MC2 INDUSTRIE a acquis un savoir-faire particulier dans la conception, fabrication et installation de convoyeurs à bande.
+          </Lead>
+          <p className={BODY}>
+            Nous proposons une prestation de conception et étude du projet avec vos éléments (matière transportée, débit attendu, implantation, etc…).
+          </p>
+          <p className={BODY}>
+            Ensuite nous pouvons intégrer diverses options (stations de pesage, capots, détecteurs de particules, goulottes d&apos;alimentation ou de jetée, etc…) à votre installation. MC2 assure également le déménagement et la réimplantation de convoyeurs existants.
+          </p>
         </div>
-        <PlaceholderImage src={IMAGES.convoyeurBande2} alt="Convoyeur à bande - vue détaillée" aspectRatio="aspect-[21/9]" />
+        <PlaceholderImage src={IMAGES.convoyeurBande} alt="Convoyeur à bande" className="border-t-4 border-mc2-maintenance" />
       </div>
-    </section>
+      <PlaceholderImage src={IMAGES.convoyeurBande2} alt="Convoyeur à bande - vue détaillée" aspectRatio="aspect-21/9" />
+    </Section>
   );
 }
 
 function CharpenteStructureMetallique() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
-          <PlaceholderImage src={IMAGES.charpenteMetallique} alt="Charpente et structure métallique" />
-          <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Depuis ses débuts, MC2 conçoit et construit des charpentes métalliques. Notre bureau d&apos;études et nos dessinateurs sont capables de développer un projet qui s&apos;inscrit dans votre installation.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Nous modélisons en 3D vos bâtiments existants pour y adapter tout type d&apos;extension fabriqué sur mesure dans notre atelier. En collaboration avec des organismes certificateurs, nous fournissons une installation certifiée par une note de calcul.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <PlaceholderImage src={IMAGES.charpente2} alt="Charpente métallique" />
-          <PlaceholderImage src={IMAGES.charpente3} alt="Structure métallique" />
+    <Section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center mb-12 md:mb-16">
+        <PlaceholderImage src={IMAGES.charpenteMetallique} alt="Charpente et structure métallique" className="border-t-4 border-mc2-maintenance" />
+        <div className="space-y-6">
+          <Lead>
+            Depuis ses débuts, MC2 conçoit et construit des charpentes métalliques. Notre bureau d&apos;études et nos dessinateurs sont capables de développer un projet qui s&apos;inscrit dans votre installation.
+          </Lead>
+          <p className={BODY}>
+            Nous modélisons en 3D vos bâtiments existants pour y adapter tout type d&apos;extension fabriqué sur mesure dans notre atelier. En collaboration avec des organismes certificateurs, nous fournissons une installation certifiée par une note de calcul.
+          </p>
         </div>
       </div>
-    </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <PlaceholderImage src={IMAGES.charpente2} alt="Charpente métallique" />
+        <PlaceholderImage src={IMAGES.charpente3} alt="Structure métallique" />
+      </div>
+    </Section>
   );
 }
 
 function ThermoEjecteur() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+    <Section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-12 md:mb-16">
+        <div className="space-y-10">
           <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <Lead>
               Les thermo-éjecteurs utilisent l&apos;énergie cinétique de la vapeur à haute pression pour comprimer une vapeur à basse pression. Ce procédé transforme une énergie autrefois considérée comme perdue en une ressource précieuse.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
+            </Lead>
+            <p className={BODY}>
               Développés il y a plus de 30 ans par Monsieur Claude Chacoux et la société MC2, ces équipements ont été spécialement conçus pour optimiser les performances des unités de production de sucre et d&apos;éthanol.
             </p>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Spécifications techniques</h3>
-              <ul className="list-disc list-inside space-y-1 text-gray-700">
-                <li>Technologie éprouvée : Plus de 30 ans d&apos;excellence</li>
-                <li>Conformité aux normes européennes (97/23/CE)</li>
-                <li>Fiabilité optimale : Conception sans pièce mobile</li>
-                <li>Solutions personnalisées sur mesure</li>
-                <li>Entretien simplifié : Démontage partiel possible</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Avantages clés</h3>
-              <ul className="list-disc list-inside space-y-1 text-gray-700">
-                <li>Compatible avec une large gamme de flux et de pressions</li>
-                <li>Intégration aisée aux installations existantes</li>
-                <li>Aucune consommation supplémentaire d&apos;énergie</li>
-                <li>Conception durable nécessitant peu de maintenance</li>
-                <li>Réduction de plus de 30 % de la consommation de vapeur</li>
-              </ul>
-            </div>
           </div>
-          <PlaceholderImage src={IMAGES.thermoEjecteur} alt="Thermo-éjecteur" />
+
+          <BulletList
+            title="Spécifications techniques"
+            items={[
+              "Technologie éprouvée : Plus de 30 ans d'excellence",
+              "Conformité aux normes européennes (97/23/CE)",
+              "Fiabilité optimale : Conception sans pièce mobile",
+              "Solutions personnalisées sur mesure",
+              "Entretien simplifié : Démontage partiel possible",
+            ]}
+          />
+
+          <BulletList
+            title="Avantages clés"
+            items={[
+              "Compatible avec une large gamme de flux et de pressions",
+              "Intégration aisée aux installations existantes",
+              "Aucune consommation supplémentaire d'énergie",
+              "Conception durable nécessitant peu de maintenance",
+              "Réduction de plus de 30 % de la consommation de vapeur",
+            ]}
+          />
         </div>
-        <PlaceholderImage src={IMAGES.thermoEjecteur2} alt="Thermo-éjecteur détail" aspectRatio="aspect-[21/9]" />
+        <PlaceholderImage src={IMAGES.thermoEjecteur} alt="Thermo-éjecteur" className="border-t-4 border-mc2-maintenance" />
       </div>
-    </section>
+      <PlaceholderImage src={IMAGES.thermoEjecteur2} alt="Thermo-éjecteur détail" aspectRatio="aspect-21/9" />
+    </Section>
   );
 }
 

@@ -45,6 +45,7 @@ export default function MetierTransition({ slug }) {
           >
             {/* Using native img instead of next/image so the URL matches
                 the preloaded resource from the metiers list page */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}{/* biome-ignore lint/performance/noImgElement: see above */}
             <img
               src={`/images/metiers/logo-${slug}-white.webp`}
               alt=""

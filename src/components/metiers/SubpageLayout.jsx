@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 
 export default function SubpageLayout({
@@ -8,78 +9,41 @@ export default function SubpageLayout({
   locale,
   children,
 }) {
+  const isFr = locale === "fr";
+  const backHref = `/metiers/${metierSlug}`;
+
   return (
-    <div className="w-full">
-      {/* Header band */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 md:px-16 pt-6 pb-12 md:pt-8 md:pb-16">
-          {/* Back link */}
+    <div className="w-full" style={{ "--metier": metierColor }}>
+      <section className="bg-background pt-36 pb-16 md:pt-44 md:pb-24">
+        <div className="container mx-auto px-6 md:px-16">
           <Link
-            href={`/metiers/${metierSlug}`}
-            className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-700 transition-colors mb-8"
+            href={backHref}
+            className="group mb-12 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground md:mb-16"
           >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            <span>
-              {locale === "fr" ? "Retour à" : "Back to"} {metierTitle}
-            </span>
+            <ArrowLeft className="size-4 transition-transform duration-300 group-hover:-translate-x-1" />
+            {isFr ? "Retour à" : "Back to"} {metierTitle}
           </Link>
 
-          {/* Title area */}
-          <div className="flex items-center gap-3 mb-3">
-            <span
-              className="w-8 h-1 rounded-full"
-              style={{ backgroundColor: metierColor }}
-            />
-            <p
-              className="text-sm font-semibold uppercase tracking-wider"
-              style={{ color: metierColor }}
-            >
-              {metierTitle}
-            </p>
-          </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+          <p className="mb-8 flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-(--metier)">
+            <span className="size-2 rounded-full bg-current" />
+            {metierTitle}
+          </p>
+          <h1 className="max-w-5xl text-5xl md:text-7xl font-bold">
             {subpageTitle}
           </h1>
         </div>
       </section>
 
-      {/* Content */}
       {children}
 
-      {/* Bottom back navigation */}
-      <section className="py-12 px-4 md:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="border-t-4 border-(--metier) bg-background py-16 md:py-20">
+        <div className="container mx-auto px-6 md:px-16">
           <Link
-            href={`/metiers/${metierSlug}`}
-            className="inline-flex items-center gap-2 text-lg font-medium hover:opacity-80 transition-opacity"
-            style={{ color: metierColor }}
+            href={backHref}
+            className="group inline-flex items-center gap-4 text-xl md:text-2xl font-semibold transition-colors hover:text-(--metier)"
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            {locale === "fr"
+            <ArrowLeft className="size-6 transition-transform duration-300 group-hover:-translate-x-1" />
+            {isFr
               ? `Voir tous les équipements ${metierTitle}`
               : `See all ${metierTitle} equipment`}
           </Link>

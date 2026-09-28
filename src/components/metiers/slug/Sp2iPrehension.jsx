@@ -1,4 +1,5 @@
 import SubpageCard from "@/components/metiers/SubpageCard";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const IMAGES = {
   equipment: {
@@ -11,28 +12,15 @@ const IMAGES = {
   },
 };
 
-function SectionTitle({ children, subtitle, className = "" }) {
-  return (
-    <div className={`mb-12 ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-        {children}
-      </h2>
-      {subtitle && (
-        <p className="text-xl text-sp2i-prehension font-semibold">{subtitle}</p>
-      )}
-    </div>
-  );
-}
-
-export default function Sp2iPrehension({ t, locale }) {
+export default function Sp2iPrehension() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Outils de levage ===== */}
-      <section className="py-20 px-4 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionTitle>Nos équipements</SectionTitle>
+      <section className="bg-white py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
+          <SectionHeader title="Nos équipements" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             <SubpageCard
               href="/metiers/sp2i-prehension/outils-de-levage"
               src={IMAGES.levage.main}

@@ -1,4 +1,5 @@
 import SubpageCard from "@/components/metiers/SubpageCard";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const IMAGES = {
   equipmentRow1: {
@@ -16,24 +17,14 @@ const IMAGES = {
   },
 };
 
-function SectionTitle({ children, className = "" }) {
-  return (
-    <div className={`mb-12 ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-        {children}
-      </h2>
-    </div>
-  );
-}
-
-export default function Sp2iFerroviaire({ t, locale }) {
+export default function Sp2iFerroviaire() {
   return (
     <div className="w-full">
-      <section className="py-20 px-4 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionTitle>Nos équipements</SectionTitle>
+      <section className="bg-white py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
+          <SectionHeader title="Nos équipements" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
             <SubpageCard
               href="/metiers/sp2i-ferroviaire/catenaire-escamotable"
               src={IMAGES.equipmentRow1.col1}
@@ -52,9 +43,6 @@ export default function Sp2iFerroviaire({ t, locale }) {
               alt="Plateforme Élévatrice Mobile de Personne"
               title="Plateforme Élévatrice Mobile de Personne (PEMP)"
             />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <SubpageCard
               href="/metiers/sp2i-ferroviaire/portique-mobile"
               src={IMAGES.equipmentRow2.col1}
@@ -75,7 +63,7 @@ export default function Sp2iFerroviaire({ t, locale }) {
             />
           </div>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="mt-12 md:mt-16 max-w-3xl mx-auto">
             <SubpageCard
               href="/metiers/sp2i-ferroviaire/grue-velocipedique"
               src={IMAGES.grue.main}

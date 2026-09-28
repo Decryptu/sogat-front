@@ -1,4 +1,4 @@
-import { geist, geistMono } from "../fonts";
+import { geist, geistMono, barlowCondensed } from "../fonts";
 import { locale as rootLocale } from "next/root-params";
 import { getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
@@ -63,7 +63,7 @@ export default async function RootLayout({ children }) {
 	return (
 		<html lang={locale} className="h-full">
 			<body
-				className={`${geist.variable} ${geistMono.variable} font-sans h-full flex flex-col overflow-x-hidden`}
+				className={`${geist.variable} ${geistMono.variable} ${barlowCondensed.variable} font-sans h-full flex flex-col overflow-x-hidden`}
 			>
 				<NextIntlClientProvider messages={messages}>
 					<SmoothScroll>

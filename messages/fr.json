@@ -69,19 +69,16 @@
     }
   },
   "footer": {
-    "description": "Expert en gestion de projets de construction et modélisation numérique",
     "sections": {
       "services": "Nos Métiers",
       "studies": "Bureau d'Études",
       "monitoring": "Monitoring",
       "3d": "Acquisitions 3D",
-      "company": "Entreprise",
-      "about": "À propos",
-      "careers": "Carrières",
-      "contact": "Contact",
-      "language": "Langue"
+      "pages": "Rubriques"
     },
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "question": "Vous avez une question ?",
+    "contactCta": "Contactez-nous"
   },
   "navigation": {
     "home": "ACCUEIL",
@@ -91,7 +88,9 @@
     "contact": "CONTACT",
     "personalSpace": "Espace personnel",
     "legalNotice": "Mentions légales",
-    "close": "Fermer le menu"
+    "close": "Fermer le menu",
+    "open": "Ouvrir le menu",
+    "menu": "Menu"
   },
   "metiersPage": {
     "hero": {
@@ -153,7 +152,6 @@
     "title": "Nos Métiers",
     "description": "Nous sommes spécialisés dans divers domaines professionnels, offrant une expertise dans de multiples secteurs. Notre équipe est composée de professionnels hautement qualifiés qui apportent des années d'expérience et une connaissance approfondie de l'industrie à chaque projet.",
     "imageAlt": "Équipe professionnelle au travail",
-
     "sermas": {
       "title": "SERMAS",
       "description": "SERMAS conçoit et assemble des équipements dédiés à la fabrication de produits en fonte d'aluminium : scies haute performance (billettes, plaques coulées, T-bars), scies multifonctions et de refendage, ainsi que des installations complètes intégrant manutention, pesage et traitement des copeaux. Un savoir-faire pointu pour des solutions fiables et sur mesure.",

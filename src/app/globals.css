@@ -4,10 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+/* inline: the font variables live on <body>, not :root */
+@theme inline {
   --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-barlow-condensed);
+}
 
+@theme {
   --color-sermas: hsl(var(--sermas));
   --color-haquette: hsl(var(--haquette));
   --color-aretec: hsl(var(--aretec));
@@ -167,7 +171,11 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: Geist, Arial, Helvetica, sans-serif;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1,
+  h2 {
+    @apply font-display uppercase leading-[1.05];
   }
 }

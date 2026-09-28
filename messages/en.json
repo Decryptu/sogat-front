@@ -69,19 +69,16 @@
     }
   },
   "footer": {
-    "description": "Expert in construction project management and digital modeling",
     "sections": {
       "services": "Services",
       "studies": "Engineering Office",
       "monitoring": "Monitoring",
       "3d": "3D Acquisitions",
-      "company": "Company",
-      "about": "About",
-      "careers": "Careers",
-      "contact": "Contact",
-      "language": "Language"
+      "pages": "Pages"
     },
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "question": "Have a question?",
+    "contactCta": "Contact us"
   },
   "navigation": {
     "home": "HOME",
@@ -91,7 +88,9 @@
     "contact": "CONTACT",
     "personalSpace": "Personal space",
     "legalNotice": "Legal notice",
-    "close": "Close menu"
+    "close": "Close menu",
+    "open": "Open menu",
+    "menu": "Menu"
   },
   "metiersPage": {
     "hero": {
@@ -153,7 +152,6 @@
     "title": "Our Professions",
     "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
     "imageAlt": "Professional team at work",
-
     "sermas": {
       "title": "SERMAS",
       "description": "SERMAS specializes in industrial automation and robotics solutions, providing cutting-edge technology for manufacturing processes.",

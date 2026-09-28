@@ -1,65 +1,48 @@
 import LanguageSwitcher from "@/components/language-switcher/LanguageSwitcher";
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
-import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import Linkedin from "@/components/ui/LinkedinIcon";
 import { METIERS } from "@/constants/metiers";
+import { NAVIGATION_LINKS } from "@/constants/navigation";
 import MetiersLogos from "@/components/home/MetiersLogos";
+
+const LINK_CLASS = "text-white/60 transition-colors hover:text-white";
 
 export default function Footer() {
 	const t = useTranslations("footer");
+	const navT = useTranslations("navigation");
 	const metierT = useTranslations("home.businessAreas");
 	const contactT = useTranslations("contact.location");
 	const locale = useLocale();
 
 	return (
-		<footer className="bg-gray-900 text-white">
+		<footer className="bg-gray-900 text-white border-b-4 border-primary-light">
 			<MetiersLogos />
-			<div className="container py-12 mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-					<div>
-						<div className="h-8 w-32 mb-4">
-							<Image
-								src="/images/sogat-white.webp"
-								alt="Sogat"
-								width={100}
-								height={32}
-								className="w-[100px] h-8 object-contain" // Fixed dimensions
-							/>
-						</div>
-						<p className="text-gray-400 mb-4">{t("description")}</p>
-						<div className="space-y-2">
-							<a
-								href={`mailto:${contactT("email")}`}
-								className="flex items-center gap-2 text-gray-400 hover:text-white"
-							>
-								<Mail className="w-4 h-4" />
-								<span className="text-sm">{contactT("email")}</span>
-							</a>
-							<a
-								href={contactT("linkedin")}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="flex items-center gap-2 text-gray-400 hover:text-white"
-							>
-								<Linkedin className="w-4 h-4" />
-								<span className="text-sm">LinkedIn</span>
-							</a>
-						</div>
-					</div>
 
+			<div className="container mx-auto px-6 md:px-16 py-16 md:py-24 grid gap-16 md:grid-cols-2">
+				<div className="flex flex-col items-start gap-8">
+					<h2 className="text-5xl md:text-6xl font-bold">{t("question")}</h2>
+					<Link
+						href={`/${locale}/contact`}
+						className="group inline-flex items-center gap-4 text-lg"
+					>
+						{t("contactCta")}
+						<ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1" />
+					</Link>
+				</div>
+
+				<div className="grid grid-cols-2 gap-10">
 					<div>
-						<h3 className="font-semibold mb-4">{t("sections.services")}</h3>
-						<ul className="space-y-2">
-							{METIERS.map((metier) => (
-								<li key={metier}>
+						<h3 className="mb-6 text-white">{t("sections.pages")}</h3>
+						<ul className="space-y-3">
+							{NAVIGATION_LINKS.map(({ key, path }) => (
+								<li key={key}>
 									<Link
-										href={`/metiers/${metier}`}
-										className="text-gray-400 hover:text-white"
+										href={`/${locale}${path}`}
+										className={`inline-block lowercase first-letter:uppercase ${LINK_CLASS}`}
 									>
-										{metierT(metier)}
+										{navT(key)}
 									</Link>
 								</li>
 							))}
@@ -67,42 +50,47 @@ export default function Footer() {
 					</div>
 
 					<div>
-						<h3 className="font-semibold mb-4">{t("sections.company")}</h3>
-						<ul className="space-y-2">
-							<li>
-								<Link href="/groupe" className="text-gray-400 hover:text-white">
-									{t("sections.about")}
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/metiers"
-									className="text-gray-400 hover:text-white"
-								>
-									{t("sections.careers")}
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/contact"
-									className="text-gray-400 hover:text-white"
-								>
-									{t("sections.contact")}
-								</Link>
-							</li>
+						<h3 className="mb-6 text-white">{t("sections.services")}</h3>
+						<ul className="space-y-3">
+							{METIERS.map((metier) => (
+								<li key={metier}>
+									<Link
+										href={`/${locale}/metiers/${metier}`}
+										className={LINK_CLASS}
+									>
+										{metierT(metier)}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
-
-					<div>
-						<h3 className="font-semibold mb-4">{t("sections.language")}</h3>
-						<LanguageSwitcher locale={locale} />
-					</div>
 				</div>
+			</div>
 
-				<div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+			<div className="border-t border-white/10">
+				<div className="container mx-auto px-6 md:px-16 py-8 flex flex-col-reverse gap-6 md:flex-row md:items-center md:justify-between text-sm text-white/50">
 					<p>
 						&copy; {new Date().getFullYear()} Sogat. {t("rights")}
 					</p>
+					<div className="flex flex-wrap items-center gap-6">
+						<a
+							href={`mailto:${contactT("email")}`}
+							className={`flex items-center gap-2 ${LINK_CLASS}`}
+						>
+							<Mail className="size-4" />
+							{contactT("email")}
+						</a>
+						<a
+							href={contactT("linkedin")}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="LinkedIn"
+							className={LINK_CLASS}
+						>
+							<Linkedin className="size-5" />
+						</a>
+						<LanguageSwitcher locale={locale} />
+					</div>
 				</div>
 			</div>
 		</footer>

@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
-import { X, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { X, ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import LanguageSwitcher from "../language-switcher/LanguageSwitcher";
+import LinkedinIcon from "@/components/ui/LinkedinIcon";
+import { METIERS } from "@/constants/metiers";
 import { motion } from "framer-motion";
 import {
 	NAVIGATION_LINKS,
@@ -17,14 +18,19 @@ const ANIMATION_CONFIG = {
 	ease: [0.22, 1, 0.36, 1],
 };
 
-const AnimatedNavLink = ({ href, children, onClick }) => (
+const AnimatedNavLink = ({ href, children, count, onClick }) => (
 	<Link
 		href={href}
 		onClick={onClick}
 		className="group relative flex items-center gap-4 w-fit"
 	>
-		<span className="block text-4xl md:text-6xl font-bold transition-all duration-300 ease-out group-hover:translate-x-4">
+		<span className="block font-display text-5xl md:text-7xl font-bold uppercase leading-none transition-transform duration-300 ease-out group-hover:translate-x-4">
 			{children}
+			{count && (
+				<sup className="ml-2 align-super font-sans text-base font-normal">
+					{count}
+				</sup>
+			)}
 		</span>
 		<ArrowRight className="w-8 h-8 opacity-0 -translate-x-4 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0" />
 	</Link>
@@ -32,6 +38,7 @@ const AnimatedNavLink = ({ href, children, onClick }) => (
 
 export default function NavigationContent({ onClose, locale }) {
 	const t = useTranslations("navigation");
+	const contactT = useTranslations("contact.location");
 	const pathname = usePathname();
 	const currentMetier = getMetierSlugFromPathname(pathname);
 	const currentStyle = getNavigationStyle(pathname);
@@ -87,22 +94,21 @@ export default function NavigationContent({ onClose, locale }) {
 					animate={{ y: 0 }}
 					exit={{ y: "-100%" }}
 					transition={ANIMATION_CONFIG}
-					className="w-full md:w-1/2 p-8 md:p-16 flex flex-col"
+					className="w-full md:w-1/2 flex flex-col"
 				>
-					<div className="flex justify-end mb-8">
-						<Button
-							variant="ghost"
-							size="icon"
+					<div className="flex px-8 md:px-16 h-20 md:h-24 items-center">
+						<button
+							type="button"
 							onClick={onClose}
-							className="text-white hover:bg-white/20"
+							className="cursor-pointer text-white transition-transform duration-300 hover:rotate-90"
 							aria-label={t("close")}
 						>
-							<X className="h-8 w-8" />
-						</Button>
+							<X className="h-10 w-10" strokeWidth={1} />
+						</button>
 					</div>
 
-					<nav className="flex-1">
-						<ul className="space-y-6 text-white">
+					<nav className="flex-1 flex items-center px-8 md:px-16 py-8">
+						<ul className="space-y-4 md:space-y-6 text-white">
 							{NAVIGATION_LINKS.map(({ key, path }, index) => (
 								<motion.li
 									key={key}
@@ -114,7 +120,11 @@ export default function NavigationContent({ onClose, locale }) {
 										delay: 0.1 * index,
 									}}
 								>
-									<AnimatedNavLink href={`/${locale}${path}`} onClick={onClose}>
+									<AnimatedNavLink
+										href={`/${locale}${path}`}
+										count={key === "services" ? METIERS.length : undefined}
+										onClick={onClose}
+									>
 										{t(key)}
 									</AnimatedNavLink>
 								</motion.li>
@@ -127,9 +137,27 @@ export default function NavigationContent({ onClose, locale }) {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={ANIMATION_CONFIG}
-						className="mt-auto flex justify-end text-white"
+						className="bg-white/10 px-8 md:px-16 py-8 md:py-12 flex flex-wrap items-center justify-between gap-6 text-white"
 					>
-						<LanguageSwitcher locale={locale} />
+						<a
+							href={`mailto:${contactT("email")}`}
+							className="flex items-center gap-3 text-white/80 transition-colors hover:text-white"
+						>
+							<Mail className="h-5 w-5" strokeWidth={1.5} />
+							{contactT("email")}
+						</a>
+						<div className="flex items-center gap-6">
+							<a
+								href={contactT("linkedin")}
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="LinkedIn"
+								className="text-white/80 transition-colors hover:text-white"
+							>
+								<LinkedinIcon className="h-5 w-5" />
+							</a>
+							<LanguageSwitcher locale={locale} />
+						</div>
 					</motion.div>
 				</motion.div>
 			</div>

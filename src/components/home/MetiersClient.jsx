@@ -8,17 +8,17 @@ import { ArrowRight } from "lucide-react";
 const AnimatedLink = ({ href, children, onMouseEnter, onMouseLeave }) => (
   <Link 
     href={href} 
-    className="group relative flex items-center gap-2 w-fit"
+    className="group relative flex items-center justify-between gap-4 py-5"
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
-    <span className="text-xl md:text-2xl font-light transition-colors duration-300 group-hover:text-primary">
+    <span className="text-lg md:text-xl transition-all duration-300 group-hover:translate-x-2 group-hover:text-primary">
       {children}
     </span>
 
-    <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0 text-primary" />
+    <ArrowRight className="w-5 h-5 shrink-0 opacity-0 -translate-x-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0 text-primary" />
 
-    <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 ease-out group-hover:w-full" />
+    <span className="absolute -bottom-px left-0 w-0 h-px bg-primary transition-all duration-500 ease-out group-hover:w-full" />
   </Link>
 );
 
@@ -34,14 +34,14 @@ export default function MetiersClient({ translations, metiers }) {
   return (
     <>
       {/* Left column */}
-      <div className="bg-background px-8 md:px-16 py-12 md:py-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16">
+      <div className="bg-background px-6 md:px-16 py-16 md:py-24">
+        <h2 className="text-5xl md:text-7xl font-bold mb-12 md:mb-16">
           {translations.title}
         </h2>
 
-        <nav className="divide-y divide-gray-200">
+        <nav className="border-b border-foreground/10 divide-y divide-foreground/10 max-w-xl">
           {metiers.map((metier) => (
-            <div key={metier} className="py-4 first:pt-0 last:pb-0">
+            <div key={metier}>
               <AnimatedLink 
                 href={`/metiers/${metier}`}
                 onMouseEnter={() => handleImageChange(metier)}
@@ -55,7 +55,7 @@ export default function MetiersClient({ translations, metiers }) {
       </div>
 
       {/* Right column */}
-      <div className="relative h-[300px] md:h-auto md:m-16">
+      <div className="relative h-[320px] md:h-auto md:m-24 overflow-hidden">
         <Image
           key={currentImage} // Force remount of component when image changes
           src={`/images/metiers/${currentImage}.webp`}

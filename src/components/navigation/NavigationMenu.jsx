@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import NavigationContent from "./NavigationContent";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,11 +21,9 @@ export default function NavigationMenu({ locale }) {
 		setIsOpen(false);
 	};
 
-	// Check if we're on the root path
 	const isRootPath = pathname === `/${locale}` || pathname === "/";
 	const currentMetier = getMetierSlugFromPathname(pathname);
 
-	// Dynamic styles based on path
 	const styles = {
 		logo: isRootPath
 			? "/images/sogat-white.webp"
@@ -35,19 +31,16 @@ export default function NavigationMenu({ locale }) {
 				? getMetierHeaderLogo(currentMetier)
 				: "/images/sogat-blue.webp",
 		logoAlt: currentMetier ? `${currentMetier} logo` : "SOGAT logo",
-		border: isRootPath ? "border-white/20" : "border-black/20",
-		buttonClass: isRootPath
-			? "text-white hover:bg-white/20"
-			: "text-black hover:bg-black/20",
+		border: isRootPath ? "border-white/20" : "border-black/10",
+		text: isRootPath ? "text-white" : "text-foreground",
 	};
 
 	return (
 		<>
 			<div className="absolute top-0 w-full z-50">
 				<div
-					className={`border-b ${styles.border} grid grid-cols-[1fr_auto_1fr] h-20`}
+					className={`border-b ${styles.border} grid grid-cols-[1fr_auto_1fr] h-20 md:h-24`}
 				>
-					{/* Logo section */}
 					<div className="px-6 md:px-12 flex items-center">
 						<Link href={`/${locale}`} className="block w-fit">
 							<Image
@@ -61,22 +54,26 @@ export default function NavigationMenu({ locale }) {
 						</Link>
 					</div>
 
-					{/* Empty middle section - just for border */}
 					<div
 						className={`border-l md:border-x ${styles.border} w-8 md:w-96`}
 					/>
 
-					{/* Menu trigger section */}
-					<div className="flex justify-end px-6 md:px-12 items-center">
-						<Button
-							variant="ghost"
-							size="icon"
-							className={styles.buttonClass}
+					<div className="flex justify-end md:justify-start px-6 md:px-12 items-center">
+						<button
+							type="button"
 							onClick={() => setIsOpen(true)}
-							aria-label={t("close")}
+							aria-label={t("open")}
+							aria-expanded={isOpen}
+							className={`group flex cursor-pointer items-center gap-4 py-2 ${styles.text}`}
 						>
-							<Menu className="h-8 w-8" />
-						</Button>
+							<span className="flex w-10 flex-col items-end gap-2">
+								<span className="h-px w-full bg-current transition-[width] duration-300 group-hover:w-2/3" />
+								<span className="h-px w-full bg-current" />
+							</span>
+							<span className="hidden sm:block font-display text-base font-bold uppercase tracking-wider">
+								{t("menu")}
+							</span>
+						</button>
 					</div>
 				</div>
 			</div>

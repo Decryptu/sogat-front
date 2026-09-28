@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import CtaLink from "@/components/ui/CtaLink";
 import ExpertiseStats from "./ExpertiseStats";
 
 export default function Expertise() {
@@ -8,28 +7,20 @@ export default function Expertise() {
 
   return (
     <section>
-      <div id="discover" className="py-4 text-center">
-        <div className="flex items-center justify-center gap-4">
-          <span className="h-1 w-12 bg-primary" />
-          <h3 className="text-sm font-light uppercase tracking-wider">
-            {t("banner")}
-          </h3>
-          <span className="h-1 w-12 bg-primary" />
-        </div>
+      <div id="discover" className="flex items-center gap-6 px-6 pt-14 md:pt-20">
+        <span className="h-px flex-1 bg-linear-to-r from-transparent to-primary/40" />
+        <h3 className="font-display text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+          {t("banner")}
+        </h3>
+        <span className="h-px flex-1 bg-linear-to-l from-transparent to-primary/40" />
       </div>
 
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-800 mb-8 leading-tight">
+      <div className="container mx-auto px-6 md:px-16 py-16 md:py-24">
+        <div className="mb-16 md:mb-20 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+          <h2 className="max-w-3xl text-5xl md:text-7xl font-bold">
             {t("title")}
           </h2>
-          <Link 
-            href="/groupe"
-            className="inline-flex items-center text-lg text-primary hover:text-primary/80 gap-2 font-medium"
-          >
-            {t("cta")}
-            <ArrowUpRight className="h-5 w-5" />
-          </Link>
+          <CtaLink href="/groupe">{t("cta")}</CtaLink>
         </div>
 
         <ExpertiseStats />

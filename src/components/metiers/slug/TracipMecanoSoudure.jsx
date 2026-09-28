@@ -18,7 +18,7 @@ const IMAGES = {
 
 function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3]" }) {
   return (
-    <div className={`relative ${aspectRatio} rounded-xl overflow-hidden bg-gray-100 ${className}`}>
+    <div className={`relative ${aspectRatio} overflow-hidden bg-muted ${className}`}>
       <Image
         src={src}
         alt={alt}
@@ -32,12 +32,12 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
 // =============================================================================
 // MAIN COMPONENT
 // =============================================================================
-export default function TracipMecanoSoudure({ t, locale }) {
+export default function TracipMecanoSoudure() {
   return (
     <div className="w-full">
       {/* ===== SECTION: 3 Column Image Showcase ===== */}
-      <section className="py-20 px-4 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-white py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <PlaceholderImage
               src={IMAGES.showcase.col1}

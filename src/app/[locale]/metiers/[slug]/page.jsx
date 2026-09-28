@@ -2,13 +2,25 @@ import { notFound } from "next/navigation";
 import { locale as rootLocale } from "next/root-params";
 import { getTranslations } from "next-intl/server";
 import dynamic from 'next/dynamic';
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import { METIERS } from "@/constants/metiers";
 import { METIER_COLORS } from "@/constants/metier-colors";
 import MetierCTA from "@/components/metiers/MetierCTA";
 import MetierTransition from "@/components/metiers/MetierTransition";
 import HeroImageFrame from "@/components/ui/HeroImageFrame";
+
+const METIER_COMPONENTS = {
+ sermas: dynamic(() => import("@/components/metiers/slug/Sermas")),
+ "sp2i-ferroviaire": dynamic(() => import("@/components/metiers/slug/Sp2iFerroviaire")),
+ "sp2i-prehension": dynamic(() => import("@/components/metiers/slug/Sp2iPrehension")),
+ aretec: dynamic(() => import("@/components/metiers/slug/Aretec")),
+ "tracip-mecano-soudure": dynamic(() => import("@/components/metiers/slug/TracipMecanoSoudure")),
+ "tracip-environnement": dynamic(() => import("@/components/metiers/slug/TracipEnvironnement")),
+ haquette: dynamic(() => import("@/components/metiers/slug/Haquette")),
+ iserco: dynamic(() => import("@/components/metiers/slug/Iserco")),
+ "mc2-maintenance": dynamic(() => import("@/components/metiers/slug/Mc2Maintenance")),
+};
 
 export function generateStaticParams() {
  return METIERS.map((slug) => ({ slug }));
@@ -30,55 +42,38 @@ export default async function MetierPage({ params }) {
  const heroImages = fs.existsSync(imgDir)
    ? fs.readdirSync(imgDir)
        .filter((f) => /^\d+\.webp$/.test(f))
-       .sort((a, b) => parseInt(a) - parseInt(b))
+       .sort((a, b) => Number.parseInt(a, 10) - Number.parseInt(b, 10))
        .slice(0, 6)
        .map((f) => `/images/metiers/${slug}/${f}`)
    : [`/images/metiers/${slug}.webp`];
 
- // Convert hyphenated slug to PascalCase for component name
- const componentName = slug
-   .split('-')
-   .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-   .join('');
-
- // Dynamic import with error handling and loading state
- const DynamicMetierComponent = dynamic(
-   () => import(`@/components/metiers/slug/${componentName}`).catch(() => {
-     console.warn(`Component for ${slug} not found`);
-     return () => <div className="w-full py-8" />;
-   }),
-   {
-     loading: () => (
-       <div className="w-full py-8">
-         <div className="max-w-7xl mx-auto px-4">
-           <div className="animate-pulse bg-gray-100 h-96 rounded-lg" />
-         </div>
-       </div>
-     ),
-   }
- );
+ const MetierContent = METIER_COMPONENTS[slug];
 
  return (
    <div className="w-full">
      <MetierTransition slug={slug} />
-     <div className="grid lg:grid-cols-2 items-center">
-       {/* Left Column - Text Content */}
-       <div className="space-y-6 px-4 md:px-16 py-12">
-         <h1 className="text-4xl lg:text-6xl font-bold">{t("title")}</h1>
-         <p className="text-lg lg:text-xl text-gray-700">{t("description")}</p>
+     <section className="grid lg:grid-cols-2 bg-background pt-20 md:pt-24">
+       <div className="flex flex-col justify-center gap-8 px-6 md:px-16 py-16 md:py-24">
+         <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold">{t("title")}</h1>
+         <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
+           {t("description")}
+         </p>
        </div>
-
-       {/* Right Column - Image */}
-       <HeroImageFrame
-         images={heroImages}
-         alt={t("imageAlt")}
-         frameColor={METIER_COLORS[slug]}
-         priority
-       />
-     </div>
+       <div
+         className="flex items-center p-8 sm:p-10 lg:p-14"
+         style={{ backgroundColor: METIER_COLORS[slug] }}
+       >
+         <HeroImageFrame
+           images={heroImages}
+           alt={t("imageAlt")}
+           frameColor={METIER_COLORS[slug]}
+           priority
+         />
+       </div>
+     </section>
 
      {/* Dynamic Metier Component */}
-     <DynamicMetierComponent t={t} locale={locale} />
+     <MetierContent t={t} locale={locale} />
 
      {/* Dynamic CTA Section */}
      <MetierCTA slug={slug} t={t} />

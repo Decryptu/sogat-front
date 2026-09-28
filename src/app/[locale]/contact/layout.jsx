@@ -8,9 +8,7 @@ export default function ContactLayout({ children }) {
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossOrigin=""
       />
-      <div className="w-full pt-20">
-        {children}
-      </div>
+      {children}
     </>
   );
 }

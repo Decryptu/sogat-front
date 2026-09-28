@@ -1,28 +1,17 @@
-"use client";
-
-import { useState } from "react";
-import { motion } from "framer-motion";
-
 export default function Stats({ stats }) {
-  const [hoveredStat, setHoveredStat] = useState(null);
-
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map(({ key, value, label }) => (
-            <motion.div
-              key={key}
-              className="text-center"
-              onHoverStart={() => setHoveredStat(key)}
-              onHoverEnd={() => setHoveredStat(null)}
-              whileHover={{ scale: 1.02 }}
-            >
-              <h3 className="text-6xl font-light text-primary mb-4">{value}</h3>
-              <p className="text-gray-500 text-sm">{label}</p>
-            </motion.div>
-          ))}
-        </div>
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-6 md:px-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
+        {stats.map(({ key, value, label }) => (
+          <div key={key} className="border-t border-foreground/15 pt-6">
+            <p className="font-display text-5xl md:text-6xl font-bold leading-none text-primary">
+              {value}
+            </p>
+            <p className="mt-3 max-w-xs text-sm text-muted-foreground uppercase tracking-wide">
+              {label}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

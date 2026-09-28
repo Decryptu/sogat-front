@@ -69,19 +69,16 @@
     }
   },
   "footer": {
-    "description": "Expert in construction project management and digital modeling",
     "sections": {
       "services": "Services",
       "studies": "Engineering Office",
       "monitoring": "Monitoring",
       "3d": "3D Acquisitions",
-      "company": "Company",
-      "about": "About",
-      "careers": "Careers",
-      "contact": "Contact",
-      "language": "Language"
+      "pages": "Pages"
     },
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "question": "Have a question?",
+    "contactCta": "Contact us"
   },
   "navigation": {
     "home": "HOME",
@@ -91,7 +88,9 @@
     "contact": "CONTACT",
     "personalSpace": "Personal space",
     "legalNotice": "Legal notice",
-    "close": "Close menu"
+    "close": "Close menu",
+    "open": "Open menu",
+    "menu": "Menu"
   },
   "metiersPage": {
     "hero": {
@@ -153,7 +152,6 @@
     "title": "Our Professions",
     "description": "We specialize in various professional domains, offering expertise across multiple sectors. Our team consists of highly qualified professionals who bring years of experience and deep industry knowledge to every project.",
     "imageAlt": "Professional team at work",
-
     "sermas": {
       "title": "SERMAS",
       "description": "SERMAS specializes in industrial automation and robotics solutions, providing cutting-edge technology for manufacturing processes.",
@@ -331,6 +329,40 @@
           "description": "Turnkey installation, global service after-sales"
         }
       }
+    },
+    "structure": {
+      "title": "Group Structure",
+      "description": "An industrial group built around complementary subsidiaries"
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Six core pillars that guide our daily work",
+      "items": {
+        "human": {
+          "title": "People",
+          "description": "Our people, through their skills, creativity, adaptability and resilience, are an essential value at the heart of the SOGAT group's success and growth."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Innovation, by bringing new ideas, solutions and technologies, is essential to improving competitiveness and meeting our customers' challenges."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Quality, by guaranteeing high standards and ongoing customer satisfaction, is essential to strengthening the SOGAT Group's reputation, loyalty and long-term success."
+        },
+        "safety": {
+          "title": "Safety",
+          "description": "One of our core values, ensuring the well-being of our employees and the long-term future of our activities."
+        },
+        "csr": {
+          "title": "CSR",
+          "description": "Corporate Social Responsibility (CSR), by integrating social, environmental and economic concerns into business activities, is essential to promoting sustainable development and improving social impact."
+        },
+        "satisfaction": {
+          "title": "Satisfaction",
+          "description": "Customer satisfaction is at the heart of our commitment: we aim to exceed expectations by delivering high-quality, reliable and tailored solutions."
+        }
+      }
     }
   },
   "expertise": {
@@ -496,7 +528,16 @@
       "phone": "+33 3 20 62 95 95",
       "fax": "+33 3 20 62 95 96",
       "email": "contact@sogat.com",
-      "linkedin": "https://www.linkedin.com/company/groupe-sogat/"
+      "linkedin": "https://www.linkedin.com/company/groupe-sogat/",
+      "labels": {
+        "address": "Address",
+        "hours": "Opening hours",
+        "phone": "Phone",
+        "fax": "Fax",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "cta": "Email us"
+      }
     }
   }
 }

@@ -65,7 +65,7 @@ const METIER_HEADER_LOGOS = {
 
 export function getMetierSlugFromPathname(pathname = "") {
   const pathSegments = pathname.split("/");
-  const metiersIndex = pathSegments.findIndex((segment) => segment === "metiers");
+  const metiersIndex = pathSegments.indexOf("metiers");
   const slug = metiersIndex !== -1 ? pathSegments[metiersIndex + 1] : null;
 
   return METIERS.includes(slug) ? slug : null;

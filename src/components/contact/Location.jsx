@@ -2,9 +2,11 @@
 
 import { useEffect } from "react"
 import dynamic from 'next/dynamic'
-import { motion } from "framer-motion"
-import { Phone, Printer, Mail } from 'lucide-react'
+import { Clock, Mail, MapPin, Phone, Printer } from 'lucide-react'
 import Linkedin from '@/components/ui/LinkedinIcon'
+import SectionHeader from '@/components/ui/SectionHeader'
+import CtaLink from '@/components/ui/CtaLink'
+import { FadeIn } from '@/components/ui/motion'
 
 const MapContainer = dynamic(
   () => import('react-leaflet').then(mod => mod.MapContainer),
@@ -26,7 +28,9 @@ const Popup = dynamic(
 // Gondecourt coordinates
 const position = [50.541, 2.883]
 
-export default function Location({ title, description, address, hours, phone, fax, email, linkedin }) {
+const LINK_CLASS = "transition-colors hover:text-primary"
+
+export default function Location({ title, description, address, hours, phone, fax, email, linkedin, labels }) {
   useEffect(() => {
     import('leaflet').then(L => {
       L.Icon.Default.mergeOptions({
@@ -37,92 +41,94 @@ export default function Location({ title, description, address, hours, phone, fa
     })
   }, [])
 
+  const rows = [
+    {
+      key: "address",
+      Icon: MapPin,
+      content: (
+        <>
+          <span className="block font-semibold">{address.name}</span>
+          {address.street}<br />
+          {address.city}<br />
+          {address.country}
+        </>
+      )
+    },
+    { key: "hours", Icon: Clock, content: hours },
+    phone && {
+      key: "phone",
+      Icon: Phone,
+      content: <a href={`tel:${phone}`} className={LINK_CLASS}>{phone}</a>
+    },
+    fax && { key: "fax", Icon: Printer, content: fax },
+    email && {
+      key: "email",
+      Icon: Mail,
+      content: <a href={`mailto:${email}`} className={LINK_CLASS}>{email}</a>
+    },
+    linkedin && {
+      key: "linkedin",
+      Icon: Linkedin,
+      content: (
+        <a href={linkedin} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
+          {address.name}
+        </a>
+      )
+    }
+  ].filter(Boolean)
+
   return (
-    <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+    <section className="bg-white py-20 md:py-28">
+      <div className="container mx-auto px-6 md:px-16 grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <FadeIn x={-20} y={0} className="flex flex-col">
+          <SectionHeader title={title} description={description} />
+
+          <ul className="border-y border-foreground/10 divide-y divide-foreground/10">
+            {rows.map(({ key, Icon, content }) => (
+              <li key={key} className="flex gap-5 py-5">
+                <Icon className="mt-1 size-5 shrink-0 text-primary" />
+                <div className="flex flex-col gap-1 sm:flex-row sm:gap-6">
+                  <span className="text-sm uppercase tracking-wide text-muted-foreground sm:w-36 sm:shrink-0 sm:pt-1">
+                    {labels?.[key]}
+                  </span>
+                  <span className="text-lg leading-relaxed">{content}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {email && (
+            <CtaLink href={`mailto:${email}`} className="mt-10">
+              {labels?.cta}
+            </CtaLink>
+          )}
+        </FadeIn>
+
+        <FadeIn
+          x={20}
+          y={0}
+          delay={0.15}
+          className="relative isolate min-h-[420px] overflow-hidden border-t-4 border-primary-light"
+        >
+          <MapContainer
+            center={position}
+            zoom={13}
+            scrollWheelZoom={false}
+            className="absolute inset-0"
+            style={{ height: "100%", width: "100%" }}
           >
-            <div>
-              <h2 className="text-3xl font-bold mb-4">{title}</h2>
-              <p className="text-gray-600">{description}</p>
-            </div>
-            <div className="space-y-2">
-              <p className="font-bold">{address.name}</p>
-              <p>{address.street}</p>
-              <p>{address.city}</p>
-              <p>{address.country}</p>
-            </div>
-            <div className="space-y-3">
-              <p className="text-gray-600">{hours}</p>
-              {phone && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Phone className="w-4 h-4" />
-                  <a href={`tel:${phone}`} className="hover:text-primary">
-                    {phone}
-                  </a>
-                </div>
-              )}
-              {fax && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Printer className="w-4 h-4" />
-                  <span>{fax}</span>
-                </div>
-              )}
-              {email && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Mail className="w-4 h-4" />
-                  <a href={`mailto:${email}`} className="hover:text-primary">
-                    {email}
-                  </a>
-                </div>
-              )}
-              {linkedin && (
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Linkedin className="w-4 h-4" />
-                  <a
-                    href={linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
-              )}
-            </div>
-          </motion.div>
-          <motion.div
-            className="h-[400px] rounded-lg overflow-hidden shadow-lg"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
-          >
-            <MapContainer
-              center={position}
-              zoom={13}
-              scrollWheelZoom={false}
-              style={{ height: "100%", width: "100%" }}
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={position}>
-                <Popup>
-                  {address.name}<br/>
-                  {address.street}
-                </Popup>
-              </Marker>
-            </MapContainer>
-          </motion.div>
-        </div>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={position}>
+              <Popup>
+                {address.name}<br/>
+                {address.street}
+              </Popup>
+            </Marker>
+          </MapContainer>
+        </FadeIn>
       </div>
     </section>
   )

@@ -26,237 +26,239 @@ const IMAGES = {
   },
 };
 
-function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3]" }) {
+const BODY = "text-lg text-muted-foreground leading-relaxed";
+
+function PlaceholderImage({ src, alt, className = "" }) {
   return (
-    <div className={`relative ${aspectRatio} rounded-xl overflow-hidden bg-gray-100 ${className}`}>
-      <Image src={src} alt={alt} fill className="object-cover" />
+    <div className={`relative aspect-4/3 overflow-hidden bg-foreground/5 ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+      />
     </div>
   );
 }
 
-function DetailImage({ src, alt }) {
+function Section({ children }) {
   return (
-    <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 mt-3">
-      <Image src={src} alt={alt} fill className="object-cover" />
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-6 md:px-16">{children}</div>
+    </section>
+  );
+}
+
+function Lead({ children }) {
+  return <p className="text-xl md:text-2xl font-medium leading-relaxed">{children}</p>;
+}
+
+function Dot() {
+  return <span className="mt-2.5 size-2 shrink-0 rounded-full bg-sp2i-prehension" />;
+}
+
+function BulletList({ items }) {
+  return (
+    <ul className="divide-y divide-foreground/10 border-y border-foreground/10">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-4 py-4 text-lg">
+          <Dot />
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Label({ children }) {
+  return <span className="font-semibold text-foreground">{children}</span>;
+}
+
+function SubList({ label, items }) {
+  return (
+    <div>
+      <Label>{label}</Label>
+      <ul className="mt-2 space-y-1">
+        {items.map((item) => (
+          <li key={item} className="flex items-start gap-3">
+            <Dot />
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 function LevageItem({ image, alt, title, children }) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-      <div className="relative aspect-[4/3] bg-gray-100">
-        <Image src={image} alt={alt} fill className="object-cover" />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-        <div className="text-gray-700 text-sm leading-relaxed space-y-3">
-          {children}
-        </div>
-      </div>
-    </div>
+    <article className="group">
+      <PlaceholderImage src={image} alt={alt} className="border-t-4 border-sp2i-prehension" />
+      <h3 className="mt-6 mb-4 text-lg md:text-xl font-semibold">{title}</h3>
+      <div className="space-y-3 text-muted-foreground leading-relaxed">{children}</div>
+    </article>
   );
 }
 
 function OutilsDeLevage() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <p className="text-lg text-gray-600 mb-12">
-          SP2I conçoit et fabrique des pinces de préhension et outils de levage sur mesure pour la manutention de charges lourdes dans l&apos;industrie sidérurgique, métallurgique et manufacturière.
-        </p>
+    <Section>
+      <p className={`max-w-3xl mb-12 md:mb-16 ${BODY}`}>
+        SP2I conçoit et fabrique des pinces de préhension et outils de levage sur mesure pour la manutention de charges lourdes dans l&apos;industrie sidérurgique, métallurgique et manufacturière.
+      </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <LevageItem image={IMAGES.levage.bobines} alt="Pinces pour bobines horizontales" title="Pinces pour bobines horizontales">
-            <p><span className="font-medium">Objectif :</span> Lever et transférer des bobines d&apos;acier, d&apos;aluminium, de papier, ou autres corps ronds creux rigides d&apos;axe horizontal</p>
-            <div>
-              <p className="font-medium">Prise :</p>
-              <ul className="list-disc list-inside ml-2 space-y-1">
-                <li>Dans le noyau de la bobine (sabot, éperon)</li>
-                <li>Serrage sur les rives de la bobine</li>
-                <li>Serrage sur le Ø extérieur de la bobine</li>
-              </ul>
-            </div>
-            <p className="font-medium">Capacité de levage : NGH15 (15T) — NGH32 (32T) — NGH50 (50T)</p>
-            <div className="grid grid-cols-2 gap-2">
-              <DetailImage src={IMAGES.levageDetail.bobines1} alt="Pince bobines horizontales" />
-              <DetailImage src={IMAGES.levageDetail.bobines2} alt="Pince bobines horizontales" />
-            </div>
-          </LevageItem>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 md:gap-y-20">
+        <LevageItem image={IMAGES.levage.bobines} alt="Pinces pour bobines horizontales" title="Pinces pour bobines horizontales">
+          <p><Label>Objectif :</Label> Lever et transférer des bobines d&apos;acier, d&apos;aluminium, de papier, ou autres corps ronds creux rigides d&apos;axe horizontal</p>
+          <SubList
+            label="Prise :"
+            items={[
+              "Dans le noyau de la bobine (sabot, éperon)",
+              "Serrage sur les rives de la bobine",
+              "Serrage sur le Ø extérieur de la bobine",
+            ]}
+          />
+          <p><Label>Capacité de levage : NGH15 (15T) — NGH32 (32T) — NGH50 (50T)</Label></p>
+          <div className="grid grid-cols-2 gap-2 pt-3">
+            <PlaceholderImage src={IMAGES.levageDetail.bobines1} alt="Pince bobines horizontales" />
+            <PlaceholderImage src={IMAGES.levageDetail.bobines2} alt="Pince bobines horizontales" />
+          </div>
+        </LevageItem>
 
-          <LevageItem image={IMAGES.levage.outillage} alt="Pinces pour outillage de presse" title="Pinces pour outillage de presse">
-            <p><span className="font-medium">Objectif :</span> Lever et transférer des outillages de presses grâce à 4 bras, munis de sabots spéciaux, mobiles longitudinalement et transversalement.</p>
-            <p><span className="font-medium">Type de matériel :</span> Pinces électromécaniques</p>
-            <p><span className="font-medium">Options :</span> Chaque pince est adaptée aux outils à manutentionner ainsi qu&apos;aux contraintes de stockage et à l&apos;environnement de travail.</p>
-            <DetailImage src={IMAGES.levageDetail.outillage1} alt="Pince outillage de presse" />
-          </LevageItem>
+        <LevageItem image={IMAGES.levage.outillage} alt="Pinces pour outillage de presse" title="Pinces pour outillage de presse">
+          <p><Label>Objectif :</Label> Lever et transférer des outillages de presses grâce à 4 bras, munis de sabots spéciaux, mobiles longitudinalement et transversalement.</p>
+          <p><Label>Type de matériel :</Label> Pinces électromécaniques</p>
+          <p><Label>Options :</Label> Chaque pince est adaptée aux outils à manutentionner ainsi qu&apos;aux contraintes de stockage et à l&apos;environnement de travail.</p>
+          <PlaceholderImage src={IMAGES.levageDetail.outillage1} alt="Pince outillage de presse" className="mt-6" />
+        </LevageItem>
 
-          <LevageItem image={IMAGES.levage.toles} alt="Pinces pour paquets de tôles" title="Pinces pour paquets de tôles et produits plats">
-            <p><span className="font-medium">Objectif :</span> Manutentionner des paquets de tôles, panneaux, palettes ou autres produits plats.</p>
-            <p><span className="font-medium">Prise :</span> Par le dessous du paquet</p>
-            <div>
-              <p className="font-medium">Type de matériel :</p>
-              <ul className="list-disc list-inside ml-2 space-y-1">
-                <li>Pinces : Manuelles, Électro-mécaniques, Électrohydrauliques</li>
-                <li>Palonniers : Cés, À fourches, À contrepoids, À rappel par ressort</li>
-              </ul>
-            </div>
-          </LevageItem>
+        <LevageItem image={IMAGES.levage.toles} alt="Pinces pour paquets de tôles" title="Pinces pour paquets de tôles et produits plats">
+          <p><Label>Objectif :</Label> Manutentionner des paquets de tôles, panneaux, palettes ou autres produits plats.</p>
+          <p><Label>Prise :</Label> Par le dessous du paquet</p>
+          <SubList
+            label="Type de matériel :"
+            items={[
+              "Pinces : Manuelles, Électro-mécaniques, Électrohydrauliques",
+              "Palonniers : Cés, À fourches, À contrepoids, À rappel par ressort",
+            ]}
+          />
+        </LevageItem>
 
-          <LevageItem image={IMAGES.levage.brames} alt="Pince à brames" title="Pince à brames">
-            <p><span className="font-medium">Objectif :</span> Lever et transférer des brames en position horizontale ou verticale, unitairement ou plusieurs.</p>
-            <div>
-              <p className="font-medium">Caractéristiques :</p>
-              <ul className="list-disc list-inside ml-2 space-y-1">
-                <li>Brames ronds, carrés ou rectangulaires</li>
-                <li>En acier, aluminium, bronze, zinc...</li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-medium">Fonctions :</p>
-              <ul className="list-disc list-inside ml-2 space-y-1">
-                <li>Levage, Démoulage, Reprise à plat, Multifonctions</li>
-              </ul>
-            </div>
-          </LevageItem>
+        <LevageItem image={IMAGES.levage.brames} alt="Pince à brames" title="Pince à brames">
+          <p><Label>Objectif :</Label> Lever et transférer des brames en position horizontale ou verticale, unitairement ou plusieurs.</p>
+          <SubList
+            label="Caractéristiques :"
+            items={[
+              "Brames ronds, carrés ou rectangulaires",
+              "En acier, aluminium, bronze, zinc...",
+            ]}
+          />
+          <SubList label="Fonctions :" items={["Levage, Démoulage, Reprise à plat, Multifonctions"]} />
+        </LevageItem>
 
-          <LevageItem image={IMAGES.levage.diverses} alt="Pinces charges diverses" title="Pinces charges diverses">
-            <p><span className="font-medium">Objectif :</span> Lever et transférer une charge.</p>
-            <p>À partir d&apos;un cahier des charges, nous pouvons concevoir et fabriquer tout type d&apos;équipement de levage.</p>
-            <p><span className="font-medium">Options :</span> Chaque pince est adaptée aux outils à manutentionner ainsi qu&apos;aux contraintes de stockage et à l&apos;environnement de travail.</p>
-          </LevageItem>
+        <LevageItem image={IMAGES.levage.diverses} alt="Pinces charges diverses" title="Pinces charges diverses">
+          <p><Label>Objectif :</Label> Lever et transférer une charge.</p>
+          <p>À partir d&apos;un cahier des charges, nous pouvons concevoir et fabriquer tout type d&apos;équipement de levage.</p>
+          <p><Label>Options :</Label> Chaque pince est adaptée aux outils à manutentionner ainsi qu&apos;aux contraintes de stockage et à l&apos;environnement de travail.</p>
+        </LevageItem>
 
-          <LevageItem image={IMAGES.levage.lingot} alt="Pince à lingot d'aluminium" title="Pince à lingot d'aluminium">
-            <p><span className="font-medium">Objectif :</span> Lever et transférer des lingots en position horizontale ou verticale, unitairement ou plusieurs.</p>
-            <div>
-              <p className="font-medium">Caractéristiques :</p>
-              <ul className="list-disc list-inside ml-2 space-y-1">
-                <li>Lingots ronds, carrés ou rectangulaires</li>
-                <li>En acier, aluminium, bronze, zinc...</li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-medium">Fonctions :</p>
-              <ul className="list-disc list-inside ml-2 space-y-1">
-                <li>Levage, Démoulage, Reprise à plat, Multifonctions</li>
-              </ul>
-            </div>
-          </LevageItem>
-        </div>
+        <LevageItem image={IMAGES.levage.lingot} alt="Pince à lingot d'aluminium" title="Pince à lingot d'aluminium">
+          <p><Label>Objectif :</Label> Lever et transférer des lingots en position horizontale ou verticale, unitairement ou plusieurs.</p>
+          <SubList
+            label="Caractéristiques :"
+            items={[
+              "Lingots ronds, carrés ou rectangulaires",
+              "En acier, aluminium, bronze, zinc...",
+            ]}
+          />
+          <SubList label="Fonctions :" items={["Levage, Démoulage, Reprise à plat, Multifonctions"]} />
+        </LevageItem>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function ConvoyeurARouleau() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <p className="text-xl text-sp2i-prehension font-semibold mb-12">
-          Convoyeurs à rouleaux, à chaînes et à bandes
-        </p>
-        <div className="space-y-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <PlaceholderImage src={IMAGES.convoyeur.img1} alt="Convoyeurs à rouleaux" />
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed text-lg">
-                Les convoyeurs permettent de transférer des charges unitaires, en paquets ou en vrac d&apos;une position vers une autre ou vers de multiples positions.
-              </p>
-              <ul className="space-y-2 pt-4">
-                {["Convoyeurs à rouleaux", "Convoyeurs à chaînes", "Convoyeurs à bandes", "Convoyeurs à écailles"].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-700">
-                    <span className="w-2 h-2 bg-sp2i-prehension rounded-full shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-4 lg:order-last">
-              <p className="text-gray-700 leading-relaxed text-lg">
-                Les convoyeurs peuvent être isolés ou intégrés à une ligne de convoyage avec des transferts.
-              </p>
-              <div className="bg-sp2i-prehension/10 rounded-xl p-6 border border-sp2i-prehension/20">
-                <p className="text-gray-700">
-                  <span className="font-semibold text-sp2i-prehension">Exemple :</span> Transfert à chaînes à 90° intégré dans un convoyage à rouleaux.
-                </p>
-              </div>
-            </div>
-            <PlaceholderImage src={IMAGES.convoyeur.img2} alt="Transfert à chaînes intégré" className="lg:order-first" />
+    <Section>
+      <p className="mb-12 md:mb-16 flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em]">
+        <span className="size-2 rounded-full bg-sp2i-prehension" />
+        Convoyeurs à rouleaux, à chaînes et à bandes
+      </p>
+      <div className="space-y-16 md:space-y-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <PlaceholderImage src={IMAGES.convoyeur.img1} alt="Convoyeurs à rouleaux" className="border-t-4 border-sp2i-prehension" />
+          <div className="space-y-8">
+            <Lead>
+              Les convoyeurs permettent de transférer des charges unitaires, en paquets ou en vrac d&apos;une position vers une autre ou vers de multiples positions.
+            </Lead>
+            <BulletList items={["Convoyeurs à rouleaux", "Convoyeurs à chaînes", "Convoyeurs à bandes", "Convoyeurs à écailles"]} />
           </div>
         </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="space-y-8 lg:order-last">
+            <Lead>
+              Les convoyeurs peuvent être isolés ou intégrés à une ligne de convoyage avec des transferts.
+            </Lead>
+            <p className={`border-l-4 border-sp2i-prehension bg-sp2i-prehension/10 p-6 ${BODY}`}>
+              <Label>Exemple :</Label> Transfert à chaînes à 90° intégré dans un convoyage à rouleaux.
+            </p>
+          </div>
+          <PlaceholderImage src={IMAGES.convoyeur.img2} alt="Transfert à chaînes intégré" className="border-t-4 border-sp2i-prehension lg:order-first" />
+        </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function LigneDeTransfert() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <PlaceholderImage src={IMAGES.transfert.main} alt="Ligne de transfert et de manutention" />
-          <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Nos lignes assurent le transfert ou la manutention de charges unitaires ou en paquets.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Pour ces lignes, nous intégrons :
-            </p>
-            <ul className="space-y-3">
-              {["Convoyeurs à chaînes de manutention", "Refroidissoirs", "Tournes tubes", "Décalamineuses"].map((item, index) => (
-                <li key={index} className="flex items-center gap-3 text-gray-700">
-                  <span className="w-2 h-2 bg-sp2i-prehension rounded-full shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="pt-4 border-t border-gray-200">
-              <p className="text-gray-600 text-sm">
-                Les lignes peuvent être isolées, ou intégrées à une ligne de convoyage complète.
-              </p>
-            </div>
-          </div>
+    <Section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <PlaceholderImage src={IMAGES.transfert.main} alt="Ligne de transfert et de manutention" className="border-t-4 border-sp2i-prehension" />
+        <div className="space-y-6">
+          <Lead>
+            Nos lignes assurent le transfert ou la manutention de charges unitaires ou en paquets.
+          </Lead>
+          <p className={BODY}>
+            Pour ces lignes, nous intégrons :
+          </p>
+          <BulletList items={["Convoyeurs à chaînes de manutention", "Refroidissoirs", "Tournes tubes", "Décalamineuses"]} />
+          <p className="text-muted-foreground">
+            Les lignes peuvent être isolées, ou intégrées à une ligne de convoyage complète.
+          </p>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function NavetteTransbordeur() {
   return (
-    <section className="py-20 px-4 md:px-16 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed text-lg">
-              La navette transbordeur est un système de manutention automatisé permettant le déplacement de charges lourdes entre différentes lignes de production ou postes de travail.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Se déplaçant sur rails, elle assure le transfert transversal de produits tels que bobines, lingots, ou palettes entre les différentes zones d&apos;un atelier industriel.
-            </p>
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h4 className="font-semibold text-gray-900 mb-3">Caractéristiques</h4>
-              <ul className="space-y-2">
-                {[
-                  "Déplacement sur rails motorisé",
-                  "Capacité de charge adaptée au besoin",
-                  "Intégration dans les lignes de production existantes",
-                  "Pilotage automatisé ou semi-automatisé",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-600 text-sm">
-                    <span className="w-1.5 h-1.5 bg-sp2i-prehension rounded-full shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+    <Section>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="space-y-8">
+          <Lead>
+            La navette transbordeur est un système de manutention automatisé permettant le déplacement de charges lourdes entre différentes lignes de production ou postes de travail.
+          </Lead>
+          <p className={BODY}>
+            Se déplaçant sur rails, elle assure le transfert transversal de produits tels que bobines, lingots, ou palettes entre les différentes zones d&apos;un atelier industriel.
+          </p>
+          <div>
+            <h3 className="mb-4 text-lg md:text-xl font-semibold">Caractéristiques</h3>
+            <BulletList
+              items={[
+                "Déplacement sur rails motorisé",
+                "Capacité de charge adaptée au besoin",
+                "Intégration dans les lignes de production existantes",
+                "Pilotage automatisé ou semi-automatisé",
+              ]}
+            />
           </div>
-          <PlaceholderImage src={IMAGES.navette.main} alt="Navette transbordeur" />
         </div>
+        <PlaceholderImage src={IMAGES.navette.main} alt="Navette transbordeur" className="border-t-4 border-sp2i-prehension" />
       </div>
-    </section>
+    </Section>
   );
 }
 

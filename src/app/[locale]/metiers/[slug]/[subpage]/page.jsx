@@ -6,6 +6,16 @@ import { METIER_SUBPAGES } from "@/constants/metier-subpages";
 import { METIER_COLORS } from "@/constants/metier-colors";
 import SubpageLayout from "@/components/metiers/SubpageLayout";
 
+const SUBPAGE_COMPONENTS = {
+  sermas: dynamic(() => import("@/components/metiers/subpages/SermasSubpages")),
+  "sp2i-ferroviaire": dynamic(() => import("@/components/metiers/subpages/Sp2iFerroviaireSubpages")),
+  "sp2i-prehension": dynamic(() => import("@/components/metiers/subpages/Sp2iPrehensionSubpages")),
+  aretec: dynamic(() => import("@/components/metiers/subpages/AretecSubpages")),
+  haquette: dynamic(() => import("@/components/metiers/subpages/HaquetteSubpages")),
+  iserco: dynamic(() => import("@/components/metiers/subpages/IsercoSubpages")),
+  "mc2-maintenance": dynamic(() => import("@/components/metiers/subpages/Mc2MaintenanceSubpages")),
+};
+
 export function generateStaticParams() {
   return Object.entries(METIER_SUBPAGES).flatMap(([metierSlug, subpages]) =>
     subpages.map((sp) => ({
@@ -46,28 +56,7 @@ export default async function SubPage({ params }) {
     getTranslations(`metiers.${slug}`),
   ]);
 
-  const componentName = slug
-    .split("-")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join("");
-
-  const DynamicContent = dynamic(
-    () =>
-      import(`@/components/metiers/subpages/${componentName}Subpages`).catch(
-        () => {
-          return () => <div className="w-full py-8" />;
-        }
-      ),
-    {
-      loading: () => (
-        <div className="w-full py-8">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="animate-pulse bg-gray-100 h-96 rounded-lg" />
-          </div>
-        </div>
-      ),
-    }
-  );
+  const SubpageContent = SUBPAGE_COMPONENTS[slug];
 
   return (
     <SubpageLayout
@@ -77,7 +66,7 @@ export default async function SubPage({ params }) {
       subpageTitle={subpageData.title[locale] || subpageData.title.fr}
       locale={locale}
     >
-      <DynamicContent subpage={subpage} locale={locale} />
+      <SubpageContent subpage={subpage} locale={locale} />
     </SubpageLayout>
   );
 }

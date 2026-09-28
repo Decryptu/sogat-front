@@ -20,22 +20,23 @@ const IMAGES = {
 // REUSABLE COMPONENTS
 // =============================================================================
 
-function SectionTitle({ children, subtitle, className = "" }) {
+function SectionTitle({ children, eyebrow }) {
   return (
-    <div className={`mb-12 ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-        {children}
-      </h2>
-      {subtitle && (
-        <p className="text-xl text-tracip-environnement font-semibold">{subtitle}</p>
+    <div className="mb-12 md:mb-16 flex flex-col gap-6">
+      {eyebrow && (
+        <p className="flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-tracip-environnement">
+          <span className="size-2 rounded-full bg-current" />
+          {eyebrow}
+        </p>
       )}
+      <h2 className="max-w-4xl text-4xl md:text-6xl font-bold">{children}</h2>
     </div>
   );
 }
 
 function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3]" }) {
   return (
-    <div className={`relative ${aspectRatio} rounded-xl overflow-hidden bg-gray-100 ${className}`}>
+    <div className={`relative ${aspectRatio} overflow-hidden bg-muted ${className}`}>
       <Image
         src={src}
         alt={alt}
@@ -46,6 +47,19 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
   );
 }
 
+function BulletList({ items }) {
+  return (
+    <ul className="space-y-3">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-4 text-muted-foreground">
+          <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-tracip-environnement" />
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 // =============================================================================
 // MAIN COMPONENT
 // =============================================================================
@@ -53,9 +67,9 @@ export default function TracipEnvironnement() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Nos équipements ===== */}
-      <section className="py-20 px-4 md:px-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionTitle subtitle="NOTRE MAÎTRISE ENVIRONNEMENTALE">
+      <section className="bg-white py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
+          <SectionTitle eyebrow="NOTRE MAÎTRISE ENVIRONNEMENTALE">
             Nos équipements
           </SectionTitle>
 
@@ -80,84 +94,67 @@ export default function TracipEnvironnement() {
       </section>
 
       {/* ===== SECTION: Filtres à manches, dépoussiérage, traitement des fumées ===== */}
-      <section className="py-20 px-4 md:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-background py-20 md:py-28">
+        <div className="container mx-auto px-6 md:px-16">
           <SectionTitle>
             FILTRES À MANCHES, DÉPOUSSIÉRAGE, TRAITEMENT DES FUMÉES
           </SectionTitle>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left - Text content */}
-            <div className="space-y-8">
-              {/* Filtres à manches */}
-              <div>
-                <h3 className="text-xl font-bold text-tracip-environnement mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="divide-y divide-foreground/10 border-y border-foreground/10">
+              <div className="py-8">
+                <h3 className="mb-5 text-lg md:text-xl font-semibold">
                   Filtres à manches
                 </h3>
-                <ul className="space-y-2">
-                  {[
+                <BulletList
+                  items={[
                     "Conceptions spécifiques pour l'industrie lourde",
                     "Intégration dans la ligne process",
                     "Applications gaz chauds et corrosifs",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-gray-700">
-                      <span className="w-2 h-2 bg-tracip-environnement rounded-full shrink-0 mt-2" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                  ]}
+                />
               </div>
 
-              {/* Dépoussiérage */}
-              <div>
-                <h3 className="text-xl font-bold text-tracip-environnement mb-4">
+              <div className="py-8">
+                <h3 className="mb-5 text-lg md:text-xl font-semibold">
                   Dépoussiérage
                 </h3>
-                <p className="text-gray-700 mb-3">Installations clé en main. Applications :</p>
-                <ul className="space-y-2">
-                  {[
+                <p className="mb-4 text-lg text-muted-foreground leading-relaxed">
+                  Installations clé en main. Applications :
+                </p>
+                <BulletList
+                  items={[
                     "Cimenterie : Broyeurs, séparateurs dynamiques, fours, refroidisseurs clinker",
                     "Matériaux de construction",
                     "Engrais",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-gray-700">
-                      <span className="w-2 h-2 bg-tracip-environnement rounded-full shrink-0 mt-2" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                  ]}
+                />
               </div>
 
-              {/* Traitement des fumées */}
-              <div>
-                <h3 className="text-xl font-bold text-tracip-environnement mb-4">
+              <div className="py-8">
+                <h3 className="mb-5 text-lg md:text-xl font-semibold">
                   Traitement des fumées
                 </h3>
-                <p className="text-gray-700 mb-3">
+                <p className="mb-4 text-lg text-muted-foreground leading-relaxed">
                   Installations complètes avec neutralisation des polluants, transports et stockages des résidus.
                   Procédés « voie sèche », à la chaux, au bicarbonate de sodium.
                 </p>
-                <p className="text-gray-700 mb-3">Applications :</p>
-                <ul className="space-y-2">
-                  {[
+                <p className="mb-4 text-lg text-muted-foreground leading-relaxed">Applications :</p>
+                <BulletList
+                  items={[
                     "Incinération de déchets",
                     "Chaudières biomasse",
                     "Verreries",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-gray-700">
-                      <span className="w-2 h-2 bg-tracip-environnement rounded-full shrink-0 mt-2" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                  ]}
+                />
               </div>
             </div>
 
-            {/* Right - Image */}
             <PlaceholderImage
               src={IMAGES.filtres.main}
               alt="Filtres à manches et traitement des fumées"
               aspectRatio="aspect-[3/4]"
+              className="border-t-4 border-tracip-environnement"
             />
           </div>
         </div>

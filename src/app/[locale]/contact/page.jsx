@@ -26,7 +26,8 @@ export default async function Contact() {
     phone: t("location.phone"),
     fax: t("location.fax"),
     email: t("location.email"),
-    linkedin: t("location.linkedin")
+    linkedin: t("location.linkedin"),
+    labels: t.raw("location.labels")
   };
 
   return (

@@ -494,7 +494,16 @@
       "phone": "+33 3 20 62 95 95",
       "fax": "+33 3 20 62 95 96",
       "email": "contact@sogat.com",
-      "linkedin": "https://www.linkedin.com/company/groupe-sogat/"
+      "linkedin": "https://www.linkedin.com/company/groupe-sogat/",
+      "labels": {
+        "address": "Address",
+        "hours": "Opening hours",
+        "phone": "Phone",
+        "fax": "Fax",
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "cta": "Email us"
+      }
     }
   }
 }

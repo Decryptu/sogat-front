@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { StaggerIn, StaggerItem } from "@/components/ui/motion";
 
@@ -51,6 +52,7 @@ const hierarchyData = {
 };
 
 export default function GroupeHierarchy() {
+  const t = useTranslations("groupe.structure");
   const { parent, children } = hierarchyData;
 
   return (
@@ -58,8 +60,8 @@ export default function GroupeHierarchy() {
       <div className="container mx-auto px-6 md:px-16">
         <SectionHeader
           tone="light"
-          title="Structure du Groupe"
-          description="Un groupe industriel structuré autour de filiales complémentaires"
+          title={t("title")}
+          description={t("description")}
         />
 
         <div className="flex flex-col items-center">

@@ -329,6 +329,40 @@
           "description": "Installation clé en main, service après-vente global"
         }
       }
+    },
+    "structure": {
+      "title": "Structure du Groupe",
+      "description": "Un groupe industriel structuré autour de filiales complémentaires"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "description": "Six piliers fondamentaux qui guident notre action quotidienne",
+      "items": {
+        "human": {
+          "title": "L'Homme",
+          "description": "Les hommes, par leurs compétences, leur créativité, leur adaptabilité, et leur résilience, sont une valeur essentielle au cœur du succès et du développement du groupe SOGAT."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "L'innovation, en apportant de nouvelles idées, solutions et technologies, est essentielle pour améliorer la compétitivité et répondre aux défis de nos clients."
+        },
+        "quality": {
+          "title": "Qualité",
+          "description": "La qualité, en garantissant des standards élevés et une satisfaction continue des clients, est essentielle pour renforcer la réputation, la fidélité et le succès à long terme du Groupe SOGAT."
+        },
+        "safety": {
+          "title": "La Sécurité",
+          "description": "L'une de nos valeurs fondamentales, garantissant le bien-être de nos collaborateurs, et la pérennité de nos activités."
+        },
+        "csr": {
+          "title": "RSE",
+          "description": "La Responsabilité Sociétale des Entreprises (RSE), en intégrant des préoccupations sociales, environnementales et économiques dans les activités commerciales, est essentielle pour promouvoir un développement durable et améliorer l'impact social."
+        },
+        "satisfaction": {
+          "title": "Satisfaction",
+          "description": "La satisfaction client est au cœur de notre engagement, nous visons à dépasser les attentes en offrant des solutions de qualité, fiables et personnalisées."
+        }
+      }
     }
   },
   "expertise": {

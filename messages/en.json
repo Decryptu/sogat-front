@@ -329,6 +329,40 @@
           "description": "Turnkey installation, global service after-sales"
         }
       }
+    },
+    "structure": {
+      "title": "Group Structure",
+      "description": "An industrial group built around complementary subsidiaries"
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Six core pillars that guide our daily work",
+      "items": {
+        "human": {
+          "title": "People",
+          "description": "Our people, through their skills, creativity, adaptability and resilience, are an essential value at the heart of the SOGAT group's success and growth."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Innovation, by bringing new ideas, solutions and technologies, is essential to improving competitiveness and meeting our customers' challenges."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Quality, by guaranteeing high standards and ongoing customer satisfaction, is essential to strengthening the SOGAT Group's reputation, loyalty and long-term success."
+        },
+        "safety": {
+          "title": "Safety",
+          "description": "One of our core values, ensuring the well-being of our employees and the long-term future of our activities."
+        },
+        "csr": {
+          "title": "CSR",
+          "description": "Corporate Social Responsibility (CSR), by integrating social, environmental and economic concerns into business activities, is essential to promoting sustainable development and improving social impact."
+        },
+        "satisfaction": {
+          "title": "Satisfaction",
+          "description": "Customer satisfaction is at the heart of our commitment: we aim to exceed expectations by delivering high-quality, reliable and tailored solutions."
+        }
+      }
     }
   },
   "expertise": {

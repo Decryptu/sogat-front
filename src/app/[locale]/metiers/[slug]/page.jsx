@@ -9,7 +9,6 @@ import { METIER_COLORS } from "@/constants/metier-colors";
 import MetierCTA from "@/components/metiers/MetierCTA";
 import MetierTransition from "@/components/metiers/MetierTransition";
 import HeroImageFrame from "@/components/ui/HeroImageFrame";
-import PageHero from "@/components/ui/PageHero";
 
 const METIER_COMPONENTS = {
  sermas: dynamic(() => import("@/components/metiers/slug/Sermas")),
@@ -53,14 +52,25 @@ export default async function MetierPage({ params }) {
  return (
    <div className="w-full">
      <MetierTransition slug={slug} />
-     <PageHero title={t("title")} description={t("description")}>
-       <HeroImageFrame
-         images={heroImages}
-         alt={t("imageAlt")}
-         frameColor={METIER_COLORS[slug]}
-         priority
-       />
-     </PageHero>
+     <section className="grid lg:grid-cols-2 bg-background pt-20 md:pt-24">
+       <div className="flex flex-col justify-center gap-8 px-6 md:px-16 py-16 md:py-24">
+         <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold">{t("title")}</h1>
+         <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
+           {t("description")}
+         </p>
+       </div>
+       <div
+         className="flex items-center p-8 sm:p-10 lg:p-14"
+         style={{ backgroundColor: METIER_COLORS[slug] }}
+       >
+         <HeroImageFrame
+           images={heroImages}
+           alt={t("imageAlt")}
+           frameColor={METIER_COLORS[slug]}
+           priority
+         />
+       </div>
+     </section>
 
      {/* Dynamic Metier Component */}
      <MetierContent t={t} locale={locale} />

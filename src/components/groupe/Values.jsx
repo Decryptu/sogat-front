@@ -153,6 +153,7 @@ export default function Values() {
             <div className="relative w-72 h-72">
               {/* Circular ring with segments */}
               <svg
+                aria-hidden="true"
                 viewBox="0 0 200 200"
                 className="w-full h-full"
                 style={{ transform: "rotate(-90deg)" }}
@@ -292,6 +293,7 @@ export default function Values() {
           >
             <div className="relative w-48 h-48 sm:w-56 sm:h-56">
               <svg
+                aria-hidden="true"
                 viewBox="0 0 200 200"
                 className="w-full h-full"
                 style={{ transform: "rotate(-90deg)" }}

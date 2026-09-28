@@ -24,7 +24,7 @@ function SectionTitle({ children, subtitle, className = "" }) {
   );
 }
 
-export default function Sp2iPrehension({ t, locale }) {
+export default function Sp2iPrehension() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Outils de levage ===== */}

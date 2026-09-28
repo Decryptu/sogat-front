@@ -26,7 +26,7 @@ function SectionTitle({ children, className = "" }) {
   );
 }
 
-export default function Sp2iFerroviaire({ t, locale }) {
+export default function Sp2iFerroviaire() {
   return (
     <div className="w-full">
       <section className="py-20 px-4 md:px-16 bg-white">

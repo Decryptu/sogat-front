@@ -134,7 +134,7 @@ export default function ExpertiseClient() {
             whileInView="animate"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {pillars.map((pillar, index) => (
+            {pillars.map((pillar) => (
               <motion.div
                 key={pillar.key}
                 variants={fadeInUp}
@@ -226,13 +226,14 @@ export default function ExpertiseClient() {
                       whileInView="animate"
                       viewport={{ once: true }}
                     >
-                      {sectionData.points.map((point, idx) => (
+                      {sectionData.points.map((point) => (
                         <motion.li
-                          key={idx}
+                          key={point}
                           className="flex items-start gap-3"
                           variants={fadeInUp}
                         >
                           <svg
+                            aria-hidden="true"
                             className="w-6 h-6 text-primary flex-shrink-0 mt-0.5"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -259,9 +260,9 @@ export default function ExpertiseClient() {
                       whileInView="animate"
                       viewport={{ once: true }}
                     >
-                      {sectionData.services.map((service, idx) => (
+                      {sectionData.services.map((service) => (
                         <motion.div
-                          key={idx}
+                          key={service.title}
                           className="border-l-4 border-primary pl-4"
                           variants={fadeInUp}
                         >
@@ -283,9 +284,9 @@ export default function ExpertiseClient() {
                         whileInView="animate"
                         viewport={{ once: true }}
                       >
-                        {sectionData.specs.map((spec, idx) => (
+                        {sectionData.specs.map((spec) => (
                           <motion.div
-                            key={idx}
+                            key={spec}
                             className="bg-gray-100 rounded-lg p-4 text-center"
                             variants={fadeInUp}
                           >
@@ -311,7 +312,7 @@ export default function ExpertiseClient() {
                           <ul className="space-y-2">
                             {sectionData.equipment.map((item, idx) => (
                               <motion.li
-                                key={idx}
+                                key={item}
                                 className="flex items-center gap-3 text-gray-700"
                                 initial={{ opacity: 0, x: -10 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -319,6 +320,7 @@ export default function ExpertiseClient() {
                                 transition={{ delay: idx * 0.05 }}
                               >
                                 <svg
+                                  aria-hidden="true"
                                   className="w-5 h-5 text-primary flex-shrink-0"
                                   fill="currentColor"
                                   viewBox="0 0 20 20"

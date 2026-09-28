@@ -189,7 +189,7 @@ function SpecsTable({ specs }) {
       <table className="w-full">
         <tbody>
           {specs.map(([label, value], index) => (
-            <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+            <tr key={label} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
               <td className="px-4 py-3 text-sm font-medium text-gray-700 border-r border-gray-200 w-1/2">
                 {label}
               </td>

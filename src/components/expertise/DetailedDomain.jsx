@@ -20,9 +20,9 @@ export default function DetailedDomain({ domains, t }) {
                 {t(`domains.${domain.id}.detailedDescription`)}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {t.raw(`domains.${domain.id}.features`).map((feature, index) => (
+                {t.raw(`domains.${domain.id}.features`).map((feature) => (
                   <div 
-                    key={`${domain.id}-feature-${index}`}
+                    key={feature}
                     className="flex items-start gap-3"
                   >
                     <div className="shrink-0 w-1.5 h-1.5 rounded-full bg-primary mt-2.5" />

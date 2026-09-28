@@ -69,9 +69,9 @@ function SciesABillettes() {
                   "Robuste et fiable",
                   "Hautes performances",
                   "Faible consommation d'énergie",
-                ].map((item, index) => (
+                ].map((item) => (
                   <li
-                    key={index}
+                    key={item}
                     className="flex items-center gap-3 text-lg text-gray-700"
                   >
                     <span className="w-2 h-2 bg-sermas rounded-full shrink-0" />
@@ -123,7 +123,7 @@ function SciesABillettes() {
             {[IMAGES.disque.img1, IMAGES.disque.img2, IMAGES.disque.img3].map(
               (src, index) => (
                 <PlaceholderImage
-                  key={index}
+                  key={src}
                   src={src}
                   alt={`Technologie à disque ${index + 1}`}
                 />
@@ -188,9 +188,9 @@ function SciesMultiFonctions() {
                 "Robuste, fiable et entièrement automatisée.",
                 "Faible consommation d'énergie.",
                 "Système d'extraction et de compactage des copeaux.",
-              ].map((item, index) => (
+              ].map((item) => (
                 <li
-                  key={index}
+                  key={item}
                   className="flex items-start gap-3 text-gray-700"
                 >
                   <span className="w-2 h-2 bg-sermas rounded-full shrink-0 mt-2" />
@@ -242,9 +242,9 @@ function SciesDeRefendage() {
                 "Configuration flexible",
                 "Mode entièrement automatique",
                 "Système d'extraction des copeaux",
-              ].map((item, index) => (
+              ].map((item) => (
                 <li
-                  key={index}
+                  key={item}
                   className="flex items-start gap-3 text-gray-700"
                 >
                   <span className="w-2 h-2 bg-sermas rounded-full shrink-0 mt-2" />
@@ -263,7 +263,7 @@ function SciesDeRefendage() {
             IMAGES.refendage.bottom3,
           ].map((src, index) => (
             <PlaceholderImage
-              key={index}
+              key={src}
               src={src}
               alt={`Scies de refendage ${index + 1}`}
             />

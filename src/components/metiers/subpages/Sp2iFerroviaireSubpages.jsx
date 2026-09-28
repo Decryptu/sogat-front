@@ -58,7 +58,7 @@ function DiagonalCollage({ images, alt }) {
       <div className="hidden md:block">
         <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: "21 / 9" }}>
           {images.map((src, i) => (
-            <div key={i} className="absolute inset-0" style={{ clipPath: clips[i] }}>
+            <div key={src} className="absolute inset-0" style={{ clipPath: clips[i] }}>
               <Image src={src} alt={`${alt} ${i + 1}`} fill className="object-cover object-center" />
             </div>
           ))}
@@ -66,7 +66,7 @@ function DiagonalCollage({ images, alt }) {
       </div>
       <div className="md:hidden flex flex-col gap-3">
         {images.map((src, i) => (
-          <div key={i} className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "16 / 9" }}>
+          <div key={src} className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "16 / 9" }}>
             <Image src={src} alt={`${alt} ${i + 1}`} fill className="object-cover" />
           </div>
         ))}
@@ -77,7 +77,6 @@ function DiagonalCollage({ images, alt }) {
 
 function CatenaireEscamotable() {
   return (
-    <>
       <section className="py-20 px-4 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
@@ -112,7 +111,6 @@ function CatenaireEscamotable() {
           <DiagonalCollage images={IMAGES.catenaire.collage} alt="Caténaire escamotable" />
         </div>
       </section>
-    </>
   );
 }
 
@@ -174,8 +172,8 @@ function PortiqueMobile() {
                   "Hauteur de travail ajustable",
                   "Compatible tous gabarits de rames",
                   "Conformité aux normes de sécurité ferroviaire",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-600 text-sm">
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
                     <span className="w-1.5 h-1.5 bg-sp2i-feroviaire rounded-full shrink-0" />
                     {item}
                   </li>
@@ -206,8 +204,8 @@ function Pemp() {
                   "Accès latéral sécurisé",
                   "Accès toiture facilité",
                   "Mobilité optimale en atelier",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-600 text-sm">
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
                     <span className="w-1.5 h-1.5 bg-sp2i-feroviaire rounded-full shrink-0" />
                     {item}
                   </li>
@@ -237,7 +235,7 @@ function AutomateSecurite() {
             </p>
             <div className="flex items-center gap-4 pt-4">
               <div className="w-12 h-12 rounded-xl bg-sp2i-feroviaire/20 flex items-center justify-center">
-                <svg className="w-6 h-6 text-sp2i-feroviaire" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg aria-hidden="true" className="w-6 h-6 text-sp2i-feroviaire" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -277,8 +275,8 @@ function GrueVelocipedique() {
                   "Capacité de levage adaptée au ferroviaire",
                   "Encombrement réduit",
                   "Facilité d'utilisation",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-600 text-sm">
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
                     <span className="w-1.5 h-1.5 bg-sp2i-feroviaire rounded-full shrink-0" />
                     {item}
                   </li>

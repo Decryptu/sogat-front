@@ -8,7 +8,7 @@ const IMAGES = {
   autres: "/images/metiers/iserco/32.webp",
 };
 
-export default function Iserco({ t, locale }) {
+export default function Iserco() {
   return (
     <div className="w-full">
       <section className="py-20 px-4 md:px-16 bg-white">

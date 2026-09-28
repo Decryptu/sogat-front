@@ -163,8 +163,8 @@ function ConvoyeurARouleau() {
                 Les convoyeurs permettent de transférer des charges unitaires, en paquets ou en vrac d&apos;une position vers une autre ou vers de multiples positions.
               </p>
               <ul className="space-y-2 pt-4">
-                {["Convoyeurs à rouleaux", "Convoyeurs à chaînes", "Convoyeurs à bandes", "Convoyeurs à écailles"].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-700">
+                {["Convoyeurs à rouleaux", "Convoyeurs à chaînes", "Convoyeurs à bandes", "Convoyeurs à écailles"].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-sp2i-prehension rounded-full shrink-0" />
                     {item}
                   </li>
@@ -205,8 +205,8 @@ function LigneDeTransfert() {
               Pour ces lignes, nous intégrons :
             </p>
             <ul className="space-y-3">
-              {["Convoyeurs à chaînes de manutention", "Refroidissoirs", "Tournes tubes", "Décalamineuses"].map((item, index) => (
-                <li key={index} className="flex items-center gap-3 text-gray-700">
+              {["Convoyeurs à chaînes de manutention", "Refroidissoirs", "Tournes tubes", "Décalamineuses"].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-gray-700">
                   <span className="w-2 h-2 bg-sp2i-prehension rounded-full shrink-0" />
                   {item}
                 </li>
@@ -244,8 +244,8 @@ function NavetteTransbordeur() {
                   "Capacité de charge adaptée au besoin",
                   "Intégration dans les lignes de production existantes",
                   "Pilotage automatisé ou semi-automatisé",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-600 text-sm">
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
                     <span className="w-1.5 h-1.5 bg-sp2i-prehension rounded-full shrink-0" />
                     {item}
                   </li>

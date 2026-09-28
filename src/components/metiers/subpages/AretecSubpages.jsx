@@ -64,7 +64,6 @@ function OverlayCard({ src, alt, title }) {
 
 function LignesProductionAutomatisees() {
   return (
-    <>
       <section className="py-20 px-4 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -78,8 +77,8 @@ function LignesProductionAutomatisees() {
                   "Construction de systèmes de convoyage et de manutention",
                   "Construction de ligne de production",
                   "Réalisation de prototypes",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-aretec rounded-full shrink-0 mt-2" />
                     {item}
                   </li>
@@ -107,8 +106,8 @@ function LignesProductionAutomatisees() {
                   "Installation et mise en service sur site",
                   "Formation du personnel",
                   "Contrats de maintenance",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-aretec rounded-full shrink-0 mt-2" />
                     {item}
                   </li>
@@ -131,7 +130,6 @@ function LignesProductionAutomatisees() {
           </div>
         </div>
       </section>
-    </>
   );
 }
 
@@ -158,7 +156,6 @@ function MachinesSpeciales() {
 
 function Robotique() {
   return (
-    <>
       <section className="py-20 px-4 md:px-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -169,8 +166,8 @@ function Robotique() {
                   "Intégration sur lignes existantes",
                   "Création d'îlots complets",
                   "Remplacement de robots obsolètes",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-aretec rounded-full shrink-0 mt-2" />
                     {item}
                   </li>
@@ -200,8 +197,8 @@ function Robotique() {
                   "Test production en nos locaux",
                   "Mise en place sur site client",
                   "Assistance au démarrage et formation",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-aretec rounded-full shrink-0 mt-2" />
                     {item}
                   </li>
@@ -229,7 +226,6 @@ function Robotique() {
           </div>
         </div>
       </section>
-    </>
   );
 }
 

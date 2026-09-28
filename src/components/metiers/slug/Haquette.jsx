@@ -28,7 +28,7 @@ const EQUIPMENT = [
   { slug: "fraiseuse-commande-numerique", image: IMAGES.fraiseuseCN, label: "Fraiseuse à commande numérique" },
 ];
 
-export default function Haquette({ t, locale }) {
+export default function Haquette() {
   return (
     <div className="w-full">
       <section className="py-20 px-4 md:px-16 bg-white">

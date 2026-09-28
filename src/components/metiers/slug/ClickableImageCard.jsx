@@ -15,23 +15,30 @@ export default function ClickableImageCard({
   const hasContent = description || children;
 
   return (
-    <div
-      className="group cursor-pointer"
-      onClick={() => hasContent && setShowDescription(!showDescription)}
-    >
-      <div
-        className={`relative ${aspectRatio} rounded-xl overflow-hidden mb-4 bg-gray-100`}
+    <div>
+      <button
+        type="button"
+        disabled={!hasContent}
+        aria-expanded={hasContent ? showDescription : undefined}
+        onClick={() => setShowDescription(!showDescription)}
+        className="group block w-full cursor-pointer text-left disabled:cursor-default"
       >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
-      {title && (
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      )}
+        <span
+          className={`relative block ${aspectRatio} overflow-hidden mb-4 bg-gray-100`}
+        >
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </span>
+        {title && (
+          <span className="block text-lg font-semibold text-gray-900 mb-2">
+            {title}
+          </span>
+        )}
+      </button>
       {hasContent && showDescription && (
         <div className="text-gray-600 text-sm leading-relaxed animate-in fade-in duration-300">
           {description && <p>{description}</p>}

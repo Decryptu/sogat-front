@@ -8,7 +8,7 @@ const IMAGES = {
   },
 };
 
-export default function Aretec({ t, locale }) {
+export default function Aretec() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Introduction text ===== */}
@@ -39,8 +39,8 @@ export default function Aretec({ t, locale }) {
                   "Soudures Ultrasons",
                   "Transitique inter machines",
                   "Rétrofit ou adaptation d'anciens moyens",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-aretec rounded-full shrink-0 mt-2" />
                     {item}
                   </li>
@@ -65,8 +65,8 @@ export default function Aretec({ t, locale }) {
                   "Installation, intégration et mise en service sur site",
                   "Formation du personnel",
                   "Mise en place de contrats de maintenance",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-gray-700">
                     <span className="w-2 h-2 bg-aretec rounded-full shrink-0 mt-2" />
                     {item}
                   </li>

@@ -32,7 +32,7 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
 // =============================================================================
 // MAIN COMPONENT
 // =============================================================================
-export default function TracipMecanoSoudure({ t, locale }) {
+export default function TracipMecanoSoudure() {
   return (
     <div className="w-full">
       {/* ===== SECTION: 3 Column Image Showcase ===== */}

@@ -30,7 +30,7 @@ function SectionTitle({ children, subtitle, className = "" }) {
   );
 }
 
-export default function Sermas({ t, locale }) {
+export default function Sermas() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Nos équipements - SCIE A BILLETTES ===== */}

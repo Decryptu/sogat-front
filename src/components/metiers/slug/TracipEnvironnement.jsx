@@ -49,7 +49,7 @@ function PlaceholderImage({ src, alt, className = "", aspectRatio = "aspect-[4/3
 // =============================================================================
 // MAIN COMPONENT
 // =============================================================================
-export default function TracipEnvironnement({ t, locale }) {
+export default function TracipEnvironnement() {
   return (
     <div className="w-full">
       {/* ===== SECTION: Nos équipements ===== */}
@@ -99,8 +99,8 @@ export default function TracipEnvironnement({ t, locale }) {
                     "Conceptions spécifiques pour l'industrie lourde",
                     "Intégration dans la ligne process",
                     "Applications gaz chauds et corrosifs",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 text-gray-700">
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-gray-700">
                       <span className="w-2 h-2 bg-tracip-environnement rounded-full shrink-0 mt-2" />
                       {item}
                     </li>
@@ -119,8 +119,8 @@ export default function TracipEnvironnement({ t, locale }) {
                     "Cimenterie : Broyeurs, séparateurs dynamiques, fours, refroidisseurs clinker",
                     "Matériaux de construction",
                     "Engrais",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 text-gray-700">
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-gray-700">
                       <span className="w-2 h-2 bg-tracip-environnement rounded-full shrink-0 mt-2" />
                       {item}
                     </li>
@@ -143,8 +143,8 @@ export default function TracipEnvironnement({ t, locale }) {
                     "Incinération de déchets",
                     "Chaudières biomasse",
                     "Verreries",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3 text-gray-700">
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-gray-700">
                       <span className="w-2 h-2 bg-tracip-environnement rounded-full shrink-0 mt-2" />
                       {item}
                     </li>

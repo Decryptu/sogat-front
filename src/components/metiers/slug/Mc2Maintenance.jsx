@@ -7,7 +7,7 @@ const IMAGES = {
   thermoEjecteur: "/images/metiers/mc2-maintenance/8.webp",
 };
 
-export default function Mc2Maintenance({ t, locale }) {
+export default function Mc2Maintenance({ locale }) {
   return (
     <div className="w-full">
       <section className="py-20 px-4 md:px-16 bg-white">

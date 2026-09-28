@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Stats({ stats }) {
-  const [hoveredStat, setHoveredStat] = useState(null);
-
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -14,8 +11,6 @@ export default function Stats({ stats }) {
             <motion.div
               key={key}
               className="text-center"
-              onHoverStart={() => setHoveredStat(key)}
-              onHoverEnd={() => setHoveredStat(null)}
               whileHover={{ scale: 1.02 }}
             >
               <h3 className="text-6xl font-light text-primary mb-4">{value}</h3>

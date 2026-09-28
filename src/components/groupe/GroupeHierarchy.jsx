@@ -140,7 +140,7 @@ export default function GroupeHierarchy() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {hierarchyData.children.map((child, index) => (
+          {hierarchyData.children.map((child) => (
             <motion.div key={child.name} variants={itemVariants} className="flex flex-col items-center">
               {/* Vertical connector from horizontal line */}
               <div className="hidden md:block w-0.5 h-6 bg-white/20 mb-4" />

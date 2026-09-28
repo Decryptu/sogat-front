@@ -19,6 +19,7 @@ export default function SubpageLayout({
             className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-700 transition-colors mb-8"
           >
             <svg
+              aria-hidden="true"
               className="w-4 h-4"
               fill="none"
               viewBox="0 0 24 24"
@@ -67,6 +68,7 @@ export default function SubpageLayout({
             style={{ color: metierColor }}
           >
             <svg
+              aria-hidden="true"
               className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
